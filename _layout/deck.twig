@@ -1,0 +1,14 @@
+{% extends "default.twig" %}
+
+{% block content %}
+    <div class="row-fluid">
+        <h3 class="pull-left"><a href="{{ page.location }}">{{ page.title }}</a></h3>
+        <span class="pull-right">{{ page.date|date(DATE_ATOM) }}</span>
+    </div>
+
+    <div class="row-fluid">
+        {{ content }}
+    </div>
+
+    <script async class="speakerdeck-embed" data-id="{{ page.deckid }}" data-ratio="{{ page.deckratio }}" src="js/speakerdeck.js"></script>
+{% endblock %}

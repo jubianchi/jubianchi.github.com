@@ -1,0 +1,16 @@
+{% extends "default.twig" %}
+
+{% block content %}
+    <article>
+        <div class="row-fluid navbar">
+            <div class="navbar-inner">
+                <h3 class="pull-left">{{ page.title }}</h3>
+                <span class="pull-right">{{ page.date|date(DATE_ATOM) }}</span>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            {{ content }}
+        </div>
+    </article>
+{% endblock %}

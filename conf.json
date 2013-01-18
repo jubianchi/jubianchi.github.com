@@ -1,0 +1,11 @@
+{
+    "blacklist": [
+        "Vagrantfile",
+        "composer.json",
+        "composer.lock",
+        "composer.phar"
+    ],
+    "timezone": "Europe/Paris",
+    "destination": "_site",
+    "source": "_src"
+}

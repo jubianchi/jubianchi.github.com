@@ -1,0 +1,4 @@
+_site
+_vendor
+.vagrant
+composer.phar
