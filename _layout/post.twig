@@ -4,8 +4,10 @@
     <article>
         <div class="row-fluid navbar">
             <div class="navbar-inner">
-                <h3 class="pull-left">{{ page.title }}</h3>
-                <span class="pull-right">{{ page.date|date(DATE_ATOM) }}</span>
+                <h3 class="pull-left">
+                    {{ page.title }}
+                    <small>{{ page.date|date(DATE_ATOM) }}</small>
+                </h3>
             </div>
         </div>
 
