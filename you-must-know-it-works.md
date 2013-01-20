@@ -14,4 +14,4 @@
 
 > How can you **know** your code works ? That's easy. Test it. Test it again. Test it up. Test it down. Test it seven ways to Sunday!
 
-> [Robert C. Martin - The Clean Coder](http://www.amazon.fr/dp/0137081073/ref=cm_sw_r_tw_dp_5TDypb15W7VMB)
+> — [Robert C. Martin - The Clean Coder](http://www.amazon.fr/dp/0137081073/ref=cm_sw_r_tw_dp_5TDypb15W7VMB)

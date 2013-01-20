@@ -21,4 +21,4 @@
 
 > build things
 
-> [Zach Holman](https://twitter.com/holman) - [Open Source Misfeasance](http://zachholman.com/talk/open-source-misfeasance)
+> — [Zach Holman](https://twitter.com/holman) - [Open Source Misfeasance](http://zachholman.com/talk/open-source-misfeasance)

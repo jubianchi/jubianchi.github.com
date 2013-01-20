@@ -10,4 +10,4 @@
 ***
 > So, no, you shouldn't reinvent the wheel. Unless you plan on learning more about wheels, that is.
 
-> [Jeff Atwood](https://twitter.com/codinghorror) - [Coding Horror](http://www.codinghorror.com/blog/2009/02/dont-reinvent-the-wheel-unless-you-plan-on-learning-more-about-wheels.html)
+> — [Jeff Atwood](https://twitter.com/codinghorror) - [Coding Horror](http://www.codinghorror.com/blog/2009/02/dont-reinvent-the-wheel-unless-you-plan-on-learning-more-about-wheels.html)
