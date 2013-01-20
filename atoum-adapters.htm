@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Template &middot; Bootstrap</title>
+    <title>jubianchi.fr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Julien Bianchi <contact@jubianchi.fr>">
 
     <link href="styles/bootstrap.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
@@ -31,8 +30,10 @@
             <article>
         <div class="row-fluid navbar">
             <div class="navbar-inner">
-                <h3 class="pull-left">Tests unitaires et adapters avec atoum</h3>
-                <span class="pull-right">December 4, 2012 12:16</span>
+                <h3 class="pull-left">
+                    Tests unitaires et adapters avec atoum
+                    <small>December 4, 2012 12:16</small>
+                </h3>
             </div>
         </div>
 
@@ -44,7 +45,7 @@ des bonnes pratiques à mettre en place pour bien les utiliser. Je vais donc ten
 à travers des exemples relativement simples. J'utiliserais <em>atoum</em> pour les tests qui seront écrits pour une classe
 gérant une connexion à un serveur FTP.</p>
 
-<h2>Le pattern Adapter</h2>
+<h3>Le pattern Adapter</h3>
 
 <p>Avant de commencer, nous allons faire un petit rappel sur le design pattern <em>Adapter</em>. Voici un extrait de la définition
 donnée par Wikipedia :</p>
@@ -59,7 +60,7 @@ donnée par Wikipedia :</p>
 <p>Cette définition nous dit que l'<em>Adapter</em> traduit des appels d'une interface vers une autre avec un minimum de code. En
 d'autres termes, elle n'est qu'un proxy.</p>
 
-<h2>L'intérêt des Adapters pour les tests unitaires</h2>
+<h3>L'intérêt des Adapters pour les tests unitaires</h3>
 
 <p>Lorsqu'on souhaite utiliser les tests unitaires pour valider notre code de la manière la plus approfondie possible, il
 est souvent nécessaires d'utiliser certaines bonnes pratiques qui permettent de mettre en place cette stratégie.
@@ -76,7 +77,7 @@ dans votre code : mon fichier existe ou n'existe pas, le serveur FTP est disponi
 Les <em>adapters</em> sont là pour nous permettre de tester ces cas très simplement et de manière très intuitive (en tout cas
 avec <em>atoum</em>)</p>
 
-<h2>Sans les adapters</h2>
+<h3>Sans les adapters</h3>
 
 <p>Comme je vous le disais, nous allons travailler sur un exemple présentant une classe qui permet de se connecter à un
 serveur FTP via les fonctions natives de PHP. Cet exemple est assez basique mais il a l'avantage de montrer rapidement
@@ -140,7 +141,7 @@ machine à moins de passer par des "hacks" que je ne détaillerais pas ici.</p>
 <p>Rappelez-vous bien une chose : nous sommes dans le cadre de tests unitaires et il serait très dommage de les coupler
 à l'environnement sur lequel ils sont exécutés, c'est donc là que les <em>adapters</em> vont nous aider.</p>
 
-<h2>Comment utiliser les Adapters</h2>
+<h3>Comment utiliser les Adapters</h3>
 
 <p>Les classes qui utiliseront l'<em>adapter</em> auront donc une dépendance supplémentaire vers ce proxy. Ne vous inquiétez pas,
 dans l'idéal, votre code sera fait de telle manière que l'injection de cette dépendance soit optionnelle. Voyons tout
@@ -238,9 +239,9 @@ importante (nous sommes passé de 67% à 80%) !</p>
 que nous sommes désormais dépendant de l'<em>adapter</em> et que cela peut nous jouer des tours dans certains cas
 (les performances peuvent par exemples être impactées).</p>
 
-<h2>Attentions aux pièges !</h2>
+<h3>Attentions aux pièges !</h3>
 
-<h3>Ne pas être dépendant du framework de test dans le code de production</h3>
+<h4>Ne pas être dépendant du framework de test dans le code de production</h4>
 
 <p>L'utilisation des <em>adapters</em> apporte beaucoup de choses mais il faut les utiliser avec précaution. Si vous remontez au
 paragraphe précédent, vous verrez que le code de la classe <code>Ftp</code> est maintenant dépendant de l'<em>adapter</em> par défaut
@@ -343,7 +344,7 @@ $ bin/atoum -f tests/listing/Adapter/4-5.php
 <p>Comme vous pouvez le voir, la dépendance vers <em>atoum</em> a disparue de notre code de production ! Nous sommes maintenant
 dépendant de notre <code>Adapterinterface</code> et de l'implémentation par défaut que nous avons ajoutée.</p>
 
-<h3>Attention aux performances</h3>
+<h4>Attention aux performances</h4>
 
 <p>Nous avons vu dans l'exemple précédent comment découpler facilement nos <em>adapters</em> du framework de test. Pour cela, nous
 avons mis en place une interface : désormais, toutes nos classes nécessitant un <em>adapter</em> peuvent se reposer sur cette
@@ -362,7 +363,7 @@ cliente et, à travers ses différentes implémentations, y répondre. Donc, en 
 dépendre d'un <em>Adapter</em> spécifique à chaque cas : dans notre exemple, la classe <code>Ftp</code> devrait dépendre d'un <code>FtpAdapter</code>
 qui fournirait l'implémentation des méthodes nécessaires.</p>
 
-<h3>Attention aux abus</h3>
+<h4>Attention aux abus</h4>
 
 <p>Comme toute technique utilisée en programmation, les <em>adapters</em> demandent à être utilisé avec précaution et surtout de
 manière judicieuse : il ne faut pas en abuser (par exemple, ne passez pas tous vos appels à <code>sprintf</code> par un <code>Adapter</code> : dans la plupart des cas (tous ?) , ce sera inutile).
