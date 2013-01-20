@@ -9,15 +9,17 @@
     <link href="styles/bootstrap.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
     <link href="styles/bootstrap-responsive.css" rel="stylesheet">
+    <link href="styles/github.css" rel="stylesheet">
 </head>
 
 <body>
 
-<div id=""wrap">
+<div id="wrap">
     <div class="container">
         <div class="masthead">
             <ul class="nav nav-pills pull-right">
                 <li><a href="index.htm">Accueil</a></li>
+                <li><a href="projects.htm">Projects</a></li>
                 <li><a href="https://github.com/jubianchi">Github</a></li>
                 <li><a href="https://twitter.com/jubianchi">Twitter</a></li>
             </ul>
@@ -27,8 +29,8 @@
         <hr>
 
         <div class="row-fluid">
-                <article>
-        <div class="row-fluid navbar">
+            <div class="span9">    <article>
+        <div class="row-fluid navbar navbar-inverse">
             <div class="navbar-inner">
                 <h3 class="pull-left">
                     How to test your Symfony2 project with Behat on TravisCI
@@ -37,6 +39,14 @@
             </div>
         </div>
 
+                    <ul class="tags">
+                                    <li><a href="#" class="label">CI</a></li>
+                                    <li><a href="#" class="label">travis</a></li>
+                                    <li><a href="#" class="label">symfony</a></li>
+                                    <li><a href="#" class="label">behat</a></li>
+                                    <li><a href="#" class="label">BDD</a></li>
+                            </ul>
+        
         <div class="row-fluid">
             <p>This week end, I finally decided to work on the <a href="http://behat-viewer.org">Behat Viewer</a> continuous integration : this project is entirely tested with <a href="http://behat.org">Behat</a> and until now, the tests were launched manually each time I wanted to push changes to the public repository. Running the project like this did not fully satisfied me : there was no build history and the results were not publicly available. So I decided to take advantage of the great tools we have : I kept  <a href="http://behat.org">Behat</a> as my functional testing framework and choose <a href="http://travis-ci.org">Travis CI</a> as the continuous integration plateform. In this post I will detail the configuration I use to run these tests on the Travis CI virtual machines.</p>
 
@@ -102,6 +112,9 @@ script:
 
         </div>
     </article>
+</div>
+            <div class="span3">
+                                                                </div>
         </div>
     </div>
     <div id="push"></div>
@@ -129,6 +142,7 @@ script:
 <script src="js/bootstrap-collapse.js"></script>
 <script src="js/bootstrap-carousel.js"></script>
 <script src="js/bootstrap-typeahead.js"></script>
+<script src="js/jquery.github.js"></script>
 
 </body>
 </html>

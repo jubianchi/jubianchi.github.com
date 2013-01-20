@@ -9,15 +9,17 @@
     <link href="styles/bootstrap.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
     <link href="styles/bootstrap-responsive.css" rel="stylesheet">
+    <link href="styles/github.css" rel="stylesheet">
 </head>
 
 <body>
 
-<div id=""wrap">
+<div id="wrap">
     <div class="container">
         <div class="masthead">
             <ul class="nav nav-pills pull-right">
                 <li><a href="index.htm">Accueil</a></li>
+                <li><a href="projects.htm">Projects</a></li>
                 <li><a href="https://github.com/jubianchi">Github</a></li>
                 <li><a href="https://twitter.com/jubianchi">Twitter</a></li>
             </ul>
@@ -27,11 +29,11 @@
         <hr>
 
         <div class="row-fluid">
-                
+            <div class="span9">    
 
 
                         <article>
-                <div class="row-fluid navbar">
+                <div class="row-fluid navbar navbar-inverse">
                     <div class="navbar-inner">
                         <h4 class="pull-left">
                                                             <a href="atoum-adapters.htm">Tests unitaires et adapters avec atoum</a>
@@ -41,7 +43,7 @@
                 </div>
 
                 <div class="row-fluid">
-                                            <p>Nous avons récemment eu quelques discussions sur les <em>adapters<em> sur le salon IRC de atoum (pour rappel, celui-ci se trouve sur les serveurs Freenode, canal ##atoum). Plusieurs questions ont été traitées : nous avons parlé de l'utilité de ces <em>adapters<em>, des possibilités qu'ils offrent dans le cadre de tests unitaires mais également des inconvénients et des bonnes pratiques à mettre en place pour bien les utiliser. Je vais donc tenter ici d'eclaircir ces quelques points à travers des exemples relativement simples. J'utiliserais <a href="https://github.com/atoum/atoum" title="atoum">atoum</a> pour les tests qui seront écrits pour une classe gérant une connexion à un serveur FTP.</p>
+                                            <p>Nous avons récemment eu quelques discussions sur les <em>adapters</em> sur le salon IRC de atoum (pour rappel, celui-ci se trouve sur les serveurs Freenode, canal ##atoum). Plusieurs questions ont été traitées : nous avons parlé de l'utilité de ces <em>adapters</em>, des possibilités qu'ils offrent dans le cadre de tests unitaires mais également des inconvénients et des bonnes pratiques à mettre en place pour bien les utiliser. Je vais donc tenter ici d'eclaircir ces quelques points à travers des exemples relativement simples. J'utiliserais <a href="https://github.com/atoum/atoum" title="atoum">atoum</a> pour les tests qui seront écrits pour une classe gérant une connexion à un serveur FTP.</p>
                                     </div>
 
                 <hr/>
@@ -53,7 +55,7 @@
                                             </ul>
                             </article>
                                 <article>
-                <div class="row-fluid navbar">
+                <div class="row-fluid navbar navbar-inverse">
                     <div class="navbar-inner">
                         <h4 class="pull-left">
                                                             <a href="build-fun-build-silly-build-things.htm">Build fun, build silly, build things</a>
@@ -89,7 +91,7 @@
                                             </ul>
                             </article>
                                 <article>
-                <div class="row-fluid navbar">
+                <div class="row-fluid navbar navbar-inverse">
                     <div class="navbar-inner">
                         <h4 class="pull-left">
                                                             <a href="deck-vagrant.htm">Vagrant</a>
@@ -113,7 +115,7 @@
                                             </ul>
                             </article>
                                 <article>
-                <div class="row-fluid navbar">
+                <div class="row-fluid navbar navbar-inverse">
                     <div class="navbar-inner">
                         <h4 class="pull-left">
                                                             Don't Reinvent The Wheel
@@ -139,7 +141,7 @@
                                             </ul>
                             </article>
                                 <article>
-                <div class="row-fluid navbar">
+                <div class="row-fluid navbar navbar-inverse">
                     <div class="navbar-inner">
                         <h4 class="pull-left">
                                                             <a href="how-to-test-your-symfony2-project-with-behat-on-travisci.htm">How to test your Symfony2 project with Behat on TravisCI</a>
@@ -163,7 +165,7 @@
                                             </ul>
                             </article>
                                             <article>
-                <div class="row-fluid navbar">
+                <div class="row-fluid navbar navbar-inverse">
                     <div class="navbar-inner">
                         <h4 class="pull-left">
                                                             Priority...
@@ -189,8 +191,8 @@
                                                     <li><a href="#" class="label">quote</a></li>
                                             </ul>
                             </article>
-                                <article>
-                <div class="row-fluid navbar">
+                                            <article>
+                <div class="row-fluid navbar navbar-inverse">
                     <div class="navbar-inner">
                         <h4 class="pull-left">
                                                             You must know it works
@@ -220,7 +222,14 @@
                                                     <li><a href="#" class="label">best practice</a></li>
                                             </ul>
                             </article>
-                    </div>
+            </div>
+            <div class="span3">
+                                                            <div class="sidebar-nav">
+                            <a class="twitter-timeline" href="https://twitter.com/jubianchi/favorites" data-widget-id="292992273858306048">Favorite Tweets by @jubianchi</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </div>
+                                                </div>
+        </div>
     </div>
     <div id="push"></div>
 </div>
@@ -247,6 +256,7 @@
 <script src="js/bootstrap-collapse.js"></script>
 <script src="js/bootstrap-carousel.js"></script>
 <script src="js/bootstrap-typeahead.js"></script>
+<script src="js/jquery.github.js"></script>
 
 </body>
 </html>

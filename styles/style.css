@@ -48,4 +48,14 @@ article hr {
     }
 }
 
+.navbar-inverse h3,
+.navbar-inverse h3 a,
+.navbar-inverse h4,
+.navbar-inverse h4 a {
+    color: white;
+}
+
+.github-widget {
+    margin-bottom: 20px;
+}
 

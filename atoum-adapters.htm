@@ -9,15 +9,17 @@
     <link href="styles/bootstrap.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
     <link href="styles/bootstrap-responsive.css" rel="stylesheet">
+    <link href="styles/github.css" rel="stylesheet">
 </head>
 
 <body>
 
-<div id=""wrap">
+<div id="wrap">
     <div class="container">
         <div class="masthead">
             <ul class="nav nav-pills pull-right">
                 <li><a href="index.htm">Accueil</a></li>
+                <li><a href="projects.htm">Projects</a></li>
                 <li><a href="https://github.com/jubianchi">Github</a></li>
                 <li><a href="https://twitter.com/jubianchi">Twitter</a></li>
             </ul>
@@ -27,8 +29,8 @@
         <hr>
 
         <div class="row-fluid">
-                <article>
-        <div class="row-fluid navbar">
+            <div class="span9">    <article>
+        <div class="row-fluid navbar navbar-inverse">
             <div class="navbar-inner">
                 <h3 class="pull-left">
                     Tests unitaires et adapters avec atoum
@@ -37,6 +39,12 @@
             </div>
         </div>
 
+                    <ul class="tags">
+                                    <li><a href="#" class="label">php</a></li>
+                                    <li><a href="#" class="label">atoum</a></li>
+                                    <li><a href="#" class="label">test</a></li>
+                            </ul>
+        
         <div class="row-fluid">
             <p>Nous avons récemment eu quelques discussions sur les <em>adapters</em> sur le salon IRC de atoum (pour rappel, celui-ci se
 trouve sur les serveurs Freenode, canal ##atoum). Plusieurs questions ont été traitées : nous avons parlé de l'utilité
@@ -383,6 +391,13 @@ $adapter-&gt;file_get_contents = function() { return 'foobar'; };
 
         </div>
     </article>
+</div>
+            <div class="span3">
+                                                            <div class="sidebar-nav">
+                            <a class="twitter-timeline" href="https://twitter.com/search?q=%23atoum" data-widget-id="293009231949471744">Tweets about #atoum</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </div>
+                                                </div>
         </div>
     </div>
     <div id="push"></div>
@@ -410,6 +425,7 @@ $adapter-&gt;file_get_contents = function() { return 'foobar'; };
 <script src="js/bootstrap-collapse.js"></script>
 <script src="js/bootstrap-carousel.js"></script>
 <script src="js/bootstrap-typeahead.js"></script>
+<script src="js/jquery.github.js"></script>
 
 </body>
 </html>
