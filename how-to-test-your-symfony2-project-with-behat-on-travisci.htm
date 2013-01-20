@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Template &middot; Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="styles/bootstrap.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/bootstrap-responsive.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container-narrow">
+
+    <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+            <li><a href="index.htm">Accueil</a></li>
+            <li><a href="https://github.com/jubianchi">Github</a></li>
+            <li><a href="https://twitter.com/jubianchi">Twitter</a></li>
+        </ul>
+        <h3 class="muted">jubianchi.fr</h3>
+    </div>
+
+    <hr>
+
+    <div class="row-fluid">
+            <article>
+        <div class="row-fluid navbar">
+            <div class="navbar-inner">
+                <h3 class="pull-left">How to test your Symfony2 project with Behat on TravisCI</h3>
+                <span class="pull-right">July 3, 2012 13:58</span>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <p>This week end, I finally decided to work on the <a href="http://behat-viewer.org">Behat Viewer</a> continuous integration : this project is entirely tested with <a href="http://behat.org">Behat</a> and until now, the tests were launched manually each time I wanted to push changes to the public repository. Running the project like this did not fully satisfied me : there was no build history and the results were not publicly available. So I decided to take advantage of the great tools we have : I kept  <a href="http://behat.org">Behat</a> as my functional testing framework and choose <a href="http://travis-ci.org">Travis CI</a> as the continuous integration plateform. In this post I will detail the configuration I use to run these tests on the Travis CI virtual machines.</p>
+
+<p>As you may know <a href="http://travis-ci.org">Travis CI</a> is a continuous integration plateform for open source projects hosted on (GitHub)[http://github.com]. To test our projects on it, we only need to <a href="http://about.travis-ci.org/docs/user/getting-started/">enable Travis CI on our repositories</a> and add <a href="http://about.travis-ci.org/docs/user/build-configuration/">a little configuration file (.travis.yml)</a> in our project : we are going to see how to build this file because this is this single file that will describe our build process.</p>
+
+<p>Here is the context :
+* Behat Viewer is an Symfony 2.0 application
+* It uses a MySQL database
+* Some PHP5 modules are required (php5-mysql, php5-sqlite)
+* The Apache mod_rewrite has to be enabled</p>
+
+<p>Now that we know all the required elements, let's build our configuration file :</p>
+
+<pre><code># The test environment we want to use (PHP 5.3)
+language: php
+php:
+    - 5.3
+
+before_script:
+    # Packages installation
+    - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-mysql php5-sqlite
+    # Apache webserver configuration
+    - echo "Alias /behat $(pwd)/web" | sudo tee -a /etc/apache2/sites-available/default
+    - sudo a2enmod rewrite
+    - sudo /etc/init.d/apache2 restart
+    # Database creation
+    - mysql -e 'CREATE DATABASE test_myapp_test;'
+    # Symfony 2 application configuration
+    - sed s/%database_name%/myapp_test/ app/config/parameters.ini-dist | sed s/%database_login%/root/ | sed s/%database_password%// &gt; app/config/parameters.ini
+    - bin/vendors install
+    - app/console --env=test doctrine:schema:create
+    - sudo chmod -R 777 app/cache app/logs
+    - sed 's/%hostname%/localhost\/behat/' behat.yml-dist &gt; behat.yml
+
+script:
+    # Launch test suite
+    - php behat.phar --profile=travis @BehatViewerBundle
+</code></pre>
+
+<p>This script will look really simple to anyone who is familiar with the UNIX command line but it took me several hours and builds to get the expected result.</p>
+
+<h2>Environment configuration (before_script)</h2>
+
+<p>Travis CI lets us use some standard virtual machines and with our configuration file, we are able to customize these VMs. As you read the file I showed you, you've probably said I was a little crazy : I'm using <code>sudo</code> and installing packet via <code>apt-get</code> : <a href="http://about.travis-ci.org/docs/user/build-configuration/">this is completly supported by Travis CI</a> : the virtual machines are snapshoted and restored before each build is launched.</p>
+
+<p>So, after the 5 first steps, we have a working LAMP (Apache, PHP, Mysql). Let's configure our Symfony 2 application :</p>
+
+<ul>
+<li>The first command edits the <code>app/config/parameters.ini</code> file which contains the database connection credentials</li>
+<li>The second step installs the project dependencies</li>
+<li>The third creates the database schema</li>
+<li>The fourth fixes the permissions on some directories</li>
+<li>And the last one edits the Behat's configuration file</li>
+</ul>
+
+<h2>Launching the tests (script)</h2>
+
+<p>In this section we will describe the commands that Travis has to run in order to launch our test suite. Be carefull with these commands : in this sections you should only list commands that are mandatory to run the tests. If a command in this section fails, the script will be stopped and the build marked as failed.</p>
+
+<p>This configuration file is not yet complete: currently, it will let you run your tests through Behat Goutte driver only (without javascript). Travis CI provides phantomjs on its VMs and am currently working on setting up this tool.</p>
+
+<p>This is my first post entirely written in English so please excuse me for any mistake I made :)</p>
+
+        </div>
+    </article>
+    </div>
+
+    <div class="footer">
+        <p>&copy; <a href="https://twitter.com/jubianchi">@jubianchi</a> 2012</p>
+        <p>This website is powered by <a href="http://simonjodet.github.com/gumdrop/" title="Gumdrop">Gumdrop</a> and <a href="http://pages.github.com/">Github pages</a></p>
+    </div>
+
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-alert.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-scrollspy.js"></script>
+<script src="js/bootstrap-tab.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-button.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+<script src="js/bootstrap-carousel.js"></script>
+<script src="js/bootstrap-typeahead.js"></script>
+
+</body>
+</html>
