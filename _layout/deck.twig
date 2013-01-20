@@ -1,12 +1,22 @@
 {% extends "default.twig" %}
 
 {% block content %}
-    <div class="row-fluid">
-        <h3 class="pull-left">
-            {{ page.title }}
-            <small>{{ page.date|date(DATE_ATOM) }}</small>
-        </h3>
+    <div class="row-fluid navbar navbar-inverse">
+        <div class="navbar-inner">
+            <h3 class="pull-left">
+                {{ page.title }}
+                <small>{{ page.date|date(DATE_ATOM) }}</small>
+            </h3>
+        </div>
     </div>
+
+    {% if page.tags %}
+        <ul class="tags">
+            {% for tag in page.tags %}
+                <li><a href="#" class="label">{{ tag }}</a></li>
+            {%  endfor %}
+        </ul>
+    {% endif %}
 
     <div class="row-fluid">
         {{ content }}

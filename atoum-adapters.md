@@ -1,11 +1,16 @@
 ***
 {
     "title": "Tests unitaires et adapters avec atoum",
-    "summary": "Nous avons récemment eu quelques discussions sur les <em>adapters<em> sur le salon IRC de atoum (pour rappel, celui-ci se trouve sur les serveurs Freenode, canal ##atoum). Plusieurs questions ont été traitées : nous avons parlé de l'utilité de ces <em>adapters<em>, des possibilités qu'ils offrent dans le cadre de tests unitaires mais également des inconvénients et des bonnes pratiques à mettre en place pour bien les utiliser. Je vais donc tenter ici d'eclaircir ces quelques points à travers des exemples relativement simples. J'utiliserais <a href=\"https://github.com/atoum/atoum\" title=\"atoum\">atoum</a> pour les tests qui seront écrits pour une classe gérant une connexion à un serveur FTP.",
+    "summary": "Nous avons récemment eu quelques discussions sur les <em>adapters</em> sur le salon IRC de atoum (pour rappel, celui-ci se trouve sur les serveurs Freenode, canal ##atoum). Plusieurs questions ont été traitées : nous avons parlé de l'utilité de ces <em>adapters</em>, des possibilités qu'ils offrent dans le cadre de tests unitaires mais également des inconvénients et des bonnes pratiques à mettre en place pour bien les utiliser. Je vais donc tenter ici d'eclaircir ces quelques points à travers des exemples relativement simples. J'utiliserais <a href=\"https://github.com/atoum/atoum\" title=\"atoum\">atoum</a> pour les tests qui seront écrits pour une classe gérant une connexion à un serveur FTP.",
     "type": "post",
     "date": "2012-12-04 12:16:00",
     "layout": "post.twig",
-    "tags": ["php", "atoum", "test"]
+    "tags": ["php", "atoum", "test"],
+    "twitter": {
+        "widget": "293009231949471744",
+        "url": "https://twitter.com/search?q=%23atoum",
+        "title": "Tweets about #atoum"
+    }
 }
 ***
 Nous avons récemment eu quelques discussions sur les *adapters* sur le salon IRC de atoum (pour rappel, celui-ci se

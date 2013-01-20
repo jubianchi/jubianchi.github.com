@@ -1,0 +1,7 @@
+{% extends "single-column.twig" %}
+
+{% block content %}
+    {% for repository in page.repositories %}
+        <div class="github-widget span4" data-repo="{{ repository }}"></div>
+    {% endfor %}
+{% endblock %}

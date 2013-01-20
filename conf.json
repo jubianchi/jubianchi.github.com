@@ -6,6 +6,5 @@
         "composer.phar"
     ],
     "timezone": "Europe/Paris",
-    "destination": "_site",
-    "source": "_src"
+    "destination": "_site"
 }

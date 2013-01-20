@@ -5,8 +5,13 @@
     "date": "2012-11-21 11:15:00",
     "layout": "deck.twig",
     "deckid": "f45b665015820130009522000a1e9b2a",
-    "deckration": "1.77777777777778",
-    "tags": ["quote", "open source"]
+    "deckratio": "1.77777777777778",
+    "tags": ["quote", "open source"],
+    "twitter": {
+        "widget": "293011620320378880",
+        "url": "https://twitter.com/holman",
+        "title": "Tweets by @holman"
+    }
 }
 ***
 > it's important to play
