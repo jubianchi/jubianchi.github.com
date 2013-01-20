@@ -15,7 +15,7 @@ des bonnes pratiques à mettre en place pour bien les utiliser. Je vais donc ten
 à travers des exemples relativement simples. J'utiliserais _atoum_ pour les tests qui seront écrits pour une classe
 gérant une connexion à un serveur FTP.
 
-## Le pattern Adapter
+### Le pattern Adapter
 
 Avant de commencer, nous allons faire un petit rappel sur le design pattern *Adapter*. Voici un extrait de la définition
 donnée par Wikipedia :
@@ -28,7 +28,7 @@ donnée par Wikipedia :
 Cette définition nous dit que l'*Adapter* traduit des appels d'une interface vers une autre avec un minimum de code. En
 d'autres termes, elle n'est qu'un proxy.
 
-## L'intérêt des Adapters pour les tests unitaires
+### L'intérêt des Adapters pour les tests unitaires
 
 Lorsqu'on souhaite utiliser les tests unitaires pour valider notre code de la manière la plus approfondie possible, il
 est souvent nécessaires d'utiliser certaines bonnes pratiques qui permettent de mettre en place cette stratégie.
@@ -45,7 +45,7 @@ dans votre code : mon fichier existe ou n'existe pas, le serveur FTP est disponi
 Les *adapters* sont là pour nous permettre de tester ces cas très simplement et de manière très intuitive (en tout cas
 avec *atoum*)
 
-## Sans les adapters
+### Sans les adapters
 
 Comme je vous le disais, nous allons travailler sur un exemple présentant une classe qui permet de se connecter à un
 serveur FTP via les fonctions natives de PHP. Cet exemple est assez basique mais il a l'avantage de montrer rapidement
@@ -108,7 +108,7 @@ machine à moins de passer par des "hacks" que je ne détaillerais pas ici.
 Rappelez-vous bien une chose : nous sommes dans le cadre de tests unitaires et il serait très dommage de les coupler
 à l'environnement sur lequel ils sont exécutés, c'est donc là que les *adapters* vont nous aider.
 
-## Comment utiliser les Adapters
+### Comment utiliser les Adapters
 
 Les classes qui utiliseront l'*adapter* auront donc une dépendance supplémentaire vers ce proxy. Ne vous inquiétez pas,
 dans l'idéal, votre code sera fait de telle manière que l'injection de cette dépendance soit optionnelle. Voyons tout
@@ -204,9 +204,9 @@ Notre code y gagne en testabilité et donc en fiabilité si les tests adéquats 
 que nous sommes désormais dépendant de l'*adapter* et que cela peut nous jouer des tours dans certains cas
 (les performances peuvent par exemples être impactées).
 
-## Attentions aux pièges !
+### Attentions aux pièges !
 
-### Ne pas être dépendant du framework de test dans le code de production
+#### Ne pas être dépendant du framework de test dans le code de production
 
 L'utilisation des *adapters* apporte beaucoup de choses mais il faut les utiliser avec précaution. Si vous remontez au
 paragraphe précédent, vous verrez que le code de la classe ```Ftp``` est maintenant dépendant de l'*adapter* par défaut
@@ -307,7 +307,7 @@ dépendantes de cette abstraction :
 Comme vous pouvez le voir, la dépendance vers *atoum* a disparue de notre code de production ! Nous sommes maintenant
 dépendant de notre ```Adapterinterface``` et de l'implémentation par défaut que nous avons ajoutée.
 
-### Attention aux performances
+#### Attention aux performances
 
 Nous avons vu dans l'exemple précédent comment découpler facilement nos *adapters* du framework de test. Pour cela, nous
 avons mis en place une interface : désormais, toutes nos classes nécessitant un *adapter* peuvent se reposer sur cette
@@ -326,7 +326,7 @@ cliente et, à travers ses différentes implémentations, y répondre. Donc, en 
 dépendre d'un *Adapter* spécifique à chaque cas : dans notre exemple, la classe ```Ftp``` devrait dépendre d'un ```FtpAdapter```
 qui fournirait l'implémentation des méthodes nécessaires.
 
-### Attention aux abus
+#### Attention aux abus
 
 Comme toute technique utilisée en programmation, les *adapters* demandent à être utilisé avec précaution et surtout de
 manière judicieuse : il ne faut pas en abuser (par exemple, ne passez pas tous vos appels à ```sprintf``` par un ```Adapter``` : dans la plupart des cas (tous ?) , ce sera inutile).
