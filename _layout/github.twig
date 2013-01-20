@@ -1,7 +1,15 @@
 {% extends "single-column.twig" %}
 
 {% block content %}
-    {% for repository in page.repositories %}
-        <div class="github-widget span4" data-repo="{{ repository }}"></div>
-    {% endfor %}
+    <div class="row-fluid">
+        {% for repository in page.repositories %}
+            <div class="github-widget span6" data-repo="{{ repository }}"></div>
+
+            {% if loop.index is divisibleby(2) %}
+                </div>
+                <br/>
+                <div class="row-fluid">
+            {% endif %}
+        {% endfor %}
+    </div>
 {% endblock %}
