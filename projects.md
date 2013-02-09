@@ -7,7 +7,8 @@
         "jubianchi/php-ci-box",
         "jubianchi/dotfiles",
         "jubianchi/philip",
-        "atoum/atoum"
+        "atoum/atoum",
+        "jubianchi/autotoum"
     ]
 }
 ***
