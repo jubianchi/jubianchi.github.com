@@ -1,7 +1,7 @@
 {% extends "default.twig" %}
 
 {% block content %}
-    <div class="row-fluid navbar navbar-inverse">
+    <div class="row-fluid navbar">
         <div class="navbar-inner">
             <h3 class="pull-left">
                 {{ page.title }}
@@ -24,14 +24,5 @@
 
     <script async class="speakerdeck-embed" data-id="{{ page.deckid }}" data-ratio="{{ page.deckratio }}" src="js/speakerdeck.js"></script>
 
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_shortname = 'jubianchifr';
-
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
+    {% include 'disqus.html.twig' %}
 {% endblock %}

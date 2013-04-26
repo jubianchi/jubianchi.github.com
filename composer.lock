@@ -1,18 +1,22 @@
 {
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
     "hash": "a6edb91b3723ba8d625f067978be94d8",
     "packages": [
         {
             "name": "simonjodet/gumdrop",
-            "version": "1.3.2",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simonjodet/gumdrop",
-                "reference": "1.3.2"
+                "reference": "1.4.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/simonjodet/gumdrop/archive/1.3.2.zip",
-                "reference": "1.3.2",
+                "url": "https://api.github.com/repos/simonjodet/gumdrop/zipball/1.4.0",
+                "reference": "1.4.0",
                 "shasum": ""
             },
             "require": {
@@ -22,11 +26,10 @@
                 "symfony/console": "2.1.*"
             },
             "require-dev": {
-                "mockery/mockery": "dev-master",
                 "behat/behat": "2.4.*@stable",
+                "mockery/mockery": "dev-master",
                 "simonjodet/fstesthelper": "2.*"
             },
-            "time": "2013-01-10 17:18:35",
             "bin": [
                 "bin/gumdrop"
             ],
@@ -51,9 +54,10 @@
             "description": "Gumdrop is a static website generator converting Markdown files and using the Twig templating engine.",
             "keywords": [
                 "generator",
-                "twig",
-                "markdown"
-            ]
+                "markdown",
+                "twig"
+            ],
+            "time": "2013-02-10 16:34:53"
         },
         {
             "name": "simonjodet/markdown",
@@ -72,7 +76,6 @@
             "require": {
                 "php": ">=5.3"
             },
-            "time": "2012-01-15 19:36:37",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -107,7 +110,8 @@
             "homepage": "http://github.com/dflydev/dflydev-markdown",
             "keywords": [
                 "markdown"
-            ]
+            ],
+            "time": "2012-01-15 19:36:37"
         },
         {
             "name": "simonjodet/twig",
@@ -126,7 +130,6 @@
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2012-11-11 17:17:59",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -156,27 +159,27 @@
             "homepage": "http://twig.sensiolabs.org",
             "keywords": [
                 "templating"
-            ]
+            ],
+            "time": "2012-11-11 17:17:59"
         },
         {
             "name": "symfony/console",
-            "version": "v2.1.6",
+            "version": "v2.1.9",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Console",
-                "reference": "v2.1.6"
+                "url": "https://github.com/symfony/Console.git",
+                "reference": "v2.1.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Console/archive/v2.1.6.zip",
-                "reference": "v2.1.6",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/v2.1.9",
+                "reference": "v2.1.9",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2012-12-13 17:42:00",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -198,15 +201,24 @@
                 }
             ],
             "description": "Symfony Console Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2013-03-01 16:50:10"
         }
     ],
-    "packages-dev": null,
+    "packages-dev": [
+
+    ],
     "aliases": [
 
     ],
     "minimum-stability": "stable",
     "stability-flags": [
+
+    ],
+    "platform": [
+
+    ],
+    "platform-dev": [
 
     ]
 }

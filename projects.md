@@ -6,9 +6,9 @@
         "jubianchi/phpswitch",
         "jubianchi/php-ci-box",
         "jubianchi/dotfiles",
-        "jubianchi/philip",
         "atoum/atoum",
-        "jubianchi/autotoum"
+        "jubianchi/autotoum",
+        "jubianchi/atoum.js"
     ]
 }
 ***

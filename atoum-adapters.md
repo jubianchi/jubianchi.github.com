@@ -56,6 +56,7 @@ Comme je vous le disais, nous allons travailler sur un exemple présentant une c
 serveur FTP via les fonctions natives de PHP. Cet exemple est assez basique mais il a l'avantage de montrer rapidement
 les problèmes que l'on peut rencontrer :
 
+
     <?php
     namespace tests\unit {
         use
@@ -85,7 +86,6 @@ les problèmes que l'on peut rencontrer :
             //...
         }
     }
-
 
 
     $ bin/atoum -f tests/listing/Adapter/1.php
