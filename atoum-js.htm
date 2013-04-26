@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jubianchi.fr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julien Bianchi <contact@jubianchi.fr>">
+
+    <link href="styles/bootstrap.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/bootstrap-responsive.css" rel="stylesheet">
+    <link href="styles/github.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="wrap">
+    <div class="container">
+        <div class="masthead">
+    <ul class="nav nav-pills pull-right">
+        <li><a href="index.htm">Accueil</a></li>
+        <li><a href="projects.htm">Open Source</a></li>
+        <li><a href="https://github.com/jubianchi" target="_blank">Github</a></li>
+        <li><a href="https://twitter.com/jubianchi" target="_blank">Twitter</a></li>
+    </ul>
+    <h3 class="muted">jubianchi.fr</h3>
+</div>
+
+<hr>
+        <div class="row-fluid">
+            <div class="span9">    <article>
+        <div class="row-fluid navbar">
+            <div class="navbar-inner">
+                <h3 class="pull-left">
+                    atoum.js : un poisson d'avril, mais pas que…
+                    <small>April 27, 2013 00:27</small>
+                </h3>
+            </div>
+        </div>
+
+                    <ul class="tags">
+                                    <li><a href="#" class="label">javascript</a></li>
+                                    <li><a href="#" class="label">atoum</a></li>
+                                    <li><a href="#" class="label">test</a></li>
+                            </ul>
+        
+        <div class="row-fluid">
+            <p>Ce soir j'ai publié la version <code>0.0.4</code> d'<a href="https://github.com/jubianchi/atoum.js">atoum.js</a> sur la plateforme <a href="https://npmjs.org/package/atoum.js">NPM</a>. Cette version est donc la quatrième itération que je réalise sur le projet et la seconde officiellement taguée sur Github, je me suis donc dit qu'il était temps de clarifier un peu mes intentions et ma vision de ce projet.</p>
+
+<p>Comme vous le savez certainement, lorsque j'ai démarré atoum.js, je le faisais uniquement pour publier quelque chose qui, je pensais, allait faire réagir pour le premier avril. Je pensais provoquer un peu et éventuellement recueillir quelques critiques, car je n'étais pas certain de la viabilité de la philosophie d'<a href="http://atoum.org">atoum</a> dans des projets javascript.</p>
+
+<p>Au final, lorsque j'ai publié <a href="https://twitter.com/jubianchi/status/318676434287738880">la toute première version</a>, j'ai reçu un accueil tout à fait différent : quelques retweets et <a href="https://twitter.com/_Florian_R/status/319370634285174784">autres messages</a> <a href="https://twitter.com/ludofleury/status/319550795051855872">assez</a> <a href="https://twitter.com/ludofleury/status/319550995124326400">sympathiques</a> sur Twitter ou IRC. Le peu de retours s'explique certainement par ma visibilité très limitée (voire inexistante) dans la communauté Javascript.</p>
+
+<p>J'étais donc parti dans l'optique de réaliser un petit POC fonctionnel et assez complet pour paraître sérieux et de m'arrêter là. Et je vous avoue que j'ai été assez satisfait du résultat, car je n'avais jamais démarré un projet NodeJS from scratch et que je n'avais pratiqué le JS que dans le cadre de projet web. atoum.js fonctionnait très bien et était déjà capable de <a href="http://ascii.io/a/2660">se tester lui-même</a>.</p>
+
+<p>Cette satisfaction m'a donné envie d'aller un peu plus loin et aujourd'hui, je continue à travailler sur atoum.js car je trouve que c'est quelque chose de très intéressant. Actuellement, ce projet est un peu un terrain de jeu, un laboratoire, où je peux tester de nouvelles choses et m'amuser un peu.</p>
+
+<p>Tant que personne ne manifestera un intérêt réel pour atoum.js, le projet continuera à vivre sous cette forme. Si vous souhaitez l'utiliser, ne le fait que sur un <em>side project</em> car je ne peux rien vous garantir sur le fonctionnement de l'outil ni sur ma capacité à corriger les éventuels dysfonctionnements.</p>
+
+<p>Si vous souhaitez utiliser et faire évoluer atoum.js, faites-vous connaître, contribuez et nous ferons avancer atoum.js.</p>
+
+<p>Pour finir, voici quelques détails sur les fonctionnalités implémentées après un mois de travail :</p>
+
+<ul>
+<li>Interface en ligne de commande</li>
+<li>Un <a href="https://github.com/jubianchi/atoum.js/tree/master/lib/asserters">jeu d'assertions</a> presque complet</li>
+<li>Deux moteurs d'exécution :
+
+<ul>
+<li><code>inline</code> : tous les tests sont exécutés dans le processus principal</li>
+<li><code>concurrent</code> : les méthodes de test sont exécutées dans des processus isolés, lancés en parallèle</li>
+</ul></li>
+<li>Génération de rapport xUnit</li>
+<li>Génération d'un <a href="http://jubianchi.fr/atoum.js/">rapport de couverture de code</a> avec <code>covershot</code></li>
+<li><code>callback</code> pour tester les callback</li>
+<li>Un moteur de mock très basique (WIP)</li>
+</ul>
+
+        </div>
+    </article>
+
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jubianchifr';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script></div>
+            <div class="span3">
+                                                            <div class="sidebar-nav">
+                            <a class="twitter-timeline" href="https://twitter.com/search?q=%23atoum" data-widget-id="293009231949471744">Tweets about #atoum</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </div>
+                                                </div>
+        </div>
+    </div>
+    <div id="push"></div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="muted credit">
+            &copy; <a href="https://twitter.com/jubianchi">@jubianchi</a> 2012<br/>
+            This website is powered by <a href="http://simonjodet.github.com/gumdrop/" title="Gumdrop">Gumdrop</a> and <a href="http://pages.github.com/">Github pages</a>
+        </p>
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-alert.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-scrollspy.js"></script>
+<script src="js/bootstrap-tab.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-button.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+<script src="js/bootstrap-carousel.js"></script>
+<script src="js/bootstrap-typeahead.js"></script>
+<script src="js/jquery.github.js"></script>
+<script src="js/prettify/prettify.js"></script>
+
+</body>
+</html>
