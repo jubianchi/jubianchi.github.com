@@ -1,0 +1,209 @@
+.logo-github {
+    float: left;
+    margin-right: 2em;
+    background-color: #171516;
+    width: 96px;
+    height: 96px;
+    position: relative;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    -webkit-border-radius: 48px;
+    -moz-border-radius: 48px;
+    -ms-border-radius: 48px;
+    -o-border-radius: 48px;
+    border-radius: 48px;
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.logo-github div {
+    position: absolute;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    background-color: #ffffff;
+}
+.logo-github div[class*=-none] {
+    background-color: #171516;
+}
+.logo-github .head {
+    width: 60.160000000000004px;
+    height: 44.800000000000004px;
+    left: 17.92px;
+    top: 24px;
+}
+.logo-github .chin-left {
+    width: 40px;
+    height: 43.52px;
+    left: 17.28px;
+    top: 26.240000000000002px;
+}
+.logo-github .chin-right {
+    width: 40px;
+    height: 43.52px;
+    left: 38.72px;
+    top: 26.240000000000002px;
+}
+.logo-github .ear-one-left {
+    width: 22.400000000000002px;
+    height: 28.8px;
+    left: 21.44px;
+    top: 13.44px;
+}
+.logo-github .ear-one-right {
+    width: 14.72px;
+    height: 3.84px;
+    left: 22.080000000000002px;
+    top: 22.080000000000002px;
+    -webkit-transform: rotate(23deg);
+    -moz-transform: rotate(23deg);
+    -ms-transform: rotate(23deg);
+    -o-transform: rotate(23deg);
+    transform: rotate(23deg);
+}
+.logo-github .ear-one-none {
+    width: 32.64px;
+    height: 14.4px;
+    left: 22.400000000000002px;
+    top: 11.84px;
+}
+.logo-github .ear-two-left {
+    width: 14.72px;
+    height: 3.84px;
+    left: 59.2px;
+    top: 22.080000000000002px;
+    -webkit-transform: rotate(-23deg);
+    -moz-transform: rotate(-23deg);
+    -ms-transform: rotate(-23deg);
+    -o-transform: rotate(-23deg);
+    transform: rotate(-23deg);
+}
+.logo-github .ear-two-right {
+    width: 22.400000000000002px;
+    height: 28.8px;
+    left: 52.160000000000004px;
+    top: 13.44px;
+}
+.logo-github .ear-two-none {
+    width: 32.64px;
+    height: 14.4px;
+    left: 40.96px;
+    top: 11.84px;
+}
+.logo-github .body-left {
+    -webkit-border-radius: 100% 100% 0 0;
+    -moz-border-radius: 100% 100% 0 0;
+    -ms-border-radius: 100% 100% 0 0;
+    -o-border-radius: 100% 100% 0 0;
+    border-radius: 100% 100% 0 0;
+    width: 17.92px;
+    height: 28.16px;
+    left: 35.84px;
+    top: 66.88px;
+}
+.logo-github .body-left-none {
+    width: 2.56px;
+    height: 12.8px;
+    left: 33.28px;
+    top: 81.28px;
+    -webkit-border-radius: 1.28px 0 1.28px 0;
+    -moz-border-radius: 1.28px 0 1.28px 0;
+    -ms-border-radius: 1.28px 0 1.28px 0;
+    -o-border-radius: 1.28px 0 1.28px 0;
+    border-radius: 1.28px 0 1.28px 0;
+}
+.logo-github .body-right {
+    -webkit-border-radius: 100% 100% 0 0;
+    -moz-border-radius: 100% 100% 0 0;
+    -ms-border-radius: 100% 100% 0 0;
+    -o-border-radius: 100% 100% 0 0;
+    border-radius: 100% 100% 0 0;
+    width: 17.92px;
+    height: 28.16px;
+    left: 42.24px;
+    top: 66.88px;
+}
+.logo-github .body-right-none {
+    width: 2.56px;
+    height: 12.8px;
+    left: 60.160000000000004px;
+    top: 81.28px;
+    -webkit-border-radius: 0 1.28px 0 1.28px;
+    -moz-border-radius: 0 1.28px 0 1.28px;
+    -ms-border-radius: 0 1.28px 0 1.28px;
+    -o-border-radius: 0 1.28px 0 1.28px;
+    border-radius: 0 1.28px 0 1.28px;
+}
+.logo-github .body-bottom {
+    width: 28.16px;
+    height: 5.76px;
+    left: 33.92px;
+    top: 91.2px;
+}
+.logo-github .tail-end {
+    -webkit-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -o-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+    width: 5.12px;
+    height: 11.200000000000001px;
+    left: 16.96px;
+    top: 67.52px;
+}
+.logo-github .tail-body {
+    width: 24.96px;
+    height: 15.36px;
+    left: 20.16px;
+    top: 68.16px;
+}
+.logo-github .tail-body-spots {
+    border: 1.6px #171516 dotted;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 0 0 46.4px 41.6px;
+    -moz-border-radius: 0 0 46.4px 41.6px;
+    -ms-border-radius: 0 0 46.4px 41.6px;
+    -o-border-radius: 0 0 46.4px 41.6px;
+    border-radius: 0 0 46.4px 41.6px;
+    width: 32px;
+    height: 18.88px;
+    left: 16.64px;
+    top: 60.800000000000004px;
+}
+.logo-github .tail-end-none {
+    -webkit-transform: rotate(-24deg);
+    -moz-transform: rotate(-24deg);
+    -ms-transform: rotate(-24deg);
+    -o-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+    width: 5.44px;
+    height: 15.36px;
+    left: 14.72px;
+    top: 69.76px;
+}
+.logo-github .tail-body-none {
+    width: 21.44px;
+    height: 15.36px;
+    left: 21.44px;
+    top: 62.08px;
+}
+.logo-github .tail-tip {
+    -webkit-transform: rotate(12deg);
+    -moz-transform: rotate(12deg);
+    -ms-transform: rotate(12deg);
+    -o-transform: rotate(12deg);
+    transform: rotate(12deg);
+    width: 6.4px;
+    height: 2.88px;
+    left: 13.120000000000001px;
+    top: 67.84px;
+}

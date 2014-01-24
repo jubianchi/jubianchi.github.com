@@ -1,0 +1,7 @@
+a, a:visited {
+    text-decoration: none;
+}
+
+header ul, footer, #avatar, .fake {
+    display: none;
+}
