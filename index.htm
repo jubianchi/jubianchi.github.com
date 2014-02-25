@@ -6,86 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Julien Bianchi <contact@jubianchi.fr>">
 
-    <link href="styles/bootstrap.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
     <link href="styles/style.css" rel="stylesheet">
-    <link href="styles/bootstrap-responsive.css" rel="stylesheet">
-    <link href="styles/github.css" rel="stylesheet">
 </head>
 
 <body>
 
-<div id="wrap">
-    <div class="container">
-        <div class="masthead">
-    <ul class="nav nav-pills pull-right">
-        <li><a href="index.htm">Accueil</a></li>
-        <li><a href="projects.htm">Open Source</a></li>
-        <li><a href="https://github.com/jubianchi" target="_blank">Github</a></li>
-        <li><a href="https://twitter.com/jubianchi" target="_blank">Twitter</a></li>
+<header>
+    <a href="/index.htm"><img id="avatar" src="images/nyantocat.gif"/></a>
+
+    <h1>Julien Bianchi <small><em>aka jubianchi</em></small></h1>
+
+    <ul>
+        <li><a href="mailto:contact@jubianchi.fr" title="email">email</a></li>
+        <li><a href="https://twitter.com/jubianchi" title="twitter">twitter</a></li>
+        <li><a href="https://github.com/jubianchi" title="github">github</a></li>
+        <li><a href="https://speakerdeck.com/jubianchi" title="speakerdeck">speakerdeck</a></li>
+        <li><a href="https://coderwall.com/jubianchi" title="coderwall">coderwall</a></li>
+        <li><a href="http://osrc.dfm.io/jubianchi" title="Open Source Report Card">OSRC</a></li>
     </ul>
-    <h3 class="muted">jubianchi.fr</h3>
-</div>
-
-<hr>
-        <div class="row-fluid">
-            <div class="span9">    
+</header>
+    
 
 
-                        <article>
-                <div class="row-fluid navbar">
-                    <div class="navbar-inner">
-                        <h4 class="pull-left">
-                                                            <a href="atoum-adapters.htm">Tests unitaires et adapters avec atoum</a>
-                                                        <small>December 4, 2012 12:16</small>
-                        </h4>
-                    </div>
-                </div>
+                        <section>
+                <time datetime="2013-04-27 00:27:00">
+                    <strong>Apr</strong>
+                    <span>27</span>
+                    <em>2013</em>
+                </time>
 
-                <div class="row-fluid">
-                                            <p>Nous avons récemment eu quelques discussions sur les <em>adapters</em> sur le salon IRC de atoum (pour rappel, celui-ci se trouve sur les serveurs Freenode, canal ##atoum). Plusieurs questions ont été traitées : nous avons parlé de l'utilité de ces <em>adapters</em>, des possibilités qu'ils offrent dans le cadre de tests unitaires mais également des inconvénients et des bonnes pratiques à mettre en place pour bien les utiliser. Je vais donc tenter ici d'eclaircir ces quelques points à travers des exemples relativement simples. J'utiliserais <a href="https://github.com/atoum/atoum" title="atoum">atoum</a> pour les tests qui seront écrits pour une classe gérant une connexion à un serveur FTP.</p>
-                                    </div>
+                <div class="left">
+                    <h1>
+                                                    <a href="atoum-js.htm">atoum.js : un poisson d'avril, mais pas que…</a>
+                                            </h1>
 
-                <hr/>
-
-                                    <ul class="tags">
-                                                    <li><span class="label">php</span></li>
-                                                    <li><span class="label">atoum</span></li>
-                                                    <li><span class="label">test</span></li>
-                                            </ul>
-                            </article>
-                                <article>
-                <div class="row-fluid navbar">
-                    <div class="navbar-inner">
-                        <h4 class="pull-left">
-                                                            <a href="atoum-js.htm">atoum.js : un poisson d'avril, mais pas que…</a>
-                                                        <small>April 27, 2013 00:27</small>
-                        </h4>
-                    </div>
-                </div>
-
-                <div class="row-fluid">
                                             <p>Ce soir j'ai publié la version <code>0.0.4</code> d'<a href="https://github.com/jubianchi/atoum.js">atoum.js</a> sur la plateforme <a href="https://npmjs.org/package/atoum.js">NPM</a>. Cette version est donc la quatrième itération que je réalise sur le projet et la seconde officiellement taguée sur Github, je me suis donc dit qu'il était temps de clarifier un peu mes intentions et ma vision de ce projet.</p>
                                     </div>
+            </section>
 
-                <hr/>
+                            <ul class="list tags">
+                                            <li><span class="label">javascript</span></li>
+                                            <li><span class="label">atoum</span></li>
+                                            <li><span class="label">test</span></li>
+                                    </ul>
+            
+            <hr/>
+                                <section>
+                <time datetime="2012-12-24 12:00:00">
+                    <strong>Dec</strong>
+                    <span>24</span>
+                    <em>2012</em>
+                </time>
 
-                                    <ul class="tags">
-                                                    <li><span class="label">javascript</span></li>
-                                                    <li><span class="label">atoum</span></li>
-                                                    <li><span class="label">test</span></li>
-                                            </ul>
-                            </article>
-                                <article>
-                <div class="row-fluid navbar">
-                    <div class="navbar-inner">
-                        <h4 class="pull-left">
-                                                            <a href="build-fun-build-silly-build-things.htm">Build fun, build silly, build things</a>
-                                                        <small>November 21, 2012 11:15</small>
-                        </h4>
-                    </div>
-                </div>
+                <div class="left">
+                    <h1>
+                                                    <a href="deck-vagrant.htm">Vagrant</a>
+                                            </h1>
 
-                <div class="row-fluid">
+                                            <p><p>Vagrant est une interface qui permet de (re)créer et de configurer des environnements de développements virtualisés, isolés, réutilisables et jetables.</p>
+</p>
+                                    </div>
+            </section>
+
+                            <ul class="list tags">
+                                            <li><span class="label">deck</span></li>
+                                            <li><span class="label">vagrant</span></li>
+                                            <li><span class="label">virtualbox</span></li>
+                                            <li><span class="label">fr</span></li>
+                                    </ul>
+            
+            <hr/>
+                                <section>
+                <time datetime="2012-12-04 12:16:00">
+                    <strong>Dec</strong>
+                    <span>04</span>
+                    <em>2012</em>
+                </time>
+
+                <div class="left">
+                    <h1>
+                                                    <a href="atoum-adapters.htm">Tests unitaires et adapters avec atoum</a>
+                                            </h1>
+
+                                            <p>Nous avons récemment eu quelques discussions sur les <em>adapters</em> sur le salon IRC de atoum (pour rappel, celui-ci se trouve sur les serveurs Freenode, canal ##atoum). Plusieurs questions ont été traitées : nous avons parlé de l'utilité de ces <em>adapters</em>, des possibilités qu'ils offrent dans le cadre de tests unitaires mais également des inconvénients et des bonnes pratiques à mettre en place pour bien les utiliser. Je vais donc tenter ici d'eclaircir ces quelques points à travers des exemples relativement simples. J'utiliserais <a href="https://github.com/atoum/atoum" title="atoum">atoum</a> pour les tests qui seront écrits pour une classe gérant une connexion à un serveur FTP.</p>
+                                    </div>
+            </section>
+
+                            <ul class="list tags">
+                                            <li><span class="label">php</span></li>
+                                            <li><span class="label">atoum</span></li>
+                                            <li><span class="label">test</span></li>
+                                    </ul>
+            
+            <hr/>
+                                <section>
+                <time datetime="2012-11-21 11:15:00">
+                    <strong>Nov</strong>
+                    <span>21</span>
+                    <em>2012</em>
+                </time>
+
+                <div class="left">
+                    <h1>
+                                                    <a href="build-fun-build-silly-build-things.htm">Build fun, build silly, build things</a>
+                                            </h1>
+
                                             <p><blockquote>
   <p>it's important to play</p>
   
@@ -103,126 +129,80 @@
 </blockquote>
 </p>
                                     </div>
+            </section>
 
-                <hr/>
+                            <ul class="list tags">
+                                            <li><span class="label">quote</span></li>
+                                            <li><span class="label">deck</span></li>
+                                            <li><span class="label">open source</span></li>
+                                    </ul>
+            
+            <hr/>
+                                <section>
+                <time datetime="2012-08-21 10:44:00">
+                    <strong>Aug</strong>
+                    <span>21</span>
+                    <em>2012</em>
+                </time>
 
-                                    <ul class="tags">
-                                                    <li><span class="label">quote</span></li>
-                                                    <li><span class="label">open source</span></li>
-                                            </ul>
-                            </article>
-                                <article>
-                <div class="row-fluid navbar">
-                    <div class="navbar-inner">
-                        <h4 class="pull-left">
-                                                            <a href="deck-vagrant.htm">Vagrant</a>
-                                                        <small>December 24, 2012 12:00</small>
-                        </h4>
-                    </div>
-                </div>
+                <div class="left">
+                    <h1>
+                                                    Priority...
+                                            </h1>
 
-                <div class="row-fluid">
-                                            <p><p>Vagrant est une interface qui permet de (re)créer et de configurer des environnements de développements virtualisés, isolés, réutilisables et jetables.</p>
-</p>
-                                    </div>
-
-                <hr/>
-
-                                    <ul class="tags">
-                                                    <li><span class="label">deck</span></li>
-                                                    <li><span class="label">vagrant</span></li>
-                                                    <li><span class="label">virtualbox</span></li>
-                                                    <li><span class="label">fr</span></li>
-                                            </ul>
-                            </article>
-                                <article>
-                <div class="row-fluid navbar">
-                    <div class="navbar-inner">
-                        <h4 class="pull-left">
-                                                            Don't Reinvent The Wheel
-                                                        <small>November 10, 2011 21:27</small>
-                        </h4>
-                    </div>
-                </div>
-
-                <div class="row-fluid">
-                                            <p><blockquote>
-  <p>So, no, you shouldn't reinvent the wheel. Unless you plan on learning more about wheels, that is.</p>
-  
-  <p>— <a href="https://twitter.com/codinghorror">Jeff Atwood</a> - <a href="http://www.codinghorror.com/blog/2009/02/dont-reinvent-the-wheel-unless-you-plan-on-learning-more-about-wheels.html">Coding Horror</a></p>
-</blockquote>
-</p>
-                                    </div>
-
-                <hr/>
-
-                                    <ul class="tags">
-                                                    <li><span class="label">quote</span></li>
-                                                    <li><span class="label">best practice</span></li>
-                                            </ul>
-                            </article>
-                                <article>
-                <div class="row-fluid navbar">
-                    <div class="navbar-inner">
-                        <h4 class="pull-left">
-                                                            <a href="how-to-test-your-symfony2-project-with-behat-on-travisci.htm">How to test your Symfony2 project with Behat on TravisCI</a>
-                                                        <small>July 3, 2012 13:58</small>
-                        </h4>
-                    </div>
-                </div>
-
-                <div class="row-fluid">
-                                            <p>As you may know <a title="Travis CI" href="http://travis-ci.org">Travis CI</a> is a continuous integration plateform for open source projects hosted on <a title="Github" href="http://github.com">Github</a>. In this post I'll try to show you a configuration which will help you run Behat tests on your Symfony 2 application.</p>
-                                    </div>
-
-                <hr/>
-
-                                    <ul class="tags">
-                                                    <li><span class="label">CI</span></li>
-                                                    <li><span class="label">travis</span></li>
-                                                    <li><span class="label">symfony</span></li>
-                                                    <li><span class="label">behat</span></li>
-                                                    <li><span class="label">BDD</span></li>
-                                            </ul>
-                            </article>
-                                            <article>
-                <div class="row-fluid navbar">
-                    <div class="navbar-inner">
-                        <h4 class="pull-left">
-                                                            Priority...
-                                                        <small>August 21, 2012 10:44</small>
-                        </h4>
-                    </div>
-                </div>
-
-                <div class="row-fluid">
                                             <p><blockquote>
   <p>A priority is observed, not manufactured or assigned. Otherwise, it's necessarily not a priority</p>
   
-  <p>Making something a BIG RED TOP TOP BIG HIGHEST #1 PRIORITY changes nothing but text styling. If it were really important, it'd already be done. Period.</p>
+  <p>Making something a <strong>BIG RED TOP TOP BIG HIGHEST #1 PRIORITY</strong> changes nothing but text styling. If it were really important, it'd already be done. Period.</p>
   
   <p>— <a href="https://twitter.com/hotdogsladies">Merlin Mann</a> - <a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></p>
 </blockquote>
 </p>
                                     </div>
+            </section>
 
-                <hr/>
+                            <ul class="list tags">
+                                            <li><span class="label">quote</span></li>
+                                    </ul>
+            
+            <hr/>
+                                <section>
+                <time datetime="2012-07-03 13:58:00">
+                    <strong>Jul</strong>
+                    <span>03</span>
+                    <em>2012</em>
+                </time>
 
-                                    <ul class="tags">
-                                                    <li><span class="label">quote</span></li>
-                                            </ul>
-                            </article>
-                                            <article>
-                <div class="row-fluid navbar">
-                    <div class="navbar-inner">
-                        <h4 class="pull-left">
-                                                            You must know it works
-                                                        <small>March 15, 2012 12:08</small>
-                        </h4>
-                    </div>
-                </div>
+                <div class="left">
+                    <h1>
+                                                    <a href="how-to-test-your-symfony2-project-with-behat-on-travisci.htm">How to test your Symfony2 project with Behat on TravisCI</a>
+                                            </h1>
 
-                <div class="row-fluid">
+                                            <p>As you may know <a title="Travis CI" href="http://travis-ci.org">Travis CI</a> is a continuous integration plateform for open source projects hosted on <a title="Github" href="http://github.com">Github</a>. In this post I'll try to show you a configuration which will help you run Behat tests on your Symfony 2 application.</p>
+                                    </div>
+            </section>
+
+                            <ul class="list tags">
+                                            <li><span class="label">CI</span></li>
+                                            <li><span class="label">travis</span></li>
+                                            <li><span class="label">symfony</span></li>
+                                            <li><span class="label">behat</span></li>
+                                            <li><span class="label">BDD</span></li>
+                                    </ul>
+            
+            <hr/>
+                                <section>
+                <time datetime="2012-03-15 12:08:00">
+                    <strong>Mar</strong>
+                    <span>15</span>
+                    <em>2012</em>
+                </time>
+
+                <div class="left">
+                    <h1>
+                                                    You must know it works
+                                            </h1>
+
                                             <p><blockquote>
   <p>Every time QA, or worse a <strong>user</strong>, finds a problem, you should be surprised, chagrined, and determined to prevent it from happening again.</p>
   
@@ -234,51 +214,48 @@
 </blockquote>
 </p>
                                     </div>
+            </section>
 
-                <hr/>
+                            <ul class="list tags">
+                                            <li><span class="label">quote</span></li>
+                                            <li><span class="label">test</span></li>
+                                            <li><span class="label">best practice</span></li>
+                                    </ul>
+            
+            <hr/>
+                                <section>
+                <time datetime="2011-11-10 21:27:00">
+                    <strong>Nov</strong>
+                    <span>10</span>
+                    <em>2011</em>
+                </time>
 
-                                    <ul class="tags">
-                                                    <li><span class="label">quote</span></li>
-                                                    <li><span class="label">test</span></li>
-                                                    <li><span class="label">best practice</span></li>
-                                            </ul>
-                            </article>
-            </div>
-            <div class="span3">
-                                                            <div class="sidebar-nav">
-                            <a class="twitter-timeline" href="https://twitter.com/jubianchi/favorites" data-widget-id="292992273858306048">Favorite Tweets by @jubianchi</a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                        </div>
-                                                </div>
-        </div>
-    </div>
-    <div id="push"></div>
-</div>
+                <div class="left">
+                    <h1>
+                                                    Don't Reinvent The Wheel
+                                            </h1>
 
-<div id="footer">
-    <div class="container">
-        <p class="muted credit">
-            &copy; <a href="https://twitter.com/jubianchi">@jubianchi</a> 2012<br/>
-            This website is powered by <a href="http://simonjodet.github.com/gumdrop/" title="Gumdrop">Gumdrop</a> and <a href="http://pages.github.com/">Github pages</a>
-        </p>
-    </div>
-</div>
+                                            <p><blockquote>
+  <p>So, no, you shouldn't reinvent the wheel. Unless you plan on learning more about wheels, that is.</p>
+  
+  <p>— <a href="https://twitter.com/codinghorror">Jeff Atwood</a> - <a href="http://www.codinghorror.com/blog/2009/02/dont-reinvent-the-wheel-unless-you-plan-on-learning-more-about-wheels.html">Coding Horror</a></p>
+</blockquote>
+</p>
+                                    </div>
+            </section>
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap-transition.js"></script>
-<script src="js/bootstrap-alert.js"></script>
-<script src="js/bootstrap-modal.js"></script>
-<script src="js/bootstrap-dropdown.js"></script>
-<script src="js/bootstrap-scrollspy.js"></script>
-<script src="js/bootstrap-tab.js"></script>
-<script src="js/bootstrap-tooltip.js"></script>
-<script src="js/bootstrap-popover.js"></script>
-<script src="js/bootstrap-button.js"></script>
-<script src="js/bootstrap-collapse.js"></script>
-<script src="js/bootstrap-carousel.js"></script>
-<script src="js/bootstrap-typeahead.js"></script>
-<script src="js/jquery.github.js"></script>
-<script src="js/prettify/prettify.js"></script>
+                            <ul class="list tags">
+                                            <li><span class="label">quote</span></li>
+                                            <li><span class="label">best practice</span></li>
+                                    </ul>
+            
+            <hr/>
+                        
+<footer>
+    <p>Github CSS logo authored by <a href="http://www.bchanx.com/" title="Brian Chan">Brian Chan</a> : <a href="https://github.com/bchanx/logos-in-pure-css">https://github.com/bchanx/logos-in-pure-css</a></p>
+    <p>Politician designed by <a href="http://thenounproject.com/moshiah/" title="Benjamin Harlow">Benjamin Harlow</a> from the <a href="http://www.thenounproject.com/">Noun Project</a></p>
+    <p>Juggle designed by <a href="http://thenounproject.com/Gatada" title="Johan H. W. Basberg">Johan H. W. Basberg</a> from the <a href="http://www.thenounproject.com/">Noun Project</a></p>
+</footer>
 
 </body>
 </html>
