@@ -6,7 +6,7 @@
     "layout": "deck.twig",
     "deckid": "f45b665015820130009522000a1e9b2a",
     "deckratio": "1.77777777777778",
-    "tags": ["quote", "open source"],
+    "tags": ["quote", "deck", "open source"],
     "twitter": {
         "widget": "293011620320378880",
         "url": "https://twitter.com/holman",
@@ -14,6 +14,7 @@
     }
 }
 ***
+
 > it's important to play
 
 > stretch your mind

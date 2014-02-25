@@ -1,28 +1,27 @@
 {% extends "default.twig" %}
 
 {% block content %}
-    <article>
-        <div class="row-fluid navbar">
-            <div class="navbar-inner">
-                <h3 class="pull-left">
-                    {{ page.title }}
-                    <small>{{ page.date|date(DATE_ATOM) }}</small>
-                </h3>
-            </div>
-        </div>
+    <section>
+        <time datetime="{{ page.date }}">
+            <strong>{{ page.date|date('M') }}</strong>
+            <span>{{ page.date|date('d') }}</span>
+            <em>{{ page.date|date('Y') }}</em>
+        </time>
 
-        {% if page.tags %}
-            <ul class="tags">
-                {% for tag in page.tags %}
-                    <li><a href="#" class="label">{{ tag }}</a></li>
-                {%  endfor %}
-            </ul>
-        {% endif %}
+        <div class="left">
+            <h1>{{ page.title }}</h1>
 
-        <div class="row-fluid">
             {{ content }}
         </div>
-    </article>
+    </section>
+
+    {% if page.tags %}
+        <ul class="list tags">
+            {% for tag in page.tags %}
+                <li><a href="#" class="label">{{ tag }}</a></li>
+            {%  endfor %}
+        </ul>
+    {% endif %}
 
     {% include 'disqus.html.twig' %}
 {% endblock %}

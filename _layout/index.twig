@@ -3,40 +3,41 @@
 {% block content %}
     {{ content }}
 
-    {% for page in pages %}
+    {% for page in pages|reverse %}
         {% if page.type %}
-            <article>
-                <div class="row-fluid navbar">
-                    <div class="navbar-inner">
-                        <h4 class="pull-left">
-                            {% if page.type != 'quote' %}
-                                <a href="{{ page.location }}">{{ page.title }}</a>
-                            {% else %}
-                                {{ page.title }}
-                            {% endif %}
-                            <small>{{ page.date|date(DATE_ATOM) }}</small>
-                        </h4>
-                    </div>
-                </div>
+            <section>
+                <time datetime="{{ page.date }}">
+                    <strong>{{ page.date|date('M') }}</strong>
+                    <span>{{ page.date|date('d') }}</span>
+                    <em>{{ page.date|date('Y') }}</em>
+                </time>
 
-                <div class="row-fluid">
+                <div class="left">
+                    <h1>
+                        {% if page.type != 'quote' %}
+                            <a href="{{ page.location }}">{{ page.title }}</a>
+                        {% else %}
+                            {{ page.title }}
+                        {% endif %}
+                    </h1>
+
                     {% if page.type == 'quote' or page.type == 'deck' %}
                         <p>{{ page.html }}</p>
                     {% else %}
                         <p>{{ page.summary }}</p>
                     {% endif %}
                 </div>
+            </section>
 
-                <hr/>
+            {% if page.tags %}
+                <ul class="list tags">
+                    {% for tag in page.tags %}
+                        <li><span class="label">{{ tag }}</span></li>
+                    {%  endfor %}
+                </ul>
+            {% endif %}
 
-                {% if page.tags %}
-                    <ul class="tags">
-                        {% for tag in page.tags %}
-                            <li><span class="label">{{ tag }}</span></li>
-                        {%  endfor %}
-                    </ul>
-                {% endif %}
-            </article>
+            <hr/>
         {% endif %}
     {% endfor %}
 {% endblock %}

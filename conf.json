@@ -2,8 +2,7 @@
     "blacklist": [
         "Vagrantfile",
         "composer.json",
-        "composer.lock",
-        "composer.phar"
+        "composer.lock"
     ],
     "timezone": "Europe/Paris",
     "destination": "_site"
