@@ -30,40 +30,46 @@
     </ul>
 </header>
     <section>
-        <time datetime="2012-11-21 11:15:00">
-            <strong>Nov</strong>
-            <span>21</span>
-            <em>2012</em>
+        <time datetime="2014-02-26 1:00:00">
+            <strong>Feb</strong>
+            <span>26</span>
+            <em>2014</em>
         </time>
 
         <div class="left">
-            <h1>Build fun, build silly, build things</h1>
+            <h1>atoum interactive shell</h1>
 
-            <blockquote>
-  <p>it's important to play</p>
-  
-  <p>stretch your mind</p>
-  
-  <p>also the shit's just funny</p>
-  
-  <p>build fun</p>
-  
-  <p>build silly</p>
-  
-  <p>build things</p>
-  
-  <p>— <a href="https://twitter.com/holman">Zach Holman</a> - <a href="http://zachholman.com/talk/open-source-misfeasance">Open Source Misfeasance</a></p>
-</blockquote>
+            <p>Comme vous le savez peut-être, atoum est un framework de test unitaire simple et intuitif pour PHP 5.3+. Ce que vous ne savez peut-être pas,
+c'est qu'il propose également une fondation très solide pour construire tout un tas d'outils. Partant de ce constat, je me suis demandé
+s'il était possible de mettre cette fondation à l'épreuve dans un contexte un peu différent de celui des tests unitaires : pourquoi ne
+pas essayer de faire un shell interactif en utilisant ces briques.</p>
 
+<p>Mais pourquoi encore un REPL en PHP. Pour plusieurs raisons :</p>
 
-            <script async class="speakerdeck-embed" data-id="f45b665015820130009522000a1e9b2a" data-ratio="1.77777777777778" src="js/speakerdeck.js"></script>
+<ul>
+<li>Permettre de tester les fondations d'atoum dans un contexte inhabituel pour ces dernières</li>
+<li>Pour aider au support : le shell nous permet de tester rapidement des bouts de code atoum avant de les donner aux utilisateurs</li>
+<li>Fournir un outil simple pour tester rapidement atoum</li>
+<li>Me confronter aux problématiques liées à l'écriture d'un shell/REPL</li>
+<li>M'amuser un peu</li>
+</ul>
+
+<p>Comme vous pouvez le voir dans les tags, le <em>WIP</em> indique que je travaille encore sur ce projet. Il n'est pas encore assez propre pour être
+ouvert mais je pense que cela ne va pas trop durer. <em>Stay tuned</em> comme ils disent.</p>
+
+<p>Voici une démonstration rapide de ce qu'il est possible de réaliser en quelques heures de travail à l'aide des composants fournis par
+atoum :</p>
+
         </div>
     </section>
 
+    <script type="text/javascript" src="https://asciinema.org/a/7758.js" id="asciicast-7758" async></script>
+
             <ul class="list tags">
-                            <li><a href="#" class="label">quote</a></li>
-                            <li><a href="#" class="label">deck</a></li>
-                            <li><a href="#" class="label">open source</a></li>
+                            <li><a href="#" class="label">wip</a></li>
+                            <li><a href="#" class="label">poc</a></li>
+                            <li><a href="#" class="label">atoum</a></li>
+                            <li><a href="#" class="label">shell</a></li>
                     </ul>
     
     <section id="disqus_thread"></section>
