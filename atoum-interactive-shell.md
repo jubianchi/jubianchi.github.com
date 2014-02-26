@@ -28,7 +28,14 @@ Mais pourquoi encore un REPL en PHP. Pour plusieurs raisons :
 * M'amuser un peu
 
 Comme vous pouvez le voir dans les tags, le *WIP* indique que je travaille encore sur ce projet. Il n'est pas encore assez propre pour être
-ouvert mais je pense que cela ne va pas trop durer. *Stay tuned* comme ils disent.
+ouvert mais je pense que cela ne va pas trop durer. *Stay tuned* comme ils disent. Au menu :
+
+* Support complet de readline (completion, historique, raccourcis clavier)
+* Exécution de code PHP natif
+* Exécution d'assertions atoum
+* Lancement de tests atoum
+* Divers choses inutiles mais indispensables
+* Et plein d'autres surprises
 
 Voici une démonstration rapide de ce qu'il est possible de réaliser en quelques heures de travail à l'aide des composants fournis par
 atoum :
