@@ -10,6 +10,13 @@
 
     <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
     <link href="styles/style.css" rel="stylesheet">
+
+    <link href="js/prismjs/prism.css" rel="stylesheet" />
+    <link href="js/prismjs/prism-okaidia.css" rel="stylesheet" />
+    <link href="js/prismjs/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+    <link href="styles/github.css" rel="stylesheet" />
+
+    <script src="js/jquery.js"></script>
 </head>
 
 <body>
@@ -19,6 +26,15 @@
 {% block content %}{% endblock %}
 
 {% include 'footer.html.twig' %}
+
+<script src="js/prismjs/prism.js"></script>
+<script src="js/prismjs/components/prism-bash.js"></script>
+<script src="js/prismjs/components/prism-php.js"></script>
+<script src="js/prismjs/components/prism-php-extras.js"></script>
+<script src="js/prismjs/components/prism-css.js"></script>
+<script src="js/prismjs/plugins/line-numbers/prism-line-numbers.js"></script>
+<script src="js/jquery.github.js"></script>
+<script>$(function() { $("[data-repo]").github(); });</script>
 
 </body>
 </html>

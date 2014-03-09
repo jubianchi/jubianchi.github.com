@@ -1,0 +1,12 @@
+{% if page.draft %}
+    <time>
+        <strong>&nbsp;</strong>
+        <span>Draft</span>
+    </time>
+{% else %}
+    <time datetime="{{ page.date }}">
+        <strong>{{ page.date|date('M') }}</strong>
+        <span>{{ page.date|date('d') }}</span>
+        <em>{{ page.date|date('Y') }}</em>
+    </time>
+{% endif %}

@@ -56,49 +56,48 @@ Comme je vous le disais, nous allons travailler sur un exemple présentant une c
 serveur FTP via les fonctions natives de PHP. Cet exemple est assez basique mais il a l'avantage de montrer rapidement
 les problèmes que l'on peut rencontrer :
 
+<pre class="line-numbers"><code class="language-php">namespace tests\unit {
+    use
+        mageekguy\atoum,
+        Ftp as TestedClass
+    ;
 
-    <?php
-    namespace tests\unit {
-        use
-            mageekguy\atoum,
-            Ftp as TestedClass
-        ;
-
-        class Ftp extends atoum\test {
-            public function test__construct() {
-                $this
-                    ->object(new TestedClass())->isInstanceOf('\\Ftp')
-                ;
-            }
+    class Ftp extends atoum\test {
+        public function test__construct() {
+            $this
+                -&gt;object(new TestedClass())-&gt;isInstanceOf('\\Ftp')
+            ;
         }
     }
+}
 
-    namespace {
-        class Ftp
+namespace {
+    class Ftp
+    {
+        public function __construct()
         {
-            public function __construct()
-            {
-                if (false === extension_loaded('ftp')) {
-                    throw new \RuntimeException('FTP extension is not loaded');
-                }
+            if (false === extension_loaded('ftp')) {
+                throw new \RuntimeException('FTP extension is not loaded');
             }
-
-            //...
         }
+
+        //...
     }
+}</code></pre>
 
+<pre class="line-numbers"><code class="language-bash">#!/bin/bash
 
-    $ bin/atoum -f tests/listing/Adapter/1.php
+bin/atoum -f 'tests/listing/Adapter/1.php'
 
-    > tests\unit\Ftp...
-    [S___________________________________________________________][1/1]
-    => Test duration: 0.00 second.
-    => Memory usage: 0.50 Mb.
-    > Total test duration: 0.00 second.
-    > Total test memory usage: 0.50 Mb.
-    > Code coverage value: 66.67%
-    => Class Ftp: 66.67%
-    ==> Ftp::__construct(): 66.67%
+&gt; tests\unit\Ftp...
+[S___________________________________________________________][1/1]
+=&gt; Test duration: 0.00 second.
+=&gt; Memory usage: 0.50 Mb.
+&gt; Total test duration: 0.00 second.
+&gt; Total test memory usage: 0.50 Mb.
+&gt; Code coverage value: 66.67%
+=&gt; Class Ftp: 66.67%
+==&gt; Ftp::__construct(): 66.67%</code></pre>
 
 Nous avons donc notre test unitaire qui va vérifier que l'instanciation de notre classe ```Ftp``` se passe bien.
 Pour que ce test passe, il faudra obligatoirement que la machine qui l'exécute ait l'extension PHP FTP installée et
@@ -119,42 +118,41 @@ Les classes qui utiliseront l'*adapter* auront donc une dépendance supplémenta
 dans l'idéal, votre code sera fait de telle manière que l'injection de cette dépendance soit optionnelle. Voyons tout
 de suite un extrait de code qui illustre mes propos :
 
-    <?php
-    use
-        mageekguy\atoum
-    ;
+<pre class="line-numbers"><code class="language-php">use
+    mageekguy\atoum
+;
 
-    class Ftp
+class Ftp
+{
+    private $adapter;
+
+    public function __construct(atoum\adapter $adapter = null)
     {
-        private $adapter;
+        $this->setAdapter($adapter);
 
-        public function __construct(atoum\adapter $adapter = null)
-        {
-            $this->setAdapter($adapter);
-
-            if (false === $this->getAdapter()->extension_loaded('ftp')) {
-                throw new \RuntimeException('FTP extension is not loaded');
-            }
+        if (false === $this->getAdapter()-&gt;extension_loaded('ftp')) {
+            throw new \RuntimeException('FTP extension is not loaded');
         }
-
-        public function setAdapter(atoum\adapter $adapter = null)
-        {
-            $this->adapter = $adapter;
-
-            return $this;
-        }
-
-        public function getAdapter()
-        {
-            if (null === $this->adapter) {
-                $this->adapter = new atoum\adapter();
-            }
-
-            return $this->adapter;
-        }
-
-        //...
     }
+
+    public function setAdapter(atoum\adapter $adapter = null)
+    {
+        $this->adapter = $adapter;
+
+        return $this;
+    }
+
+    public function getAdapter()
+    {
+        if (null === $this-&gt;adapter) {
+            $this->adapter = new atoum\adapter();
+        }
+
+        return $this-&gt;adapter;
+    }
+
+    //...
+}</code></pre>
 
 Comme vous pouvez le constater à travers cet extrait de code, l'injection de l'*adapter* est optionnelle et dans le cas
 où celui-ci n'est pas fourni, un *adapter* par défaut sera créé et utilisé au sein de la classe ```Ftp```.
@@ -165,40 +163,40 @@ Vous avez certainement noté que le constructeur de notre classe ```Ftp``` a ét
 ```extension_loaded``` passe désormais par notre *adapter* et cela va nous permettre d'étoffer notre test unitaire et
 d'y ajouter quelques cas supplémentaires :
 
-    <?php
-    class Ftp extends atoum\test {
-        public function test__construct() {
-            $this
-                ->if($adapter = new atoum\test\adapter())
-                ->and($adapter->extension_loaded = true)
-                ->then
-                    ->object(new TestedClass($adapter))->isInstanceOf('\\Ftp')
+<pre class="line-numbers"><code class="language-php">class Ftp extends atoum\test {
+    public function test__construct() {
+        $this
+            -&gt;if($adapter = new atoum\test\adapter())
+            -&gt;and($adapter-&gt;extension_loaded = true)
+            -&gt;then
+                -&gt;object(new TestedClass($adapter))-&gt;isInstanceOf('\\Ftp')
 
-                ->if($adapter->extension_loaded = false)
-                ->then
-                    ->exception(
-                        function() use($adapter) {
-                            new TestedClass($adapter);
-                        }
-                    )
-                        ->isInstanceOf('\\RuntimeException')
-                        ->hasMessage('FTP extension is not loaded')
-            ;
-        }
+            -&gt;if($adapter->extension_loaded = false)
+            -&gt;then
+                -&gt;exception(
+                    function() use($adapter) {
+                        new TestedClass($adapter);
+                    }
+                )
+                    -&gt;isInstanceOf('\\RuntimeException')
+                    -&gt;hasMessage('FTP extension is not loaded')
+        ;
     }
+}</code></pre>
 
+<pre class="line-numbers"><code class="language-bash">#!/bin/bash
 
-    $ bin/atoum -f tests/listing/Adapter/2-3.php
+bin/atoum -f 'tests/listing/Adapter/2-3.php'
 
-    > tests\unit\Ftp...
-    [S___________________________________________________________][1/1]
-    => Test duration: 0.01 second.
-    => Memory usage: 0.50 Mb.
-    > Total test duration: 0.01 second.
-    > Total test memory usage: 0.50 Mb.
-    > Code coverage value: 80.00%
-    => Class Ftp: 80.00%
-    ==> Ftp::getAdapter(): 50.00%
+&gt; tests\unit\Ftp...
+[S___________________________________________________________][1/1]
+=&gt; Test duration: 0.01 second.
+=&gt; Memory usage: 0.50 Mb.
+&gt; Total test duration: 0.01 second.
+&gt; Total test memory usage: 0.50 Mb.
+&gt; Code coverage value: 80.00%
+=&gt; Class Ftp: 80.00%
+==&gt; Ftp::getAdapter(): 50.00%</code></pre>
 
 On se rend immédiatement compte des avantages que l'*adapter* nous procure : nous sommes maintenant capable de tester
 notre classe sans nous soucier de la configuration de la machine exécutant les tests. Et en bonus, nous avons la
@@ -224,90 +222,88 @@ d'abstraire cette dépendance et éventuellement de migrer vers un autre framewo
 Je vais vous présenter ici la méthode que j'utilise afin d'arriver à un tel résultat, à savoir, un *adapter* indépendant
 du framework de test :
 
-    <?php
-    namespace {
-        interface AdapterInterface
-        {
-            public function invoke($name, array $args = array());
-        }
-
-        class Adapter implements AdapterInterface
-        {
-            public function invoke($name, array $args = array())
-            {
-                if (is_callable($name)) {
-                    return call_user_func_array($name, $args);
-                }
-
-                throw new \RuntimeException(sprintf('%s is not callable', var_export($name)));
-            }
-
-            public function __call($name, $args)
-            {
-                return $this->invoke($name, $args);
-            }
-        }
+<pre class="line-numbers"><code class="language-php">namespace {
+    interface AdapterInterface
+    {
+        public function invoke($name, array $args = array());
     }
 
-    namespace Test {
-        use
-            mageekguy\atoum\test\adapter as AtoumAdapter
-        ;
-
-        class Adapter extends AtoumAdapter implements \AdapterInterface
+    class Adapter implements AdapterInterface
+    {
+        public function invoke($name, array $args = array())
         {
+            if (is_callable($name)) {
+                return call_user_func_array($name, $args);
+            }
+
+            throw new \RuntimeException(sprintf('%s is not callable', var_export($name)));
+        }
+
+        public function __call($name, $args)
+        {
+            return $this-&gt;invoke($name, $args);
         }
     }
+}
+
+namespace Test {
+    use
+        mageekguy\atoum\test\adapter as AtoumAdapter
+    ;
+
+    class Adapter extends AtoumAdapter implements \AdapterInterface
+    {
+    }
+}</code></pre>
 
 Nous définissons donc, dans notre projet, une interface standard qui décrit nos *adapters* ainsi, nos classes seront
 dépendantes de cette abstraction :
 
-    <?php
-    class Ftp
+<pre class="line-numbers"><code class="language-php">class Ftp
+{
+    private $adapter;
+
+    public function __construct(AdapterInterface $adapter = null)
     {
-        private $adapter;
+        $this-&gt;setAdapter($adapter);
 
-        public function __construct(AdapterInterface $adapter = null)
-        {
-            $this->setAdapter($adapter);
-
-            if (false === $this->getAdapter()->extension_loaded('ftp')) {
-                throw new \RuntimeException('FTP extension is not loaded');
-            }
+        if (false === $this-&gt;getAdapter()-&gt;extension_loaded('ftp')) {
+            throw new \RuntimeException('FTP extension is not loaded');
         }
-
-        public function setAdapter(AdapterInterface $adapter = null)
-        {
-            $this->adapter = $adapter;
-
-            return $this;
-        }
-
-        public function getAdapter()
-        {
-            if (null === $this->adapter) {
-                $this->adapter = new Adapter();
-            }
-
-            return $this->adapter;
-        }
-
-        //...
     }
 
+    public function setAdapter(AdapterInterface $adapter = null)
+    {
+        $this-&gt;adapter = $adapter;
 
+        return $this;
+    }
 
-    $ bin/atoum -f tests/listing/Adapter/4-5.php
+    public function getAdapter()
+    {
+        if (null === $this->adapter) {
+            $this-&gt;adapter = new Adapter();
+        }
 
-    > tests\unit\Ftp...
-    [S___________________________________________________________][1/1]
-    => Test duration: 0.01 second.
-    => Memory usage: 0.50 Mb.
-    > Total test duration: 0.01 second.
-    > Total test memory usage: 0.50 Mb.
-    > Code coverage value: 80.00%
-    => Class Ftp: 80.00%
-    ==> Ftp::getAdapter(): 50.00%
+        return $this->adapter;
+    }
+
+    //...
+}</code></pre>
+
+<pre class="line-numbers"><code class="language-#!/bin/bash">#!/bin/bash
+
+bin/atoum -f tests/listing/Adapter/4-5.php
+
+&gt; tests\unit\Ftp...
+[S___________________________________________________________][1/1]
+=&gt; Test duration: 0.01 second.
+=&gt; Memory usage: 0.50 Mb.
+&gt; Total test duration: 0.01 second.
+&gt; Total test memory usage: 0.50 Mb.
+&gt; Code coverage value: 80.00%
+=&gt; Class Ftp: 80.00%
+==&gt; Ftp::getAdapter(): 50.00%</code></pre>
 
 Comme vous pouvez le voir, la dépendance vers *atoum* a disparue de notre code de production ! Nous sommes maintenant
 dépendant de notre ```Adapterinterface``` et de l'implémentation par défaut que nous avons ajoutée.
@@ -338,12 +334,11 @@ manière judicieuse : il ne faut pas en abuser (par exemple, ne passez pas tous 
 Identifiez les cas où l'utilisation de ceux-ci vous apporte réellement un plus au niveau de la testabilité et/ou de
 l'architecture de vos composants.
 
-    <?php
-    // INUTILE
-    $this->getAdapter()->file_get_contents($this->getAdapter()->md5($value) . '.txt');
+<pre class="line-numbers"><code class="language-php">// INUTILE
+$this->getAdapter()->file_get_contents($this->getAdapter()->md5($value) . '.txt');
 
-    // CORRECT
-    $this->getAdapter()->file_get_contents(md5($value) . '.txt');
+// CORRECT
+$this->getAdapter()->file_get_contents(md5($value) . '.txt');
 
-    // ADAPTER
-    $adapter->file_get_contents = function() { return 'foobar'; };
+// ADAPTER
+$adapter->file_get_contents = function() { return 'foobar'; };</code></pre>

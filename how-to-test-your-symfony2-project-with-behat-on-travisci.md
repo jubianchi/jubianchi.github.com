@@ -20,30 +20,30 @@ Here is the context :
 
 Now that we know all the required elements, let's build our configuration file :
 
-    # The test environment we want to use (PHP 5.3)
-    language: php
-    php:
-        - 5.3
+<pre class="line-numbers"><code class="language-css"># The test environment we want to use (PHP 5.3)
+language: php
+php:
+    - 5.3
 
-    before_script:
-        # Packages installation
-        - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-mysql php5-sqlite
-        # Apache webserver configuration
-        - echo "Alias /behat $(pwd)/web" | sudo tee -a /etc/apache2/sites-available/default
-        - sudo a2enmod rewrite
-        - sudo /etc/init.d/apache2 restart
-        # Database creation
-        - mysql -e 'CREATE DATABASE test_myapp_test;'
-        # Symfony 2 application configuration
-        - sed s/%database_name%/myapp_test/ app/config/parameters.ini-dist | sed s/%database_login%/root/ | sed s/%database_password%// > app/config/parameters.ini
-        - bin/vendors install
-        - app/console --env=test doctrine:schema:create
-        - sudo chmod -R 777 app/cache app/logs
-        - sed 's/%hostname%/localhost\/behat/' behat.yml-dist > behat.yml
+before_script:
+    # Packages installation
+    - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-mysql php5-sqlite
+    # Apache webserver configuration
+    - echo "Alias /behat $(pwd)/web" | sudo tee -a /etc/apache2/sites-available/default
+    - sudo a2enmod rewrite
+    - sudo /etc/init.d/apache2 restart
+    # Database creation
+    - mysql -e 'CREATE DATABASE test_myapp_test;'
+    # Symfony 2 application configuration
+    - sed s/%database_name%/myapp_test/ app/config/parameters.ini-dist | sed s/%database_login%/root/ | sed s/%database_password%// > app/config/parameters.ini
+    - bin/vendors install
+    - app/console --env=test doctrine:schema:create
+    - sudo chmod -R 777 app/cache app/logs
+    - sed 's/%hostname%/localhost\/behat/' behat.yml-dist > behat.yml</code></pre>
 
-    script:
-        # Launch test suite
-        - php behat.phar --profile=travis @BehatViewerBundle
+script:
+    # Launch test suite
+    - php behat.phar --profile=travis @BehatViewerBundle
 
 This script will look really simple to anyone who is familiar with the UNIX command line but it took me several hours and builds to get the expected result.
 

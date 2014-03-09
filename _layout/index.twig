@@ -4,7 +4,7 @@
     {{ content }}
 
     {% for page in pages|reverse %}
-        {% if page.type %}
+        {% if page.type and not page.draft %}
             <section>
                 <time datetime="{{ page.date }}">
                     <strong>{{ page.date|date('M') }}</strong>
@@ -29,13 +29,7 @@
                 </div>
             </section>
 
-            {% if page.tags %}
-                <ul class="list tags">
-                    {% for tag in page.tags %}
-                        <li><span class="label">{{ tag }}</span></li>
-                    {%  endfor %}
-                </ul>
-            {% endif %}
+            {% include '_partials/tags.twig' %}
 
             <hr/>
         {% endif %}

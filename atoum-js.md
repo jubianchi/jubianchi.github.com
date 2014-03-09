@@ -39,6 +39,4 @@ Pour finir, voici quelques détails sur les fonctionnalités implémentées apr�
 * ```callback``` pour tester les callback
 * Un moteur de mock très basique (WIP)
 
-
-
-
+<div data-repo="jubianchi/atoum.js"></div>
