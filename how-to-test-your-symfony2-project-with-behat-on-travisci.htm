@@ -10,6 +10,13 @@
 
     <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
     <link href="styles/style.css" rel="stylesheet">
+
+    <link href="js/prismjs/prism.css" rel="stylesheet" />
+    <link href="js/prismjs/prism-okaidia.css" rel="stylesheet" />
+    <link href="js/prismjs/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+    <link href="styles/github.css" rel="stylesheet" />
+
+    <script src="js/jquery.js"></script>
 </head>
 
 <body>
@@ -30,11 +37,11 @@
     </ul>
 </header>
     <section>
-        <time datetime="2012-07-03 13:58:00">
-            <strong>Jul</strong>
-            <span>03</span>
-            <em>2012</em>
-        </time>
+            <time datetime="2012-07-03 13:58:00">
+        <strong>Jul</strong>
+        <span>03</span>
+        <em>2012</em>
+    </time>
 
         <div class="left">
             <h1>How to test your Symfony2 project with Behat on TravisCI</h1>
@@ -51,7 +58,7 @@
 
 <p>Now that we know all the required elements, let's build our configuration file :</p>
 
-<pre><code># The test environment we want to use (PHP 5.3)
+<pre class="line-numbers"><code class="language-css"># The test environment we want to use (PHP 5.3)
 language: php
 php:
     - 5.3
@@ -66,16 +73,15 @@ before_script:
     # Database creation
     - mysql -e 'CREATE DATABASE test_myapp_test;'
     # Symfony 2 application configuration
-    - sed s/%database_name%/myapp_test/ app/config/parameters.ini-dist | sed s/%database_login%/root/ | sed s/%database_password%// &gt; app/config/parameters.ini
+    - sed s/%database_name%/myapp_test/ app/config/parameters.ini-dist | sed s/%database_login%/root/ | sed s/%database_password%// > app/config/parameters.ini
     - bin/vendors install
     - app/console --env=test doctrine:schema:create
     - sudo chmod -R 777 app/cache app/logs
-    - sed 's/%hostname%/localhost\/behat/' behat.yml-dist &gt; behat.yml
+    - sed 's/%hostname%/localhost\/behat/' behat.yml-dist > behat.yml</code></pre>
 
-script:
+<p>script:
     # Launch test suite
-    - php behat.phar --profile=travis @BehatViewerBundle
-</code></pre>
+    - php behat.phar --profile=travis @BehatViewerBundle</p>
 
 <p>This script will look really simple to anyone who is familiar with the UNIX command line but it took me several hours and builds to get the expected result.</p>
 
@@ -104,28 +110,39 @@ script:
         </div>
     </section>
 
-            <ul class="list tags">
-                            <li><a href="#" class="label">CI</a></li>
-                            <li><a href="#" class="label">travis</a></li>
-                            <li><a href="#" class="label">symfony</a></li>
-                            <li><a href="#" class="label">behat</a></li>
-                            <li><a href="#" class="label">BDD</a></li>
-                    </ul>
-    
-    <section id="disqus_thread"></section>
+        <ul class="list tags">
+        <li class="legend">Publié dans :</li>
+                    <li><span class="label">CI</span></li>
+                    <li><span class="label">travis</span></li>
+                    <li><span class="label">symfony</span></li>
+                    <li><span class="label">behat</span></li>
+                    <li><span class="label">BDD</span></li>
+            </ul>
 
-<script type="text/javascript">
-    var disqus_shortname = 'jubianchifr';
+        <section id="disqus_thread"></section>
 
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
+    <script type="text/javascript">
+        var disqus_shortname = 'jubianchifr';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
 <hr/>
 
 <footer>&bull;&bull;&bull;</footer>
+
+<script src="js/prismjs/prism.js"></script>
+<script src="js/prismjs/components/prism-bash.js"></script>
+<script src="js/prismjs/components/prism-php.js"></script>
+<script src="js/prismjs/components/prism-php-extras.js"></script>
+<script src="js/prismjs/components/prism-css.js"></script>
+<script src="js/prismjs/plugins/line-numbers/prism-line-numbers.js"></script>
+<script src="js/jquery.github.js"></script>
+<script>$(function() { $("[data-repo]").github(); });</script>
 
 </body>
 </html>

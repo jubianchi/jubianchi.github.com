@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jubianchi.fr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julien Bianchi <contact@jubianchi.fr>">
+
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAenp6AO6//wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERERERAAABEQAAAAEQABIhARARASIAEiERERERIgAREAERAQARABETARERMBEAEREREREREQABEREREREQAAEREAABERAAAREAAAABEAABEAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAIPBAACH4QAAz/MAAP//AAD//wAA" rel="icon" type="image/x-icon" />
+
+    <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
+    <link href="styles/style.css" rel="stylesheet">
+
+    <link href="js/prismjs/prism.css" rel="stylesheet" />
+    <link href="js/prismjs/prism-okaidia.css" rel="stylesheet" />
+    <link href="js/prismjs/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+    <link href="styles/github.css" rel="stylesheet" />
+
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+
+<header>
+    <a href="index.htm"><img id="avatar" src="images/nyantocat.gif"/></a>
+
+    <h1>Julien Bianchi <small><em>aka jubianchi</em></small></h1>
+
+    <ul>
+        <li><a href="mailto:contact@jubianchi.fr" title="email">email</a></li>
+        <li><a href="https://twitter.com/jubianchi" title="twitter">twitter</a></li>
+        <li><a href="https://github.com/jubianchi" title="github">github</a></li>
+        <li><a href="https://speakerdeck.com/jubianchi" title="speakerdeck">speakerdeck</a></li>
+        <li><a href="https://coderwall.com/jubianchi" title="coderwall">coderwall</a></li>
+        <li><a href="http://osrc.dfm.io/jubianchi" title="Open Source Report Card">OSRC</a></li>
+        <li><a href="cv/index.html" title="jubianchi.fr">CV</a></li>
+    </ul>
+</header>
+    <section>
+            <time>
+        <strong>&nbsp;</strong>
+        <span>Draft</span>
+    </time>
+
+        <div class="left">
+            <h1>Quand Hoa rencontre vagrant</h1>
+
+            <p>Aujourd'hui, je vais vous parler un peu de <a href="http://vagrantup.com">vagrant</a> et de <a href="http://hoa-project.net/">Hoa</a>. Ceux qui me connaissent savent que je suis un grand fan de vagrant, que je l'utilise quotidiennement et que je suis également contributeur au projet Hoa. J'ai donc décider de créer une box vagrant dans laquelle Hoa est pré-installer afin que tout le monde puisse l'essayer rapidement.</p>
+
+<p>Cette VM est basée sur une Debian 7 (wheezy) et est déclinée en 3 versions : PHP 5.4, PHP 5.5 et PHP 5.6. Ces trois versions intègrent les même soutils, à savoir :</p>
+
+<ul>
+<li>Hoa cloné depuis <a href="http://git.hoa-project.net/Central.git">les sources</a></li>
+<li><a href="http://getcomposer.org">Composer</a></li>
+<li>Quelques petits outils (VIM, htop, ...)</li>
+<li>Le shell ZSH pré-configuré</li>
+<li>Les <a href="https://github.com/Hywan/Dotfiles">dotfiles</a> d'<a href="https://github.com/Hywan">Hywan</a>, l'auteur d'Hoa</li>
+</ul>
+
+<p>Avec cette box vous pourrez donc très facilement testé Hoa, que ce soit en suivant les <a href="http://blog.hoa-project.net/posts/9-awecode-une-nouvelle-forme-dappr.html">Awecodes</a> ou en démarrant un projet. Dans les deux cas, pour démarrer vous devrez suivre ces quelques étapes :</p>
+
+<ul>
+<li>Importer la base-box</li>
+</ul>
+
+<pre class="line-numbers"><code class="language-bash">#!/bin/bash
+
+vagrant box add 'jubianchi/hoaproject-php-56' \
+    'http://static.jubianchi.fr/boxes/hoaproject-php-56-0.1.0.box'</code></pre>
+
+<ul>
+<li>Initialiser un Vagrantfile</li>
+</ul>
+
+<pre class="line-numbers"><code class="language-bash">#!/bin/bash
+
+mkdir '/tmp/testing-hoaproject'
+cd '/tmp/testing-hoaproject'
+vagrant init 'jubianchi/hoaproject-php-56' \
+    'http://static.jubianchi.fr/boxes/hoaproject-php-56-0.1.0.box'</code></pre>
+
+<ul>
+<li>Démarrer votre VM</li>
+</ul>
+
+<pre class="line-numbers"><code class="language-bash">#!/bin/bash
+
+cd '/tmp/testing-hoaproject'
+vagrant up
+vagrant ssh</code></pre>
+
+<p>Une fois connecté dans la machine virtuelle, vous aurez directement accès à la commande <code>hoa</code> qui vous permettra de découvrir certaines librairies depuis votre terminal.</p>
+
+<p>Si vous souhaitez simplement suivre un awecode, il vous suffit de vous rendre dans le dossier <code>/vagrant</code> de la machine virtuelle et de suivre les indications fournies. Il existe actuellement 2 awecodes :</p>
+
+<ul>
+<li><a href="http://hoa-project.net/Fr/Awecode/Websocket.html">Websocket</a></li>
+<li><a href="http://hoa-project.net/Fr/Awecode/Eventsource.html">Eventsource</a></li>
+</ul>
+
+<p>Vous pouvez télécharger ou importer les trois boxes vagrant en utilisant les liens suivants :</p>
+
+<ul>
+<li><a href="http://static.jubianchi.fr/boxes/hoaproject-php-54-0.1.0.box">hoaproject-php54</a></li>
+<li><a href="http://static.jubianchi.fr/boxes/hoaproject-php-55-0.1.0.box">hoaproject-php55</a></li>
+<li><a href="http://static.jubianchi.fr/boxes/hoaproject-php-56-0.1.0.box">hoaproject-php56</a></li>
+</ul>
+
+<p>Les sources sont disponibles sur Github : <a href="https://github.com/jubianchi/vagrant-boxes/tree/master/hoaproject">jubianchi/vagrant-boxes</a></p>
+
+<div data-repo="jubianchi/vagrant-boxes"></div>
+
+<p>Pour finir, voici une démonstration de ce que l'on peut faire avec cette box :</p>
+
+        </div>
+    </section>
+
+    <script type="text/javascript" src="https://asciinema.org/a/8079.js" id="asciicast-8079" async></script>
+
+    
+<hr/>
+
+<footer>&bull;&bull;&bull;</footer>
+
+<script src="js/prismjs/prism.js"></script>
+<script src="js/prismjs/components/prism-bash.js"></script>
+<script src="js/prismjs/components/prism-php.js"></script>
+<script src="js/prismjs/components/prism-php-extras.js"></script>
+<script src="js/prismjs/components/prism-css.js"></script>
+<script src="js/prismjs/plugins/line-numbers/prism-line-numbers.js"></script>
+<script src="js/jquery.github.js"></script>
+<script>$(function() { $("[data-repo]").github(); });</script>
+
+</body>
+</html>

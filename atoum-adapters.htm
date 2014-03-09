@@ -10,6 +10,13 @@
 
     <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
     <link href="styles/style.css" rel="stylesheet">
+
+    <link href="js/prismjs/prism.css" rel="stylesheet" />
+    <link href="js/prismjs/prism-okaidia.css" rel="stylesheet" />
+    <link href="js/prismjs/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+    <link href="styles/github.css" rel="stylesheet" />
+
+    <script src="js/jquery.js"></script>
 </head>
 
 <body>
@@ -30,11 +37,11 @@
     </ul>
 </header>
     <section>
-        <time datetime="2012-12-04 12:16:00">
-            <strong>Dec</strong>
-            <span>04</span>
-            <em>2012</em>
-        </time>
+            <time datetime="2012-12-04 12:16:00">
+        <strong>Dec</strong>
+        <span>04</span>
+        <em>2012</em>
+    </time>
 
         <div class="left">
             <h1>Tests unitaires et adapters avec atoum</h1>
@@ -84,8 +91,7 @@ avec <em>atoum</em>)</p>
 serveur FTP via les fonctions natives de PHP. Cet exemple est assez basique mais il a l'avantage de montrer rapidement
 les problèmes que l'on peut rencontrer :</p>
 
-<pre><code>&lt;?php
-namespace tests\unit {
+<pre class="line-numbers"><code class="language-php">namespace tests\unit {
     use
         mageekguy\atoum,
         Ftp as TestedClass
@@ -112,10 +118,11 @@ namespace {
 
         //...
     }
-}
+}</code></pre>
 
+<pre class="line-numbers"><code class="language-bash">#!/bin/bash
 
-$ bin/atoum -f tests/listing/Adapter/1.php
+bin/atoum -f 'tests/listing/Adapter/1.php'
 
 &gt; tests\unit\Ftp...
 [S___________________________________________________________][1/1]
@@ -125,8 +132,7 @@ $ bin/atoum -f tests/listing/Adapter/1.php
 &gt; Total test memory usage: 0.50 Mb.
 &gt; Code coverage value: 66.67%
 =&gt; Class Ftp: 66.67%
-==&gt; Ftp::__construct(): 66.67%
-</code></pre>
+==&gt; Ftp::__construct(): 66.67%</code></pre>
 
 <p>Nous avons donc notre test unitaire qui va vérifier que l'instanciation de notre classe <code>Ftp</code> se passe bien.
 Pour que ce test passe, il faudra obligatoirement que la machine qui l'exécute ait l'extension PHP FTP installée et
@@ -147,8 +153,7 @@ machine à moins de passer par des "hacks" que je ne détaillerais pas ici.</p>
 dans l'idéal, votre code sera fait de telle manière que l'injection de cette dépendance soit optionnelle. Voyons tout
 de suite un extrait de code qui illustre mes propos :</p>
 
-<pre><code>&lt;?php
-use
+<pre class="line-numbers"><code class="language-php">use
     mageekguy\atoum
 ;
 
@@ -158,16 +163,16 @@ class Ftp
 
     public function __construct(atoum\adapter $adapter = null)
     {
-        $this-&gt;setAdapter($adapter);
+        $this->setAdapter($adapter);
 
-        if (false === $this-&gt;getAdapter()-&gt;extension_loaded('ftp')) {
+        if (false === $this->getAdapter()-&gt;extension_loaded('ftp')) {
             throw new \RuntimeException('FTP extension is not loaded');
         }
     }
 
     public function setAdapter(atoum\adapter $adapter = null)
     {
-        $this-&gt;adapter = $adapter;
+        $this->adapter = $adapter;
 
         return $this;
     }
@@ -175,15 +180,14 @@ class Ftp
     public function getAdapter()
     {
         if (null === $this-&gt;adapter) {
-            $this-&gt;adapter = new atoum\adapter();
+            $this->adapter = new atoum\adapter();
         }
 
         return $this-&gt;adapter;
     }
 
     //...
-}
-</code></pre>
+}</code></pre>
 
 <p>Comme vous pouvez le constater à travers cet extrait de code, l'injection de l'<em>adapter</em> est optionnelle et dans le cas
 où celui-ci n'est pas fourni, un <em>adapter</em> par défaut sera créé et utilisé au sein de la classe <code>Ftp</code>.
@@ -194,8 +198,7 @@ permettra d'injecter l'<em>adapter</em> adéquat dans les tests unitaires.</p>
 <code>extension_loaded</code> passe désormais par notre <em>adapter</em> et cela va nous permettre d'étoffer notre test unitaire et
 d'y ajouter quelques cas supplémentaires :</p>
 
-<pre><code>&lt;?php
-class Ftp extends atoum\test {
+<pre class="line-numbers"><code class="language-php">class Ftp extends atoum\test {
     public function test__construct() {
         $this
             -&gt;if($adapter = new atoum\test\adapter())
@@ -203,7 +206,7 @@ class Ftp extends atoum\test {
             -&gt;then
                 -&gt;object(new TestedClass($adapter))-&gt;isInstanceOf('\\Ftp')
 
-            -&gt;if($adapter-&gt;extension_loaded = false)
+            -&gt;if($adapter->extension_loaded = false)
             -&gt;then
                 -&gt;exception(
                     function() use($adapter) {
@@ -214,10 +217,11 @@ class Ftp extends atoum\test {
                     -&gt;hasMessage('FTP extension is not loaded')
         ;
     }
-}
+}</code></pre>
 
+<pre class="line-numbers"><code class="language-bash">#!/bin/bash
 
-$ bin/atoum -f tests/listing/Adapter/2-3.php
+bin/atoum -f 'tests/listing/Adapter/2-3.php'
 
 &gt; tests\unit\Ftp...
 [S___________________________________________________________][1/1]
@@ -227,8 +231,7 @@ $ bin/atoum -f tests/listing/Adapter/2-3.php
 &gt; Total test memory usage: 0.50 Mb.
 &gt; Code coverage value: 80.00%
 =&gt; Class Ftp: 80.00%
-==&gt; Ftp::getAdapter(): 50.00%
-</code></pre>
+==&gt; Ftp::getAdapter(): 50.00%</code></pre>
 
 <p>On se rend immédiatement compte des avantages que l'<em>adapter</em> nous procure : nous sommes maintenant capable de tester
 notre classe sans nous soucier de la configuration de la machine exécutant les tests. Et en bonus, nous avons la
@@ -254,8 +257,7 @@ d'abstraire cette dépendance et éventuellement de migrer vers un autre framewo
 <p>Je vais vous présenter ici la méthode que j'utilise afin d'arriver à un tel résultat, à savoir, un <em>adapter</em> indépendant
 du framework de test :</p>
 
-<pre><code>&lt;?php
-namespace {
+<pre class="line-numbers"><code class="language-php">namespace {
     interface AdapterInterface
     {
         public function invoke($name, array $args = array());
@@ -287,14 +289,12 @@ namespace Test {
     class Adapter extends AtoumAdapter implements \AdapterInterface
     {
     }
-}
-</code></pre>
+}</code></pre>
 
 <p>Nous définissons donc, dans notre projet, une interface standard qui décrit nos <em>adapters</em> ainsi, nos classes seront
 dépendantes de cette abstraction :</p>
 
-<pre><code>&lt;?php
-class Ftp
+<pre class="line-numbers"><code class="language-php">class Ftp
 {
     private $adapter;
 
@@ -316,19 +316,19 @@ class Ftp
 
     public function getAdapter()
     {
-        if (null === $this-&gt;adapter) {
+        if (null === $this->adapter) {
             $this-&gt;adapter = new Adapter();
         }
 
-        return $this-&gt;adapter;
+        return $this->adapter;
     }
 
     //...
-}
+}</code></pre>
 
+<pre class="line-numbers"><code class="language-#!/bin/bash">#!/bin/bash
 
-
-$ bin/atoum -f tests/listing/Adapter/4-5.php
+bin/atoum -f tests/listing/Adapter/4-5.php
 
 &gt; tests\unit\Ftp...
 [S___________________________________________________________][1/1]
@@ -338,8 +338,7 @@ $ bin/atoum -f tests/listing/Adapter/4-5.php
 &gt; Total test memory usage: 0.50 Mb.
 &gt; Code coverage value: 80.00%
 =&gt; Class Ftp: 80.00%
-==&gt; Ftp::getAdapter(): 50.00%
-</code></pre>
+==&gt; Ftp::getAdapter(): 50.00%</code></pre>
 
 <p>Comme vous pouvez le voir, la dépendance vers <em>atoum</em> a disparue de notre code de production ! Nous sommes maintenant
 dépendant de notre <code>Adapterinterface</code> et de l'implémentation par défaut que nous avons ajoutée.</p>
@@ -370,40 +369,49 @@ manière judicieuse : il ne faut pas en abuser (par exemple, ne passez pas tous 
 Identifiez les cas où l'utilisation de ceux-ci vous apporte réellement un plus au niveau de la testabilité et/ou de
 l'architecture de vos composants.</p>
 
-<pre><code>&lt;?php
-// INUTILE
-$this-&gt;getAdapter()-&gt;file_get_contents($this-&gt;getAdapter()-&gt;md5($value) . '.txt');
+<pre class="line-numbers"><code class="language-php">// INUTILE
+$this->getAdapter()->file_get_contents($this->getAdapter()->md5($value) . '.txt');
 
 // CORRECT
-$this-&gt;getAdapter()-&gt;file_get_contents(md5($value) . '.txt');
+$this->getAdapter()->file_get_contents(md5($value) . '.txt');
 
 // ADAPTER
-$adapter-&gt;file_get_contents = function() { return 'foobar'; };
-</code></pre>
+$adapter->file_get_contents = function() { return 'foobar'; };</code></pre>
 
         </div>
     </section>
 
-            <ul class="list tags">
-                            <li><a href="#" class="label">php</a></li>
-                            <li><a href="#" class="label">atoum</a></li>
-                            <li><a href="#" class="label">test</a></li>
-                    </ul>
-    
-    <section id="disqus_thread"></section>
+        <ul class="list tags">
+        <li class="legend">Publié dans :</li>
+                    <li><span class="label">php</span></li>
+                    <li><span class="label">atoum</span></li>
+                    <li><span class="label">test</span></li>
+            </ul>
 
-<script type="text/javascript">
-    var disqus_shortname = 'jubianchifr';
+        <section id="disqus_thread"></section>
 
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
+    <script type="text/javascript">
+        var disqus_shortname = 'jubianchifr';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
 <hr/>
 
 <footer>&bull;&bull;&bull;</footer>
+
+<script src="js/prismjs/prism.js"></script>
+<script src="js/prismjs/components/prism-bash.js"></script>
+<script src="js/prismjs/components/prism-php.js"></script>
+<script src="js/prismjs/components/prism-php-extras.js"></script>
+<script src="js/prismjs/components/prism-css.js"></script>
+<script src="js/prismjs/plugins/line-numbers/prism-line-numbers.js"></script>
+<script src="js/jquery.github.js"></script>
+<script>$(function() { $("[data-repo]").github(); });</script>
 
 </body>
 </html>

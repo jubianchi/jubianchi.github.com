@@ -10,6 +10,13 @@
 
     <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
     <link href="styles/style.css" rel="stylesheet">
+
+    <link href="js/prismjs/prism.css" rel="stylesheet" />
+    <link href="js/prismjs/prism-okaidia.css" rel="stylesheet" />
+    <link href="js/prismjs/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+    <link href="styles/github.css" rel="stylesheet" />
+
+    <script src="js/jquery.js"></script>
 </head>
 
 <body>
@@ -30,11 +37,11 @@
     </ul>
 </header>
     <section>
-        <time datetime="2014-02-26 1:00:00">
-            <strong>Feb</strong>
-            <span>26</span>
-            <em>2014</em>
-        </time>
+            <time datetime="2014-02-26 1:00:00">
+        <strong>Feb</strong>
+        <span>26</span>
+        <em>2014</em>
+    </time>
 
         <div class="left">
             <h1>atoum interactive shell</h1>
@@ -74,27 +81,30 @@ atoum :</p>
 
     <script type="text/javascript" src="https://asciinema.org/a/7758.js" id="asciicast-7758" async></script>
 
-            <ul class="list tags">
-                            <li><a href="#" class="label">wip</a></li>
-                            <li><a href="#" class="label">poc</a></li>
-                            <li><a href="#" class="label">atoum</a></li>
-                            <li><a href="#" class="label">shell</a></li>
-                    </ul>
-    
-    <section id="disqus_thread"></section>
+        <section id="disqus_thread"></section>
 
-<script type="text/javascript">
-    var disqus_shortname = 'jubianchifr';
+    <script type="text/javascript">
+        var disqus_shortname = 'jubianchifr';
 
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
 <hr/>
 
 <footer>&bull;&bull;&bull;</footer>
+
+<script src="js/prismjs/prism.js"></script>
+<script src="js/prismjs/components/prism-bash.js"></script>
+<script src="js/prismjs/components/prism-php.js"></script>
+<script src="js/prismjs/components/prism-php-extras.js"></script>
+<script src="js/prismjs/components/prism-css.js"></script>
+<script src="js/prismjs/plugins/line-numbers/prism-line-numbers.js"></script>
+<script src="js/jquery.github.js"></script>
+<script>$(function() { $("[data-repo]").github(); });</script>
 
 </body>
 </html>
