@@ -7,7 +7,7 @@
     "asciinema_id": "8079",
     "tags": ["vagrant", "hoaproject", "php"],
     "draft": true,
-    "summary": "Aujourd'hui, je vais vous parler un peu de vagrant et de Hoa. Ceux qui me connaissent savent que je suis un grand fan de vagrant, que je l'utilise quotidiennement et que je suis également contributeur au projet Hoa. J'ai donc décider de créer une box vagrant dans laquelle Hoa est pré-installer afin que tout le monde puisse l'essayer rapidement."
+    "summary": "Aujourd'hui, je vais vous parler un peu de vagrant et de Hoa. Ceux qui me connaissent savent que je suis un grand fan de vagrant, que je l'utilise quotidiennement et que je suis également contributeur au projet Hoa. J'ai donc décidé de créer une box vagrant dans laquelle Hoa est pré-installé afin que tout le monde puisse l'essayer rapidement."
 }
 ***
 Aujourd'hui, je vais vous parler un peu de [vagrant](http://vagrantup.com) et de [Hoa](http://hoa-project.net/). Ceux qui me connaissent savent que je suis un grand fan de vagrant, que je l'utilise quotidiennement et que je suis également contributeur au projet Hoa. J'ai donc décider de créer une box vagrant dans laquelle Hoa est pré-installer afin que tout le monde puisse l'essayer rapidement.
@@ -20,7 +20,7 @@ Cette VM est basée sur une Debian 7 (wheezy) et est déclinée en 3 versions : 
 * Le shell ZSH pré-configuré
 * Les [dotfiles](https://github.com/Hywan/Dotfiles) d'[Hywan](https://github.com/Hywan), l'auteur d'Hoa
 
-Avec cette box vous pourrez donc très facilement testé Hoa, que ce soit en suivant les [Awecodes](http://blog.hoa-project.net/posts/9-awecode-une-nouvelle-forme-dappr.html) ou en démarrant un projet. Dans les deux cas, pour démarrer vous devrez suivre ces quelques étapes :
+Avec cette box vous pourrez donc très facilement tester Hoa, que ce soit en suivant les [Awecodes](http://blog.hoa-project.net/posts/9-awecode-une-nouvelle-forme-dappr.html) ou en démarrant un projet. Dans les deux cas, pour démarrer vous devrez suivre ces quelques étapes :
 
 * Importer la base-box
 
@@ -48,8 +48,9 @@ vagrant ssh</code></pre>
 
 Une fois connecté dans la machine virtuelle, vous aurez directement accès à la commande ```hoa``` qui vous permettra de découvrir certaines librairies depuis votre terminal.
 
-Si vous souhaitez simplement suivre un awecode, il vous suffit de vous rendre dans le dossier ```/vagrant``` de la machine virtuelle et de suivre les indications fournies. Il existe actuellement 2 awecodes :
+Si vous souhaitez simplement suivre un awecode, il vous suffit de vous rendre dans le dossier ```/vagrant``` de la machine virtuelle et de suivre les indications fournies. Il existe actuellement [3 awecodes](http://hoa-project.net/Fr/Awecode.html) :
 
+* [Readline](http://hoa-project.net/Fr/Awecode/Console-readline.html)
 * [Websocket](http://hoa-project.net/Fr/Awecode/Websocket.html)
 * [Eventsource](http://hoa-project.net/Fr/Awecode/Eventsource.html)
 
