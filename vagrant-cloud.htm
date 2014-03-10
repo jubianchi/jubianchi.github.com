@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jubianchi.fr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julien Bianchi <contact@jubianchi.fr>">
+
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAenp6AO6//wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERERERAAABEQAAAAEQABIhARARASIAEiERERERIgAREAERAQARABETARERMBEAEREREREREQABEREREREQAAEREAABERAAAREAAAABEAABEAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAIPBAACH4QAAz/MAAP//AAD//wAA" rel="icon" type="image/x-icon" />
+
+    <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
+    <link href="styles/style.css" rel="stylesheet">
+
+    <link href="js/prismjs/prism.css" rel="stylesheet" />
+    <link href="js/prismjs/prism-okaidia.css" rel="stylesheet" />
+    <link href="js/prismjs/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+    <link href="styles/github.css" rel="stylesheet" />
+
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+
+<header>
+    <a href="index.htm"><img id="avatar" src="images/nyantocat.gif"/></a>
+
+    <h1>Julien Bianchi <small><em>aka jubianchi</em></small></h1>
+
+    <ul>
+        <li><a href="mailto:contact@jubianchi.fr" title="email">email</a></li>
+        <li><a href="https://twitter.com/jubianchi" title="twitter">twitter</a></li>
+        <li><a href="https://github.com/jubianchi" title="github">github</a></li>
+        <li><a href="https://speakerdeck.com/jubianchi" title="speakerdeck">speakerdeck</a></li>
+        <li><a href="https://coderwall.com/jubianchi" title="coderwall">coderwall</a></li>
+        <li><a href="http://osrc.dfm.io/jubianchi" title="Open Source Report Card">OSRC</a></li>
+        <li><a href="cv/index.html" title="jubianchi.fr">CV</a></li>
+    </ul>
+</header>
+    <section>
+            <time datetime="2014-03-09 19:28:00">
+        <strong>Mar</strong>
+        <span>09</span>
+        <em>2014</em>
+    </time>
+
+        <div class="left">
+            <h1>Vagrant Cloud</h1>
+
+            <p>Vagrant, vagrant, encore vagrant... je vous en parle beaucoup ces derniers temps; et ce n'est pas pour rien !</p>
+
+<p>Depuis quelques jours, <a href="https://vagrantcloud.com/jubianchi">je</a> participe à la beta privée de <a href="https://vagrantcloud.com">vagrant cloud</a>. Vagrant Cloud, c'est un peu le futur de
+vagrant : un site où on peut facilement partager nos boxes mais également, partager nos VMs.</p>
+
+<p>Depuis aujourd'hui, le 10 mars 2014, cette plateforme est ouverte à tous :</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>Vagrant 1.5 and Vagrant Cloud are now available! <a href="http://t.co/SGzqX2WqbK">http://t.co/SGzqX2WqbK</a> Vagrant Share, Boxes 2.0, Rsync synced folders, Hyper-V, and more!</p>&mdash; Mitchell Hashimoto (@mitchellh) <a href="https://twitter.com/mitchellh/statuses/443069185858760705">March 10, 2014</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Ce site a plusieurs objectifs:</p>
+
+<ul>
+<li>Permettre de rechercher et trouver facilement des base boxes vagrant</li>
+<li>Faciliter le partage des base boxes</li>
+<li>Faciliter la vie des mainteneurs en leur fournissant des outils de versionnement</li>
+<li>Faciliter la vie des utilisateurs lorsqu'il s'agit de mettre à jour les bases boxes</li>
+</ul>
+
+<p>Vous trouverez donc sur cette plateforme un moteur de recherche de box. Les utilisateurs de vagrant ont l'air très actifs, je
+vois de nouvelles boxes arriver régulièrement ces dernières heures.</p>
+
+<p>Avec votre compte, vous pourrez directement partager vos base boxes (à condition de pouvoir les héberger quelque part) afin d'en faire
+profiter tout le monde. Cela vous permettra de partager facilement d'éventuellles boxes requises pour travailler sur vos projets.
+Pour vous donner un exemple, j'ai publié une première version d'<a href="https://vagrantcloud.com/jubianchi/hoaproject-php-55">une box</a>
+permettant de démarrer rapidement avec <a href="http://hoa-project.net">Hoa</a> (je vous en dirais plus à ce sujet très prochainement).</p>
+
+<p>Les mainteneurs de boxes (peut être vous) pourront facilement gérer le versionnement de leurs boxes. Le site propose une gestion
+simple mais très efficace des version, en lien direct avec la commande <code>vagrant</code>.</p>
+
+<p>Grâce aux nouvelles fonctionnalités de vagrant 1.5, les utilisateurs donc pourront facilement vérifier s'ils utilisent la dernière
+version des boxes que vous avez publiées et les mettre à jour si besoin (<code>vagrant box outdated</code> et <code>vagrant box update</code>).
+Avant, il fallait vérifier à la main l'évolution des boxes qu'on utilisait et souvent, cela était compliqué.</p>
+
+<p>Une dernière chose : j'ai gardé le meilleur pour la fin :)</p>
+
+<p>Vagrant 1.5 propose une nouvelle fonctionnalité assez énorme : les vagrant shares.
+En gros, vous pouvez maintenant partager votre VM (oui, oui votre VM, celle qui tourne sur votre poste) avec n'importe qui !
+Lancez la commande <code>vagrant share</code> et copiez l'identifiant qu'elle vous donne. Transmettez-le à un collègue qui travaille à l'autre
+bout de la France. En un coup de <code>vagrant connect &lt;identifiant&gt;</code> votre ami pourra se connecter à votre VM. C'est pas magnifique ?</p>
+
+<p>Voilà, le teasing est terminé, je vous encourage donc vivement à <a href="http://www.vagrantup.com/downloads.html">mettre vagrant à jour vagrant</a> sur votre poste (quoi vous ne l'avez pas encore installer ?!)
+et à profiter de ses nouvelles fonctionnalités. Si vous souhaitez en savoir plus, faites un tour par le <a href="http://www.vagrantup.com/blog.html">blog</a> ainsi que la <a href="http://docs.vagrantup.com/v2/">documentation</a>.</p>
+
+        </div>
+    </section>
+
+        <ul class="list tags">
+        <li class="legend">Publié dans :</li>
+                    <li><span class="label">vagrant</span></li>
+                    <li><span class="label">cloud</span></li>
+            </ul>
+
+        <section id="disqus_thread"></section>
+
+    <script type="text/javascript">
+        var disqus_shortname = 'jubianchifr';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+<hr/>
+
+<footer>&bull;&bull;&bull;</footer>
+
+<script src="js/prismjs/prism.js"></script>
+<script src="js/prismjs/components/prism-bash.js"></script>
+<script src="js/prismjs/components/prism-php.js"></script>
+<script src="js/prismjs/components/prism-php-extras.js"></script>
+<script src="js/prismjs/components/prism-css.js"></script>
+<script src="js/prismjs/plugins/line-numbers/prism-line-numbers.js"></script>
+<script src="js/jquery.github.js"></script>
+<script>$(function() { $("[data-repo]").github(); });</script>
+
+</body>
+</html>
