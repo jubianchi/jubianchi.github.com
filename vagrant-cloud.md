@@ -11,13 +11,21 @@
 
 Vagrant, vagrant, encore vagrant... je vous en parle beaucoup ces derniers temps; et ce n'est pas pour rien !
 
-Depuis quelques jours, [je](https://vagrantcloud.com/jubianchi) participe à la beta privée de [vagrant cloud](https://vagrantcloud.com). Vagrant Cloud, c'est un peu le futur de
+Depuis quelques jours, je participe à la beta privée de [vagrant cloud](https://vagrantcloud.com). Vagrant Cloud, c'est un peu le futur de
 vagrant : un site où on peut facilement partager nos boxes mais également, partager nos VMs.
 
 Depuis aujourd'hui, le 10 mars 2014, cette plateforme est ouverte à tous :
 
 <blockquote class="twitter-tweet" lang="en"><p>Vagrant 1.5 and Vagrant Cloud are now available! <a href="http://t.co/SGzqX2WqbK">http://t.co/SGzqX2WqbK</a> Vagrant Share, Boxes 2.0, Rsync synced folders, Hyper-V, and more!</p>&mdash; Mitchell Hashimoto (@mitchellh) <a href="https://twitter.com/mitchellh/statuses/443069185858760705">March 10, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Maintenant que j'ai le droit de vous en parler un peu, je vais vous donner quelues infos. Mais d'abord, laissez-moi vous montrer le résultat de
+mes tests : [https://vagrantcloud.com/jubianchi](https://vagrantcloud.com/jubianchi). J'ai donc profité de l'accès que j'avais pour vous bricoler
+quelques petites base boxes pour PHP. Vous en trouverez 3 (5.4, 5.5 et 5.6) plus ou moins équipées. Je vais essayer de maintenir ces boxes
+à jour avec les dernières versions de PHP. Le plan, c'est que je release une nouvelle version de chaque box à chaque fois qu'une nouvelle version
+de PHP est publiée. J'essayerais également de garder en ligne un maximum de version de ces boxes afin que vous puissiez facilement revenir à une version
+de PHP, juste en bidouillant un peu votre `Vagrantfile`. Dernière chose, les sources que j'utilise pour construire ces boxes sont disponibles sur
+[Github](https://github.com/jubianchi/vagrant-boxes). Vos contributions sont les bienvenues.
 
 Ce site a plusieurs objectifs:
 
