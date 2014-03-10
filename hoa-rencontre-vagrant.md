@@ -12,7 +12,7 @@
 ***
 Aujourd'hui, je vais vous parler un peu de [vagrant](http://vagrantup.com) et de [Hoa](http://hoa-project.net/). Ceux qui me connaissent savent que je suis un grand fan de vagrant, que je l'utilise quotidiennement et que je suis également contributeur au projet Hoa. J'ai donc décider de créer une box vagrant dans laquelle Hoa est pré-installer afin que tout le monde puisse l'essayer rapidement.
 
-Cette VM est basée sur une Debian 7 (wheezy) et est déclinée en 3 versions : PHP 5.4, PHP 5.5 et PHP 5.6. Ces trois versions intègrent les même soutils, à savoir :
+Cette VM est basée sur une Debian 7 (wheezy) et est déclinée en 3 versions : PHP 5.4, PHP 5.5 et PHP 5.6. Ces trois versions intègrent les mêmes outils, à savoir :
 
 * Hoa cloné depuis [les sources](http://git.hoa-project.net/Central.git)
 * [Composer](http://getcomposer.org)
