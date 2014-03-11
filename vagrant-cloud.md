@@ -19,7 +19,7 @@ Depuis aujourd'hui, le 10 mars 2014, cette plateforme est ouverte à tous :
 <blockquote class="twitter-tweet" lang="en"><p>Vagrant 1.5 and Vagrant Cloud are now available! <a href="http://t.co/SGzqX2WqbK">http://t.co/SGzqX2WqbK</a> Vagrant Share, Boxes 2.0, Rsync synced folders, Hyper-V, and more!</p>&mdash; Mitchell Hashimoto (@mitchellh) <a href="https://twitter.com/mitchellh/statuses/443069185858760705">March 10, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Maintenant que j'ai le droit de vous en parler un peu, je vais vous donner quelues infos. Mais d'abord, laissez-moi vous montrer le résultat de
+Maintenant que j'ai le droit de vous en parler un peu, je vais vous donner quelques infos. Mais d'abord, laissez-moi vous montrer le résultat de
 mes tests : [https://vagrantcloud.com/jubianchi](https://vagrantcloud.com/jubianchi).
 
 J'ai profité de l'accès que j'avais pour vous bricoler quelques petites base boxes pour PHP. Vous en trouverez 3 (5.4, 5.5 et 5.6)
@@ -58,5 +58,5 @@ En gros, vous pouvez maintenant partager votre VM (oui, oui votre VM, celle qui 
 Lancez la commande `vagrant share` et copiez l'identifiant qu'elle vous donne. Transmettez-le à un collègue qui travaille à l'autre
 bout de la France. En un coup de `vagrant connect <identifiant>` votre ami pourra se connecter à votre VM. C'est pas magnifique ?
 
-Voilà, le teasing est terminé, je vous encourage donc vivement à [mettre vagrant à jour vagrant](http://www.vagrantup.com/downloads.html) sur votre poste (quoi vous ne l'avez pas encore installer ?!)
+Voilà, le teasing est terminé, je vous encourage donc vivement à [mettre à jour vagrant](http://www.vagrantup.com/downloads.html) sur votre poste (quoi vous ne l'avez pas encore installer ?!)
 et à profiter de ses nouvelles fonctionnalités. Si vous souhaitez en savoir plus, faites un tour par le [blog](http://www.vagrantup.com/blog.html) ainsi que la [documentation](http://docs.vagrantup.com/v2/).
