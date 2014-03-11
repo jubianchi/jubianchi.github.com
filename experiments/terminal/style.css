@@ -1,0 +1,12 @@
+aside {
+    background-image: url(arrow.png);
+    background-repeat: no-repeat;
+    height: 110px;
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 18px;
+    font-family: 'Exo 2';
+    font-size: 2em;
+    font-weight: 400;
+    padding-left: 95px;
+}
