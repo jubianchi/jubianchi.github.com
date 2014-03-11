@@ -291,7 +291,7 @@ dépendantes de cette abstraction :
     //...
 }</code></pre>
 
-<pre class="line-numbers"><code class="language-#!/bin/bash">#!/bin/bash
+<pre class="line-numbers"><code class="language-bash">#!/bin/bash
 
 bin/atoum -f tests/listing/Adapter/4-5.php
 
