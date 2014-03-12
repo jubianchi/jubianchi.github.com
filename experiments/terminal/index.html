@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jubianchi.fr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julien Bianchi <contact@jubianchi.fr>">
+
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAenp6AO6//wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERERERAAABEQAAAAEQABIhARARASIAEiERERERIgAREAERAQARABETARERMBEAEREREREREQABEREREREQAAEREAABERAAAREAAAABEAABEAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAIPBAACH4QAAz/MAAP//AAD//wAA" rel="icon" type="image/x-icon" />
+
+    <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
+    <link href="../../styles/style.css" rel="stylesheet">
+
+    <link href="../../js/prismjs/prism.css" rel="stylesheet" />
+    <link href="../../js/prismjs/prism-okaidia.css" rel="stylesheet" />
+    <link href="../../js/prismjs/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+    <link href="../../styles/github.css" rel="stylesheet" />
+
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../js/less.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<header>
+    <a href="../../index.htm"><img id="avatar" src="../../images/nyantocat.gif"/></a>
+
+    <h1>Julien Bianchi <small><em>aka jubianchi</em></small></h1>
+
+    <ul>
+        <li><a href="mailto:contact@jubianchi.fr" title="email">email</a></li>
+        <li><a href="https://twitter.com/jubianchi" title="twitter">twitter</a></li>
+        <li><a href="https://github.com/jubianchi" title="github">github</a></li>
+        <li><a href="https://speakerdeck.com/jubianchi" title="speakerdeck">speakerdeck</a></li>
+        <li><a href="https://coderwall.com/jubianchi" title="coderwall">coderwall</a></li>
+        <li><a href="http://osrc.dfm.io/jubianchi" title="Open Source Report Card">OSRC</a></li>
+        <li><a href="../../cv/index.html" title="jubianchi.fr">CV</a></li>
+    </ul>
+</header>
+
+<article>
+    <div class="terminal" data-prompt="jubianchi@jubianchi.fr $ " data-callback="echoBack" data-motd="motd">
+        <header>
+            <h1>Terminal</h1>
+        </header>
+
+        <div class="window">
+            <span class="cursor">&nbsp;</span>
+        </div>
+    </div>
+
+    <aside>
+        Click on the terminal window to start it
+    </aside>
+</article>
+
+<script>
+function echoBack(input, output) {
+    output(input);
+}
+
+function motd(output) {
+    output('Hello World!<br/>');
+    output('I\'m an experiment from <a href="https://github.com" target="_blank">@jubianchi</a><br/><br/>');
+    output('Everything started when I discovered <strong>the awesome landing page of <a href="https://vagrantcloud.com" target="_blank">vagrantcloud.com</a></strong>.<br/>');
+    output('I found the shell mockups really great and <strong>I tried to create my own</strong>.<br/><br/>');
+    output('I really enjoyed working on this POC so <strong>I hope you\'ll enjoy the demo</strong> :)<br/><br/>');
+    output('Type <code>help</code> to get some help<br/><br/>');
+}
+
+$(function() {
+    $('.terminal').each(function() {
+        var $term = $(this),
+            $window = $('.window', $term),
+            $cursor = $('.cursor', $window),
+            motd = false,
+            prompt = function() {
+                var prompt = $('<span/>').addClass('prompt');
+
+                prompt.text($term.attr('data-prompt') || '$');
+
+                $cursor.hide();
+                output(prompt.after($cursor.show()));
+            },
+            output = function(text) {
+                var row = $('<p/>');
+
+                if (text instanceof String) {
+                    row.text(text);
+                } else {
+                    row.append(text);
+                }
+
+                $window
+                    .append(row)
+                    .stop(true, true)
+                    .animate({ scrollTop: $window[0].scrollHeight }, 250)
+                ;
+            };
+
+        $term.focus = function() {
+            $term.addClass('focus');
+
+            if(motd === false) {
+                (window[$term.attr('data-motd')] || function() {})(output);
+                prompt();
+
+                motd = true;
+            }
+
+            $cursor.blink();
+        };
+
+        $term.blur = function() {
+            $term.removeClass('focus');
+            $cursor.unblink();
+        };
+
+        $window.clear = function() {
+            $('p', $window).remove();
+        };
+
+        $cursor.blinker = null;
+        $cursor.type = function(char) {
+            $cursor.hide().before('<span>' + char + '</span>').show();
+        };
+        $cursor.backspace = function() {
+            $cursor.prev('span:not(.prompt)').remove();
+        };
+        $cursor.blink = function() {
+            $cursor.blinker = setInterval(
+                function() {
+                    $cursor.toggleClass('hide');
+                },
+                500
+            );
+        };
+        $cursor.unblink = function() {
+            clearInterval($cursor.blinker);
+        };
+
+        $term.click(function(ev) {
+            ev.stopPropagation();
+
+            $term.focus();
+        });
+
+        $(document).click(function() {
+            $term.blur();
+        });
+
+        $(document).on('keydown', function(ev) {
+            if(ev.keyCode === 8 && $term.is('.focus')) {
+                ev.preventDefault();
+
+                $cursor.backspace();
+            }
+        });
+
+        $(document).on('keypress', function(ev) {
+            if($term.is('.focus')) {
+                ev.preventDefault();
+
+                if(ev.keyCode === 13) {
+                    var line = $cursor.prevUntil('.prompt').text().split('').reverse().join('');
+
+                    switch(line) {
+                        case 'clear':
+                        case 'reset':
+                            $window.clear();
+                            break;
+
+                        case 'help':
+                            output('Commands:');
+                            output('<ul><li><code>clear</code>: clear the screen</li><li><code>reset</code>: alias of <code>clear</code></li><li><code>help</code>: displays this message</li></ul>');
+                            output('Other inputs are echoed back')
+                            break;
+
+                        default:
+                            (window[$term.attr('data-callback')] || function() {})(line, output);
+                    }
+
+                    prompt();
+                } else {
+                    $cursor.type(String.fromCharCode(ev.which));
+                }
+            }
+        });
+    });
+});
+</script>
+
+<script src="../../js/prismjs/prism.js"></script>
+<script src="../../js/prismjs/components/prism-bash.js"></script>
+<script src="../../js/prismjs/components/prism-php.js"></script>
+<script src="../../js/prismjs/components/prism-php-extras.js"></script>
+<script src="../../js/prismjs/components/prism-css.js"></script>
+<script src="../../js/prismjs/plugins/line-numbers/prism-line-numbers.js"></script>
+<script src="../../js/jquery.github.js"></script>
+<script>$(function() { $("[data-repo]").github(); });</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-10349389-8', 'jubianchi.fr');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>
