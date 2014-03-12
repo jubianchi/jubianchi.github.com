@@ -57,6 +57,10 @@
     </aside>
 </article>
 
+<script src="js/terminal.js"></script>
+<script src="js/termwin.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/reseq.js"></script>
 <script>
 function echoBack(input, output) {
     output(input);
@@ -72,135 +76,67 @@ function motd(output) {
 }
 
 $(function() {
-    $('.terminal').each(function() {
-        var $term = $(this),
-            $window = $('.window', $term),
-            $cursor = $('.cursor', $window),
-            motd = false,
-            prompt = function() {
-                var prompt = $('<span/>').addClass('prompt');
+    var term = terminal.init($('.terminal')),
+        script = false;
 
-                prompt.text($term.attr('data-prompt') || '$');
+    term.$term.click(function(ev) {
+        ev.stopPropagation();
 
-                $cursor.hide();
-                output(prompt.after($cursor.show()));
-            },
-            output = function(text) {
-                var row = $('<p/>');
+        term.focus();
 
-                if (text instanceof String) {
-                    row.text(text);
-                } else {
-                    row.append(text);
+        if(script === false) {
+            $.get('typescript.tsq').success(function(data) {
+                reseq.init(data).execute(term);
+            });
+
+            script = true;
+        }
+    });
+
+    $(document).click(function() {
+        term.blur();
+    });
+
+    $(document).on('keydown', function(ev) {
+        if(ev.keyCode === 8 && term.focused()) {
+            ev.preventDefault();
+
+            term.termwin.backspace();
+        }
+    });
+
+    $(document).on('keypress', function(ev) {
+        if(term.focused()) {
+            ev.preventDefault();
+
+            if(ev.keyCode === 13) {
+                var line = term.termwin.cursor.$cursor.prevUntil('.prompt').text().split('').reverse().join('');
+
+                switch(line) {
+                    case 'clear':
+                    case 'reset':
+                        term.termwin.clear();
+                        break;
+
+                    case 'help':
+                        term.output('Commands:');
+                        term.output('<ul><li><code>clear</code>: clear the screen</li><li><code>reset</code>: alias of <code>clear</code></li><li><code>help</code>: displays this message</li></ul>');
+                        term.output('Other inputs are echoed back')
+                        break;
+
+                    default:
+                        (window[term.$term.attr('data-callback')] || function() {})(line, term.output);
                 }
 
-                $window
-                    .append(row)
-                    .stop(true, true)
-                    .animate({ scrollTop: $window[0].scrollHeight }, 250)
-                ;
-            };
-
-        $term.focus = function() {
-            $term.addClass('focus');
-
-            if(motd === false) {
-                (window[$term.attr('data-motd')] || function() {})(output);
-                prompt();
-
-                motd = true;
+                term.prompt();
+            } else {
+                term.termwin.type(String.fromCharCode(ev.which));
             }
-
-            $cursor.blink();
-        };
-
-        $term.blur = function() {
-            $term.removeClass('focus');
-            $cursor.unblink();
-        };
-
-        $window.clear = function() {
-            $('p', $window).remove();
-        };
-
-        $cursor.blinker = null;
-        $cursor.type = function(char) {
-            $cursor.hide().before('<span>' + char + '</span>').show();
-        };
-        $cursor.backspace = function() {
-            $cursor.prev('span:not(.prompt)').remove();
-        };
-        $cursor.blink = function() {
-            $cursor.blinker = setInterval(
-                function() {
-                    $cursor.toggleClass('hide');
-                },
-                500
-            );
-        };
-        $cursor.unblink = function() {
-            clearInterval($cursor.blinker);
-        };
-
-        $term.click(function(ev) {
-            ev.stopPropagation();
-
-            $term.focus();
-        });
-
-        $(document).click(function() {
-            $term.blur();
-        });
-
-        $(document).on('keydown', function(ev) {
-            if(ev.keyCode === 8 && $term.is('.focus')) {
-                ev.preventDefault();
-
-                $cursor.backspace();
-            }
-        });
-
-        $(document).on('keypress', function(ev) {
-            if($term.is('.focus')) {
-                ev.preventDefault();
-
-                if(ev.keyCode === 13) {
-                    var line = $cursor.prevUntil('.prompt').text().split('').reverse().join('');
-
-                    switch(line) {
-                        case 'clear':
-                        case 'reset':
-                            $window.clear();
-                            break;
-
-                        case 'help':
-                            output('Commands:');
-                            output('<ul><li><code>clear</code>: clear the screen</li><li><code>reset</code>: alias of <code>clear</code></li><li><code>help</code>: displays this message</li></ul>');
-                            output('Other inputs are echoed back')
-                            break;
-
-                        default:
-                            (window[$term.attr('data-callback')] || function() {})(line, output);
-                    }
-
-                    prompt();
-                } else {
-                    $cursor.type(String.fromCharCode(ev.which));
-                }
-            }
-        });
+        }
     });
 });
 </script>
 
-<script src="../../js/prismjs/prism.js"></script>
-<script src="../../js/prismjs/components/prism-bash.js"></script>
-<script src="../../js/prismjs/components/prism-php.js"></script>
-<script src="../../js/prismjs/components/prism-php-extras.js"></script>
-<script src="../../js/prismjs/components/prism-css.js"></script>
-<script src="../../js/prismjs/plugins/line-numbers/prism-line-numbers.js"></script>
-<script src="../../js/jquery.github.js"></script>
-<script>$(function() { $("[data-repo]").github(); });</script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -209,7 +145,6 @@ $(function() {
 
     ga('create', 'UA-10349389-8', 'jubianchi.fr');
     ga('send', 'pageview');
-
 </script>
 </body>
 </html>

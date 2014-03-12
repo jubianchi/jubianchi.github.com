@@ -1,6 +1,8 @@
 @terminal-bg: #011826;
 @terminal-fg: #F1F2EB;
 @terminal-font: "Courier New", Courier, "Nimbus Mono L", monospace;
+@terminal-border-radius: 8px;
+@terminal-min-height: 8px;
 
 @terminal-header-bg: #023859;
 @terminal-header-fg: @terminal-fg;
@@ -14,7 +16,7 @@
     width: 80%;
     margin: 0 auto;
     min-height: 250px;
-    border-radius: 8px;
+    border-radius: @terminal-border-radius;
     color: @terminal-fg;
     font-family: @terminal-font;
     opacity: 0.8;
@@ -33,29 +35,29 @@
 
     header {
         background-color: @terminal-header-bg;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        padding: 8px;
+        border-top-left-radius: @terminal-border-radius;
+        border-top-right-radius: @terminal-border-radius;
+        padding: @terminal-border-radius * 2;
         margin-bottom: 0;
 
         h1 {
-            line-height: 32px;
+            line-height: @terminal-border-radius * 4;
             font-family: @terminal-header-font;
             font-weight: 700;
-            font-size: 18px;
+            font-size: @terminal-border-radius * 2.25;
             color: @terminal-header-fg;
             margin: 0;
         }
     }
 
     .window {
-        padding: 8px 16px;
+        padding: @terminal-border-radius @terminal-border-radius * 2;
         max-height: 350px;
         overflow: auto;
 
         p {
             font-weight: bold;
-            margin: 4px 0;
+            margin: @terminal-border-radius / 2 0;
 
             * {
                 color: inherit;
@@ -84,21 +86,24 @@
 
         &::-webkit-scrollbar-track {
             background-color: @terminal-header-bg;
+            border-bottom-right-radius: @terminal-border-radius;
         }
 
         &::-webkit-scrollbar {
             width: 6px;
             height: 6px;
             background-color: @terminal-bg;
+            border-bottom-right-radius: @terminal-border-radius;
         }
 
         &::-webkit-scrollbar-thumb {
             background-color: @terminal-bg;
+            border-bottom-right-radius: @terminal-border-radius;
         }
 
         &::-webkit-scrollbar-thumb:vertical:hover,
         &::-webkit-scrollbar-thumb:horizontal:hover {
-            background: @terminal-bg;
+            background: lighten(@terminal-bg, 10%);
         }
 
         &::-webkit-scrollbar-button {
