@@ -1,0 +1,57 @@
+: Esc [ 0 m
+|b|
+|i|
+|n|
+|/|
+|a|
+|t|
+|o|
+|u|
+|m|
+| --test-it|.
+||.
+>> >
+: Esc [ 1 ; 36 m
+>PHP path>
+: Esc [ 0 m
+>: /usr/local/Cellar/php54/5.4.24/bin/php>.
+>> >
+: Esc [ 1 ; 36 m
+>PHP version>
+: Esc [ 0 m
+>:>.
+>=> >
+: Esc [ 0 m
+>PHP 5.4.24 (cli) (built: Feb  4 2014 19:20:04)>.
+: Esc [ 1 ; 36 m
+>=> >
+: Esc [ 0 m
+>Copyright (c) 1997-2013 The PHP Group>.
+: Esc [ 1 ; 36 m
+>=> >
+: Esc [ 0 m
+>Zend Engine v2.4.0, Copyright (c) 1998-2013 Zend Technologies>.
+>> >
+: Esc [ 1 ; 36 m
+>mageekguy\atoum\tests\units\adapter>
+: Esc [ 0 m
+>...>.
+>[..__________________________________________________________][0/2]>.
+>[S.__________________________________________________________][1/2]>.
+>[SS__________________________________________________________][2/2]>.
+: Esc [ 1 ; 36 m
+>=> >
+: Esc [ 0 m
+>Test duration: 0.01 second.>.
+: Esc [ 1 ; 36 m
+>=> >
+: Esc [ 0 m
+>Memory usage: 0.50 Mb.>.
+>> >
+: Esc [ 1 ; 36 m
+>mageekguy\atoum\tests\units\annotations\extractor>
+: Esc [ 30 ; 47 m
+>^C>
+: Esc [ 0 m
+>>.
+!!
