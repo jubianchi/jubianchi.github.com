@@ -79,7 +79,7 @@ var reseq = {
 
                             resolve();
                         },
-                        time * 1000
+                        time
                     );
                 });
             };
