@@ -50,6 +50,8 @@
         <div class="window">
             <span class="cursor">&nbsp;</span>
         </div>
+
+        <footer></footer>
     </div>
 
     <aside>
@@ -57,6 +59,73 @@
     </aside>
 </article>
 
+<section>
+    <time datetime="{{ page.date }}">
+        <strong>Mar</strong>
+        <span>13</span>
+        <em>2014</em>
+    </time>
+
+    <div class="left">
+        <h1>Web terminal</h1>
+
+        <p>
+            I started this experiment as a tiny challenge to reproduce the terminals we can find on the
+            <a href="http://vagrantcloud.com">vagrantcloud</a>'s homepage.
+        </p>
+
+        <p>
+            My concern was to produce a client-side, standalone library which would be able to emulate a
+            pseudo-terminal in a web page.
+        </p>
+
+        <p>
+            After about two days of work, here is where I am : a nice-looking terminal supporting some cool things:
+            <ul>
+                <li>
+                    Programmatically create commands (everything is JS powered): I wrote some basic commands like
+                    <code>clear</code> or <code>help</code> which your can try in the above demo.
+                </li>
+                <li>
+                    It can parse and replay <a href="https://www.gnu.org/software/teseq/"><code>teseq</code></a>-like scripts : I began on parsing the standard
+                    <code>teseq</code> <a href="https://www.gnu.org/software/teseq/manual/teseq.html#Output-Format">file format</a>
+                    but I quickly had problem so I made change to the expected format (for example, <code>teseq</code> treats output
+                    line as a single type whereas my pseudo-terminal has to differentiate user inputs and commands outputs).
+                    This is really cool: you can record your own terminal using <code>script</code> and <code>teseq</code>
+                    and then quiclky share it on any web page you can edit.
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            It still lacks some features (timings support in <code>teseq</code> parser, history support, cursor moves, ...),
+            which I'll add when I have time for it. It also massively uses <a href="http://jquery.com/">jQuery</a> for events binding. Removing
+            this dependency would be great. Also, it could be fun to rewrite everything with <a href="http://kangax.github.io/es5-compat-table/es6/">ECMAScript 6</a>.
+        </p>
+
+        <p>
+            Fell free to <a href="#disqus_thread">comment</a> or open PR
+            <a href="https://github.com/jubianchi/jubianchi.github.com/tree/master/experiments/terminal">on github</a>.
+        </p>
+    </div>
+</section>
+
+<section id="disqus_thread"></section>
+
+<script type="text/javascript">
+    var disqus_shortname = 'jubianchifr';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<script src="js/terminal.js"></script>
+<script src="js/termwin.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/reseq.js"></script>
 <script>
 function echoBack(input, output) {
     output(input);
@@ -68,139 +137,51 @@ function motd(output) {
     output('Everything started when I discovered <strong>the awesome landing page of <a href="https://vagrantcloud.com" target="_blank">vagrantcloud.com</a></strong>.<br/>');
     output('I found the shell mockups really great and <strong>I tried to create my own</strong>.<br/><br/>');
     output('I really enjoyed working on this POC so <strong>I hope you\'ll enjoy the demo</strong> :)<br/><br/>');
-    output('Type <code>help</code> to get some help<br/><br/>');
 }
 
+var term;
+
 $(function() {
-    $('.terminal').each(function() {
-        var $term = $(this),
-            $window = $('.window', $term),
-            $cursor = $('.cursor', $window),
-            motd = false,
-            prompt = function() {
-                var prompt = $('<span/>').addClass('prompt');
+    var script = false;
 
-                prompt.text($term.attr('data-prompt') || '$');
+    term = terminal.init($('.terminal'));
 
-                $cursor.hide();
-                output(prompt.after($cursor.show()));
-            },
-            output = function(text) {
-                var row = $('<p/>');
+    $(document).on('keypress', function(ev) {
+        if(term.focused()) {
+            ev.preventDefault();
 
-                if (text instanceof String) {
-                    row.text(text);
-                } else {
-                    row.append(text);
+            if(ev.keyCode === 13) {
+                var line = term.termwin.cursor.$cursor.prevUntil('.prompt').text().split('').reverse().join('');
+
+                switch(line) {
+                    case 'reseq':
+                        $.get('typescript.tsq')
+                            .success(function(data) {
+                                reseq.init(data).execute(term);
+                            });
+                        break;
+                    case 'clear':
+                    case 'reset':
+                        term.termwin.clear();
+                        break;
+
+                    case 'help':
+                        term.output('Commands:');
+                        term.output('<ul><li><code>reseq</code>: replay a teseq script</li><li><code>clear</code>: clear the screen</li><li><code>reset</code>: alias of <code>clear</code></li><li><code>help</code>: displays this message</li></ul>');
+                        term.output('Other inputs are echoed back')
+                        break;
+
+                    default:
+                        (window[term.$term.attr('data-callback')] || function() {})(line, term.output);
                 }
 
-                $window
-                    .append(row)
-                    .stop(true, true)
-                    .animate({ scrollTop: $window[0].scrollHeight }, 250)
-                ;
-            };
-
-        $term.focus = function() {
-            $term.addClass('focus');
-
-            if(motd === false) {
-                (window[$term.attr('data-motd')] || function() {})(output);
-                prompt();
-
-                motd = true;
+                term.prompt();
             }
-
-            $cursor.blink();
-        };
-
-        $term.blur = function() {
-            $term.removeClass('focus');
-            $cursor.unblink();
-        };
-
-        $window.clear = function() {
-            $('p', $window).remove();
-        };
-
-        $cursor.blinker = null;
-        $cursor.type = function(char) {
-            $cursor.hide().before('<span>' + char + '</span>').show();
-        };
-        $cursor.backspace = function() {
-            $cursor.prev('span:not(.prompt)').remove();
-        };
-        $cursor.blink = function() {
-            $cursor.blinker = setInterval(
-                function() {
-                    $cursor.toggleClass('hide');
-                },
-                500
-            );
-        };
-        $cursor.unblink = function() {
-            clearInterval($cursor.blinker);
-        };
-
-        $term.click(function(ev) {
-            ev.stopPropagation();
-
-            $term.focus();
-        });
-
-        $(document).click(function() {
-            $term.blur();
-        });
-
-        $(document).on('keydown', function(ev) {
-            if(ev.keyCode === 8 && $term.is('.focus')) {
-                ev.preventDefault();
-
-                $cursor.backspace();
-            }
-        });
-
-        $(document).on('keypress', function(ev) {
-            if($term.is('.focus')) {
-                ev.preventDefault();
-
-                if(ev.keyCode === 13) {
-                    var line = $cursor.prevUntil('.prompt').text().split('').reverse().join('');
-
-                    switch(line) {
-                        case 'clear':
-                        case 'reset':
-                            $window.clear();
-                            break;
-
-                        case 'help':
-                            output('Commands:');
-                            output('<ul><li><code>clear</code>: clear the screen</li><li><code>reset</code>: alias of <code>clear</code></li><li><code>help</code>: displays this message</li></ul>');
-                            output('Other inputs are echoed back')
-                            break;
-
-                        default:
-                            (window[$term.attr('data-callback')] || function() {})(line, output);
-                    }
-
-                    prompt();
-                } else {
-                    $cursor.type(String.fromCharCode(ev.which));
-                }
-            }
-        });
+        }
     });
 });
 </script>
 
-<script src="../../js/prismjs/prism.js"></script>
-<script src="../../js/prismjs/components/prism-bash.js"></script>
-<script src="../../js/prismjs/components/prism-php.js"></script>
-<script src="../../js/prismjs/components/prism-php-extras.js"></script>
-<script src="../../js/prismjs/components/prism-css.js"></script>
-<script src="../../js/prismjs/plugins/line-numbers/prism-line-numbers.js"></script>
-<script src="../../js/jquery.github.js"></script>
-<script>$(function() { $("[data-repo]").github(); });</script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -209,7 +190,6 @@ $(function() {
 
     ga('create', 'UA-10349389-8', 'jubianchi.fr');
     ga('send', 'pageview');
-
 </script>
 </body>
 </html>

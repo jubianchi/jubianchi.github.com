@@ -1,0 +1,277 @@
+" Recorded backspaces are flawlessly replayed inside the terminal
+|l|
+|s|
+| -lha|
+. BS/^H
+||.
+>total 1792>.
+>drwxr-xr-x@ 30 julien.bianchi  staff   1,0K 12 mar 13:05 >
+: Esc [ 1 m
+: Esc [ 36 m
+>.>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>drwx------+ 13 julien.bianchi  staff   442B 12 mar 13:00 >
+: Esc [ 1 m
+: Esc [ 36 m
+>..>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>-rw-r--r--@  1 julien.bianchi  staff   152B 10 jui  2013 AUTHORS>.
+>-rw-r--r--@  1 julien.bianchi  staff    34K 14 nov  2010 COPYING>.
+>-rw-r--r--@  1 julien.bianchi  staff   2,8K 14 nov  2010 ChangeLog>.
+>-rw-r--r--@  1 julien.bianchi  staff    15K 11 dc   2010 INSTALL>.
+>-rw-r--r--   1 julien.bianchi  staff    45K 12 mar 13:02 Makefile>.
+>-rw-r--r--@  1 julien.bianchi  staff   2,4K 10 mai  2013 Makefile.am>.
+>-rw-r--r--@  1 julien.bianchi  staff    45K 11 jui  2013 Makefile.in>.
+>-rw-r--r--@  1 julien.bianchi  staff   889B 10 jui  2013 NEWS>.
+>-rw-r--r--@  1 julien.bianchi  staff   2,0K 10 jui  2013 README>.
+>-rw-r--r--@  1 julien.bianchi  staff    35K 11 jui  2013 aclocal.m4>.
+>-rwxr-xr-x@  1 julien.bianchi  staff   3,7K 11 dc   2010 >
+: Esc [ 31 m
+>compile>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>-rw-r--r--   1 julien.bianchi  staff    21K 12 mar 13:02 config.log>.
+>-rwxr-xr-x   1 julien.bianchi  staff    33K 12 mar 13:02 >
+: Esc [ 31 m
+>config.status>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>-rwxr-xr-x@  1 julien.bianchi  staff   172K 11 jui  2013 >
+: Esc [ 31 m
+>configure>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>-rw-r--r--@  1 julien.bianchi  staff   2,7K 11 jui  2013 configure.ac>.
+>-rwxr-xr-x@  1 julien.bianchi  staff    18K 11 dc   2010 >
+: Esc [ 31 m
+>depcomp>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>drwxr-xr-x@  9 julien.bianchi  staff   306B 11 jui  2013 >
+: Esc [ 1 m
+: Esc [ 36 m
+>doc>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>-rwxr-xr-x@  1 julien.bianchi  staff    13K 11 dc   2010 >
+: Esc [ 31 m
+>install-sh>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>-rwxr-xr-x@  1 julien.bianchi  staff   5,5K 11 dc   2010 >
+: Esc [ 31 m
+>mdate-sh>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>-rwxr-xr-x@  1 julien.bianchi  staff    11K 11 dc   2010 >
+: Esc [ 31 m
+>missing>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>-rwxr-xr-x   1 julien.bianchi  staff   7,3K 12 mar 13:02 >
+: Esc [ 31 m
+>reseq>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>-rw-r--r--@  1 julien.bianchi  staff   7,3K 11 jui  2013 reseq.in>.
+>-rwxr-xr-x   1 julien.bianchi  staff   2,9K 12 mar 13:02 >
+: Esc [ 31 m
+>run-tests>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>drwxr-xr-x@ 28 julien.bianchi  staff   952B 12 mar 13:02 >
+: Esc [ 1 m
+: Esc [ 36 m
+>src>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>-rwxr-xr-x   1 julien.bianchi  staff    75K 12 mar 13:02 >
+: Esc [ 31 m
+>teseq>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>drwxr-xr-x@ 31 julien.bianchi  staff   1,0K 11 jui  2013 >
+: Esc [ 1 m
+: Esc [ 36 m
+>tests>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+>-rw-r--r--@  1 julien.bianchi  staff   288K 11 dc   2010 texinfo.tex>.
+>-rw-r--r--   1 julien.bianchi  staff    43B 12 mar 13:05 typescript>.
+" As you can see, the terminal supports formating
+!!
+|l|
+: Esc [ 39 m
+. BS/^H
+: Esc [ 32 m
+|l|
+: Esc [ 32 m
+|l|
+: Esc [ 39 m
+| |
+|-|
+|l|
+|h|
+|a|
+. BS/^H BS/^H BS/^H BS/^H BS/^H
+||.
+>total 896K>.
+>-rw-r--r--  1 julien.bianchi  152 jui 10  2013 >
+: Esc [ 0 m
+: Esc [ 0 m
+>AUTHORS>
+: Esc [ 0 m
+>>.
+>-rw-r--r--  1 julien.bianchi  35K nov 14  2010 >
+: Esc [ 0 m
+>COPYING>
+: Esc [ 0 m
+>>.
+>-rw-r--r--  1 julien.bianchi 2,9K nov 14  2010 >
+: Esc [ 0 m
+>ChangeLog>
+: Esc [ 0 m
+>>.
+>-rw-r--r--  1 julien.bianchi  16K dc  11  2010 >
+: Esc [ 0 m
+>INSTALL>
+: Esc [ 0 m
+>>.
+>-rw-r--r--  1 julien.bianchi  46K mar 12 13:02 >
+: Esc [ 0 m
+>Makefile>
+: Esc [ 0 m
+>>.
+>-rw-r--r--  1 julien.bianchi 2,4K mai 10  2013 >
+: Esc [ 0 m
+>Makefile.am>
+: Esc [ 0 m
+>>.
+>-rw-r--r--  1 julien.bianchi  46K jui 11  2013 >
+: Esc [ 0 m
+>Makefile.in>
+: Esc [ 0 m
+>>.
+>-rw-r--r--  1 julien.bianchi  889 jui 10  2013 >
+: Esc [ 0 m
+>NEWS>
+: Esc [ 0 m
+>>.
+>-rw-r--r--  1 julien.bianchi 2,1K jui 10  2013 >
+: Esc [ 0 m
+>README>
+: Esc [ 0 m
+>>.
+>-rw-r--r--  1 julien.bianchi  36K jui 11  2013 >
+: Esc [ 0 m
+>aclocal.m4>
+: Esc [ 0 m
+>>.
+>-rwxr-xr-x  1 julien.bianchi 3,7K dc  11  2010 >
+: Esc [ 1 ; 31 m
+>compile>
+: Esc [ 0 m
+>*>.
+>-rw-r--r--  1 julien.bianchi  21K mar 12 13:02 >
+: Esc [ 1 ; 32 m
+>config.log>
+: Esc [ 0 m
+>>.
+>-rwxr-xr-x  1 julien.bianchi  34K mar 12 13:02 >
+: Esc [ 1 ; 31 m
+>config.status>
+: Esc [ 0 m
+>*>.
+>-rwxr-xr-x  1 julien.bianchi 173K jui 11  2013 >
+: Esc [ 1 ; 31 m
+>configure>
+: Esc [ 0 m
+>*>.
+>-rw-r--r--  1 julien.bianchi 2,7K jui 11  2013 >
+: Esc [ 0 m
+>configure.ac>
+: Esc [ 0 m
+>>.
+>-rwxr-xr-x  1 julien.bianchi  19K dc  11  2010 >
+: Esc [ 1 ; 31 m
+>depcomp>
+: Esc [ 0 m
+>*>.
+>drwxr-xr-x  9 julien.bianchi  306 jui 11  2013 >
+: Esc [ 34 m
+>doc>
+: Esc [ 0 m
+>/>.
+>-rwxr-xr-x  1 julien.bianchi  14K dc  11  2010 >
+: Esc [ 1 ; 31 m
+>install-sh>
+: Esc [ 0 m
+>*>.
+>-rwxr-xr-x  1 julien.bianchi 5,5K dc  11  2010 >
+: Esc [ 1 ; 31 m
+>mdate-sh>
+: Esc [ 0 m
+>*>.
+>-rwxr-xr-x  1 julien.bianchi  12K dc  11  2010 >
+: Esc [ 1 ; 31 m
+>missing>
+: Esc [ 0 m
+>*>.
+>-rwxr-xr-x  1 julien.bianchi 7,4K mar 12 13:02 >
+: Esc [ 1 ; 31 m
+>reseq>
+: Esc [ 0 m
+>*>.
+>-rw-r--r--  1 julien.bianchi 7,3K jui 11  2013 >
+: Esc [ 0 m
+>reseq.in>
+: Esc [ 0 m
+>>.
+>-rwxr-xr-x  1 julien.bianchi 2,9K mar 12 13:02 >
+: Esc [ 1 ; 31 m
+>run-tests>
+: Esc [ 0 m
+>*>.
+>drwxr-xr-x 28 julien.bianchi  952 mar 12 13:02 >
+: Esc [ 34 m
+>src>
+: Esc [ 0 m
+>/>.
+>-rwxr-xr-x  1 julien.bianchi  76K mar 12 13:02 >
+: Esc [ 1 ; 31 m
+>teseq>
+: Esc [ 0 m
+>*>.
+>drwxr-xr-x 31 julien.bianchi 1,1K jui 11  2013 >
+: Esc [ 34 m
+>tests>
+: Esc [ 0 m
+>/>.
+>-rw-r--r--  1 julien.bianchi 289K dc  11  2010 >
+: Esc [ 32 m
+>texinfo.tex>
+: Esc [ 0 m
+>>.
+>-rw-r--r--  1 julien.bianchi   43 mar 12 13:05 >
+: Esc [ 0 m
+>typescript>
+: Esc [ 0 m
+>>.
+!!

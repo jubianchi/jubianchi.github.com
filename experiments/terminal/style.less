@@ -1,6 +1,8 @@
 @terminal-bg: #011826;
 @terminal-fg: #F1F2EB;
 @terminal-font: "Courier New", Courier, "Nimbus Mono L", monospace;
+@terminal-border-radius: 8px;
+@terminal-min-height: 8px;
 
 @terminal-header-bg: #023859;
 @terminal-header-fg: @terminal-fg;
@@ -9,12 +11,22 @@
 @termianl-prompt-fg: #049DBF;
 @terminal-prompt-font: @terminal-font;
 
+@keyframes blink {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+}
+
+@-webkit-keyframes blink {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+}
+
 .terminal {
     background-color: @terminal-bg;
     width: 80%;
     margin: 0 auto;
-    min-height: 250px;
-    border-radius: 8px;
+    height: 450px;
+    border-radius: @terminal-border-radius;
     color: @terminal-fg;
     font-family: @terminal-font;
     opacity: 0.8;
@@ -24,6 +36,9 @@
 
         .cursor {
             visibility: visible;
+            -webkit-animation: blink 1s cubic-bezier(1.0,0,0,1.0) infinite;
+            -moz-animation: blink 1s cubic-bezier(1.0,0,0,1.0) infinite;
+            animation: blink 1s cubic-bezier(1.0,0,0,1.0) infinite;
         }
     }
 
@@ -33,29 +48,40 @@
 
     header {
         background-color: @terminal-header-bg;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        padding: 8px;
+        border-top-left-radius: @terminal-border-radius;
+        border-top-right-radius: @terminal-border-radius;
+        padding: @terminal-border-radius * 2;
         margin-bottom: 0;
 
         h1 {
-            line-height: 32px;
+            line-height: @terminal-border-radius * 4;
             font-family: @terminal-header-font;
             font-weight: 700;
-            font-size: 18px;
+            font-size: @terminal-border-radius * 2.25;
             color: @terminal-header-fg;
             margin: 0;
         }
     }
 
+    footer {
+        background-color: @terminal-header-bg;
+        border-bottom-left-radius: @terminal-border-radius;
+        border-bottom-right-radius: @terminal-border-radius;
+        height: 25px;
+        line-height: 25px;
+        font-size: 1em;
+        text-align: left;
+        padding-left: @terminal-border-radius;
+    }
+
     .window {
-        padding: 8px 16px;
-        max-height: 350px;
+        padding: @terminal-border-radius @terminal-border-radius * 2;
+        height: 345px;
+        max-height: 345px;
         overflow: auto;
 
         p {
-            font-weight: bold;
-            margin: 4px 0;
+            margin: @terminal-border-radius / 2 0;
 
             * {
                 color: inherit;
@@ -84,21 +110,24 @@
 
         &::-webkit-scrollbar-track {
             background-color: @terminal-header-bg;
+            border-bottom-right-radius: @terminal-border-radius;
         }
 
         &::-webkit-scrollbar {
             width: 6px;
             height: 6px;
             background-color: @terminal-bg;
+            border-bottom-right-radius: @terminal-border-radius;
         }
 
         &::-webkit-scrollbar-thumb {
             background-color: @terminal-bg;
+            border-bottom-right-radius: @terminal-border-radius;
         }
 
         &::-webkit-scrollbar-thumb:vertical:hover,
         &::-webkit-scrollbar-thumb:horizontal:hover {
-            background: @terminal-bg;
+            background: lighten(@terminal-bg, 10%);
         }
 
         &::-webkit-scrollbar-button {
