@@ -259,3 +259,6 @@ blockquote:before {
     background-color: transparent!important;
 }
 
+.strike {
+    text-decoration: line-through;
+}

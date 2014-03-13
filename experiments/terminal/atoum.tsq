@@ -1,14 +1,5 @@
 : Esc [ 0 m
-|b|
-|i|
-|n|
-|/|
-|a|
-|t|
-|o|
-|u|
-|m|
-| --test-it|.
+|bin/atoum --test-it|.
 ||.
 >> >
 : Esc [ 1 ; 36 m

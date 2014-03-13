@@ -5,11 +5,6 @@ var terminal = {
         this.termwin = termwin.init($('.window', this.$term));
         this.readonly = false;
         this.motd = false;
-        this.actions = [];
-
-        setInterval(function() {
-            this.runAction();
-        }.bind(this), 150);
 
         this.$term.click(function(ev) {
             ev.stopPropagation();
@@ -40,16 +35,6 @@ var terminal = {
         }.bind(this));
 
         return this;
-    },
-
-    stackAction: function(callback, args, thisObj) {
-        this.actions[this.actions.length] = [callback, args, thisObj];
-    },
-
-    runAction: function() {
-        var action = this.actions.shift();
-
-        if(action) action[0].apply(action[2], action[1]);
     },
 
     prompt: function() {

@@ -1,42 +1,15 @@
 " reseq will start playing
-" reseq will start playing
-" reseq will start playing
-" reseq will start playing
-" reseq will start playing
-" reseq will start playing
-" reseq will start playing
-" reseq will start playing
-" reseq will start playing
-" reseq will start playing
+@ 1
 " You won't be able to type anything while the script is running
-" You won't be able to type anything while the script is running
-" You won't be able to type anything while the script is running
-" You won't be able to type anything while the script is running
-" You won't be able to type anything while the script is running
-" You won't be able to type anything while the script is running
-" You won't be able to type anything while the script is running
-" You won't be able to type anything while the script is running
-" You won't be able to type anything while the script is running
-" You won't be able to type anything while the script is running
+@ 2
 " Recorded backspaces are flawlessly replayed inside the terminal
-" Recorded backspaces are flawlessly replayed inside the terminal
-" Recorded backspaces are flawlessly replayed inside the terminal
-" Recorded backspaces are flawlessly replayed inside the terminal
-" Recorded backspaces are flawlessly replayed inside the terminal
+@ 2
 |l|
+@ 0.2
 |s|
-| -lha|
-" Recorded backspaces are flawlessly replayed inside the terminal
-" Recorded backspaces are flawlessly replayed inside the terminal
-" Recorded backspaces are flawlessly replayed inside the terminal
-" Recorded backspaces are flawlessly replayed inside the terminal
-" Recorded backspaces are flawlessly replayed inside the terminal
-. BS/^H
-" Recorded backspaces are flawlessly replayed inside the terminal
-" Recorded backspaces are flawlessly replayed inside the terminal
-" Recorded backspaces are flawlessly replayed inside the terminal
-" Recorded backspaces are flawlessly replayed inside the terminal
-" Recorded backspaces are flawlessly replayed inside the terminal
+@ 0.1
+| -lh|
+@ 0.3
 ||.
 >total 1792>.
 >drwxr-xr-x@ 30 julien.bianchi  staff   1,0K 12 mar 13:05 >
@@ -151,6 +124,7 @@
 >-rw-r--r--   1 julien.bianchi  staff    43B 12 mar 13:05 typescript>.
 " As you can see, the terminal supports formating
 !!
+@ 1
 |l|
 : Esc [ 39 m
 . BS/^H
@@ -166,6 +140,8 @@
 |a|
 . BS/^H BS/^H BS/^H BS/^H BS/^H
 ||.
+" As you can see, backspace works flawlessly
+@ 2
 >total 896K>.
 >-rw-r--r--  1 julien.bianchi  152 jui 10  2013 >
 : Esc [ 0 m

@@ -64,12 +64,44 @@ var reseq = {
 
         this.buffer = '';
         this.styles = {};
+        this.promise = null;
+        this.delay = null;
 
         return this;
     },
 
+    stackAction: function(callback, args, thisObj) {
+        var delay = this.delay,
+            promiseFactory = function() {
+                return new Promise(function(resolve, reject) {
+                    if(!delay) {
+                        delay = 0.1;
+                    }
+
+                    setTimeout(
+                        function() {
+                            callback.apply(thisObj, args);
+
+                            resolve();
+                        },
+                        delay * 1000
+                    );
+                });
+            }.bind(this);
+
+        this.delay = null;
+
+        if(this.promise) {
+            this.promise = this.promise.then(promiseFactory);
+        } else {
+            this.promise = promiseFactory();
+        }
+
+
+    },
+
     execute: function(term) {
-        term.stackAction(term.disableInput, [], term);
+        this.stackAction(term.disableInput, [], term);
 
         this.data.forEach(
             function(line) {
@@ -81,19 +113,19 @@ var reseq = {
                 if(line.match(/^"/)) this.descriptionLine(line, term);
                 if(line.match(/^@/)) this.delayLine(line, term);
                 if(line.match(/^!/)) {
-                    term.stackAction(term.output, [this.buffer], term);
+                    this.stackAction(term.output, [this.buffer], term);
                     this.buffer = '';
 
                     this.resetFgColor();
                     this.resetBgColor();
 
-                    term.stackAction(term.prompt, [], term);
+                    this.stackAction(term.prompt, [], term);
                 }
             },
             this
         );
 
-        term.stackAction(term.enableInput, [], term);
+        this.stackAction(term.enableInput, [], term);
     },
 
     textLine: function(line, term) {
@@ -102,8 +134,8 @@ var reseq = {
         line = line.replace(/\|\.$/, '');
 
         line.split('').forEach(function(c) {
-            term.stackAction(term.termwin.type, [c], term.termwin);
-        });
+            this.stackAction(term.termwin.type, [c], term.termwin);
+        }, this);
     },
 
     outputLine: function(line, term) {
@@ -131,7 +163,7 @@ var reseq = {
 
                 switch(c[1]) {
                     case 'BS':
-                        term.stackAction(term.termwin.backspace, [], term.termwin);
+                        this.stackAction(term.termwin.backspace, [], term.termwin);
                         break;
                 }
             }, this);
@@ -190,8 +222,6 @@ var reseq = {
                         return;
                     }
 
-                    console.log(c);
-
                     if(c >= 30 && c <= 37 && (!color[i - 1] || color[i - 1] != 5)) {
                         this.setFgColor(colors8[c - 30]);
 
@@ -239,10 +269,10 @@ var reseq = {
     },
 
     descriptionLine: function(line, term) {
-        term.stackAction(term.status, [line.replace(/^"/, '')], term);
+        this.stackAction(term.status, [line.replace(/^"/, '')], term);
     },
 
     delayLine: function(line, term) {
-
+        this.delay = parseFloat(line.replace(/[^\d\.]/g, ''));
     }
 };

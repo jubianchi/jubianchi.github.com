@@ -42,7 +42,7 @@
 </header>
 
 <article id="web-term">
-    <div class="terminal" data-prompt="jubianchi@jubianchi.fr $ " data-callback="echoBack" data-motd="motd">
+    <div class="terminal" data-prompt="<strong>jubianchi@jubianchi.fr $</strong> " data-callback="echoBack" data-motd="motd">
         <header>
             <h1>Terminal</h1>
         </header>
@@ -89,17 +89,11 @@
         </p>
 
         <pre class="line-numbers"><code class="language-bash">switch(line) {
-    case 'reseq':
+    case 'reseq typescript.tsq':
         $.get('typescript.tsq')
             .success(function(data) {
                 reseq.init(data).execute(term);
             });
-        break;
-    case 'reseq --replay atoum':
-        $.get('atoum.tsq')
-                .success(function(data) {
-                    reseq.init(data).execute(term);
-                });
         break;
     case 'clear':
     case 'reset':
@@ -127,6 +121,7 @@
         </p>
 
         <pre class="line-numbers"><code class="language-bash">" This line will be displayed as a status mesasge
+@ 2
 |l|
 |s|
 | -lha|
@@ -143,7 +138,7 @@
 !!</code></pre>
 
         <p>
-            It still lacks some features (timings support in <code>teseq</code> parser, history support, cursor moves, ...),
+            It still lacks some features (<span class="strike">timings support in <code>teseq</code> parser</span>, history support, cursor moves, ...),
             which I'll add when I have time for it. It also massively uses <a href="http://jquery.com/">jQuery</a> for events binding. Removing
             this dependency would be great. Also, it could be fun to rewrite everything with <a href="http://kangax.github.io/es5-compat-table/es6/">ECMAScript 6</a>.
         </p>
@@ -182,10 +177,13 @@ function echoBack(input, output) {
 
 function motd(output) {
     output('Hello World!<br/>');
-    output('I\'m an experiment from <a href="https://github.com" target="_blank">@jubianchi</a><br/><br/>');
+    output('I\'m an experiment from <a href="https://github.com/jubianchi" target="_blank">@jubianchi</a><br/><br/>');
     output('Everything started when I discovered <strong>the awesome landing page of <a href="https://vagrantcloud.com" target="_blank">vagrantcloud.com</a></strong>.<br/>');
     output('I found the shell mockups really great and <strong>I tried to create my own</strong>.<br/><br/>');
     output('I really enjoyed working on this POC so <strong>I hope you\'ll enjoy the demo</strong> :)<br/><br/>');
+
+    var date = new Date();
+    output('Started on ' + date.toLocaleDateString() + ' at ' + date.toLocaleTimeString() + '<br/><br/>');
 }
 
 var term;
@@ -205,23 +203,47 @@ $(function() {
                     .replace(/</g, '&lt;').replace(/>/g, '&gt;')
                 ;
 
-                console.log(line);
-
                 switch(line) {
                     case 'reseq':
-                    case 'reseq --replay':
-                    case 'reseq --replay typescript':
+                        term.output('Arguments:');
+                        term.output('<ul><li><code>typescript.tsq</code>: replay a teseq script</li><li><code>atoum.tsq</code>: replay a sample atoum test</li></ul>');
+                        break;
+
+                    case 'reseq typescript.tsq':
                         $.get('typescript.tsq')
                             .success(function(data) {
                                 reseq.init(data).execute(term);
                             });
                         break;
-                    case 'reseq --replay atoum':
+
+                    case 'reseq atoum.tsq':
                         $.get('atoum.tsq')
-                                .success(function(data) {
-                                    reseq.init(data).execute(term);
-                                });
+                            .success(function(data) {
+                                reseq.init(data).execute(term);
+                            });
                         break;
+
+                    case 'cat typescript.tsq':
+                        $.get('typescript.tsq')
+                            .success(function(data) {
+                                term.output(data.split('\n').join('<br/>'));
+                                term.prompt();
+                            });
+                        return;
+
+                    case 'cat':
+                        term.output('Arguments:');
+                        term.output('<ul><li><code>typescript.tsq</code>: display teseq script</li><li><code>atoum.tsq</code>: display atoum test script</li></ul>');
+                        break;
+
+                    case 'cat atoum.tsq':
+                        $.get('atoum.tsq')
+                            .success(function(data) {
+                                term.output(data.split('\n').join('<br/>'));
+                                term.prompt();
+                            });
+                        return;
+
                     case 'clear':
                     case 'reset':
                         term.termwin.clear();
@@ -229,12 +251,19 @@ $(function() {
 
                     case 'help':
                         term.output('Commands:');
-                        term.output('<ul><li><code>reseq</code>: replay a teseq script</li><li><code>clear</code>: clear the screen</li><li><code>reset</code>: alias of <code>clear</code></li><li><code>help</code>: displays this message</li></ul>');
-                        term.output('Other inputs are echoed back')
+                        term.output('<ul><li><code>reseq</code>: replay a teseq script</li><li><code>cat</code>: display files</li><li><code>clear</code>: clear the screen</li><li><code>reset</code>: alias of <code>clear</code></li><li><code>help</code>: displays this message</li><li><code>exit</code>: exit terminal session</li></ul>');
                         break;
 
+                    case 'exit':
+                        term.output('[exited]');
+                        term.disableInput();
+                        term.termwin.cursor.hide();
+                        return;
+
                     default:
-                        (window[term.$term.attr('data-callback')] || function() {})(line, term.output);
+                        if(line) {
+                            term.output('<span style="color: red">Unknown command ' + line + '</span>')
+                        }
                 }
 
                 term.prompt();
