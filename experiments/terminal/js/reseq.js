@@ -70,13 +70,9 @@ var reseq = {
     },
 
     stackAction: function(callback, args, thisObj, delay) {
-        var time = (delay === undefined ? this.delay : delay),
+        var time = (delay === undefined ? this.delay : delay) * 1000,
             promiseFactory = function() {
                 return new Promise(function(resolve) {
-                    if(time === null || time === undefined) {
-                        time = 0.3;
-                    }
-
                     setTimeout(
                         function() {
                             callback.apply(thisObj, args);
@@ -95,8 +91,6 @@ var reseq = {
         } else {
             this.promise = promiseFactory();
         }
-
-
     },
 
     execute: function(term) {
@@ -149,7 +143,11 @@ var reseq = {
 
         line = line.replace(/^>/, '');
         line = line.replace(/>$/, '');
-        line = line.replace(/\s{1}/g, '&nbsp;');
+
+        var cleaned;
+        while(line !== (cleaned = line.replace(/\s{2}/g, '&nbsp; '))) {
+            line = cleaned;
+        }
 
         if(line.match(/>\.$/)) {
             line = this.applyStyle(line.replace(/>\.$/, ''));
@@ -182,7 +180,7 @@ var reseq = {
                         }.bind(this),
                         [],
                         this,
-                        0
+                        this.delay || 0
                     );
 
                     repeat = 1;
@@ -202,14 +200,16 @@ var reseq = {
                 }
             }, this);
 
-            this.stackAction(
-                function() {
-                    this['controlChar' + last](term, repeat);
-                }.bind(this),
-                [],
-                this,
-                0
-            );
+            if(last) {
+                this.stackAction(
+                    function() {
+                        this['controlChar' + last](term, repeat);
+                    }.bind(this),
+                    [],
+                    this,
+                    this.delay || 0
+                );
+            }
         }
     },
 
@@ -235,61 +235,59 @@ var reseq = {
         if(color !== null) {
             color = color[1].split(' ; ');
 
-            if(color[0] > 0) {
-                color.forEach(function(c, i) {
-                    c = parseInt(c.replace(/^\s+|\s+$/g,''));
+            color.forEach(function(c, i) {
+                c = parseInt(c.replace(/^\s+|\s+$/g,''));
 
-                    if(c == 0) {
-                        this.resetBold();
-                        this.resetFgColor();
-                        this.resetBgColor();
+                if(c == 0) {
+                    this.resetBold();
+                    this.resetFgColor();
+                    this.resetBgColor();
 
-                        return;
-                    }
+                    return;
+                }
 
-                    if(c == 1) {
-                        this.setBold();
+                if(c == 1) {
+                    this.setBold();
 
-                        return;
-                    }
+                    return;
+                }
 
-                    if(c == 39) {
-                        this.resetFgColor();
+                if(c == 39) {
+                    this.resetFgColor();
 
-                        return;
-                    }
+                    return;
+                }
 
-                    if(c == 49) {
-                        this.resetBgColor();
+                if(c == 49) {
+                    this.resetBgColor();
 
-                        return;
-                    }
+                    return;
+                }
 
-                    if(c == 38) {
-                        c = parseInt(color[i + 2].replace(/^\s+|\s+$/g,''));
-                        this.setFgColor('#' + colors256[c]);
+                if(c == 38) {
+                    c = parseInt(color[i + 2].replace(/^\s+|\s+$/g,''));
+                    this.setFgColor('#' + colors256[c]);
 
-                        return;
-                    }
+                    return;
+                }
 
-                    if(c == 48) {
-                        c = parseInt(color[i + 2].replace(/^\s+|\s+$/g,''));
-                        this.setBgColor('#' + colors256[c]);
+                if(c == 48) {
+                    c = parseInt(color[i + 2].replace(/^\s+|\s+$/g,''));
+                    this.setBgColor('#' + colors256[c]);
 
-                        return;
-                    }
+                    return;
+                }
 
-                    if(c >= 30 && c <= 37 && (!color[i - 1] || color[i - 1] != 5)) {
-                        this.setFgColor(colors8[c - 30]);
+                if(c >= 30 && c <= 37 && (!color[i - 1] || color[i - 1] != 5)) {
+                    this.setFgColor(colors8[c - 30]);
 
-                        return;
-                    }
+                    return;
+                }
 
-                    if(c >= 40 && c <= 47 && (!color[i - 1] || color[i - 1] != 5)) {
-                        this.setBgColor(colors8[c - 40]);
-                    }
-                }, this);
-            }
+                if(c >= 40 && c <= 47 && (!color[i - 1] || color[i - 1] != 5)) {
+                    this.setBgColor(colors8[c - 40]);
+                }
+            }, this);
         }
     },
 

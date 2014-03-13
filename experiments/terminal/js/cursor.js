@@ -6,7 +6,7 @@ var cursor = {
     },
 
     type: function(char) {
-        this.write('<span>' + char + '</span>');
+        this.write('<span>' + char.replace(' ', '&nbsp;') + '</span>');
 
         return this;
     },

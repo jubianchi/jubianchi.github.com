@@ -1,5 +1,5 @@
 : Esc [ 0 m
-| bin/atoum --test-it|
+|bin/atoum --test-it|
 ||.
 >> >
 : Esc [ 1 ; 36 m
@@ -30,7 +30,6 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
 >mageekguy\atoum\tests\units\adapter>
 : Esc [ 0 m
 >...>
@@ -53,26 +52,34 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\annotations\extractor>
 : Esc [ 0 m
 >...>
 . CR/^M LF/^J
 >[........____________________________________________________][0/8]>
+@ 0.7
 . BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H
 >S.......____________________________________________________][1/8]>
+@ 0.2
 . BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H
 >S......____________________________________________________][2/8]>
+@ 0.4
 . BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H
 >S.....____________________________________________________][3/8]>
+@ 0.7
 . BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H
 >S....____________________________________________________][4/8]>
+@ 0.2
 . BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H
 >S...____________________________________________________][5/8]>
+@ 0.7
 . BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H
 >S..____________________________________________________][6/8]>
+@ 0.3
 . BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H
 >S.____________________________________________________][7/8]>
+@ 0.6
 . BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H
 >S____________________________________________________][8/8]>
 . CR/^M LF/^J
@@ -88,7 +95,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserter>
 : Esc [ 0 m
 >...>
@@ -127,7 +134,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserter\generator>
 : Esc [ 0 m
 >...>
@@ -166,7 +173,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\adapter>
 : Esc [ 0 m
 >...>
@@ -217,7 +224,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\adapter\call\exceptions\logic>
 : Esc [ 0 m
 >...>
@@ -238,7 +245,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\adapter\exceptions\logic>
 : Esc [ 0 m
 >...>
@@ -259,7 +266,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\boolean>
 : Esc [ 0 m
 >...>
@@ -288,7 +295,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\castToString>
 : Esc [ 0 m
 >...>
@@ -315,7 +322,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\dateInterval>
 : Esc [ 0 m
 >...>
@@ -352,7 +359,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\dateTime>
 : Esc [ 0 m
 >...>
@@ -397,7 +404,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\dom>
 : Esc [ 0 m
 >...>
@@ -436,7 +443,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\error>
 : Esc [ 0 m
 >...>
@@ -479,7 +486,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\exception>
 : Esc [ 0 m
 >...>
@@ -516,7 +523,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\extension>
 : Esc [ 0 m
 >...>
@@ -549,7 +556,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\float>
 : Esc [ 0 m
 >...>
@@ -586,7 +593,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\hash>
 : Esc [ 0 m
 >...>
@@ -615,7 +622,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\integer>
 : Esc [ 0 m
 >...>
@@ -650,7 +657,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\iterator>
 : Esc [ 0 m
 >...>
@@ -689,7 +696,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\mock>
 : Esc [ 0 m
 >...>
@@ -742,7 +749,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\mock\exceptions\logic>
 : Esc [ 0 m
 >...>
@@ -763,7 +770,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\mysqlDateTime>
 : Esc [ 0 m
 >...>
@@ -786,7 +793,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\object>
 : Esc [ 0 m
 >...>
@@ -825,7 +832,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\output>
 : Esc [ 0 m
 >...>
@@ -850,7 +857,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\phpArray>
 : Esc [ 0 m
 >...>
@@ -931,7 +938,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\phpClass>
 : Esc [ 0 m
 >...>
@@ -978,7 +985,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\phpFunction>
 : Esc [ 0 m
 >...>
@@ -1013,7 +1020,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\sizeOf>
 : Esc [ 0 m
 >...>
@@ -1038,7 +1045,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\stream>
 : Esc [ 0 m
 >...>
@@ -1067,7 +1074,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\string>
 : Esc [ 0 m
 >...>
@@ -1124,7 +1131,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\testedClass>
 : Esc [ 0 m
 >...>
@@ -1147,7 +1154,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\utf8String>
 : Esc [ 0 m
 >...>
@@ -1202,7 +1209,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\asserters\variable>
 : Esc [ 0 m
 >...>
@@ -1253,7 +1260,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\autoloader>
 : Esc [ 0 m
 >...>
@@ -1284,7 +1291,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\cli>
 : Esc [ 0 m
 >...>
@@ -1317,7 +1324,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\cli\colorizer>
 : Esc [ 0 m
 >...>
@@ -1352,7 +1359,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\cli\progressBar>
 : Esc [ 0 m
 >...>
@@ -1377,7 +1384,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\cli\prompt>
 : Esc [ 0 m
 >...>
@@ -1404,7 +1411,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\configurator>
 : Esc [ 0 m
 >...>
@@ -1427,7 +1434,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\exceptions\logic>
 : Esc [ 0 m
 >...>
@@ -1448,7 +1455,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\exceptions\logic\badMethodCall>
 : Esc [ 0 m
 >...>
@@ -1469,7 +1476,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\exceptions\logic\invalidArgument>
 : Esc [ 0 m
 >...>
@@ -1490,7 +1497,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\exceptions\runtime>
 : Esc [ 0 m
 >...>
@@ -1511,7 +1518,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\exceptions\runtime\unexpectedValue>
 : Esc [ 0 m
 >...>
@@ -1532,7 +1539,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\fs\path>
 : Esc [ 0 m
 >...>
@@ -1583,7 +1590,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\fs\path\exception>
 : Esc [ 0 m
 >...>
@@ -1604,7 +1611,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\fs\path\factory>
 : Esc [ 0 m
 >...>
@@ -1627,7 +1634,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\includer>
 : Esc [ 0 m
 >...>
@@ -1658,7 +1665,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\iterators\filters\recursives\atoum\source>
 : Esc [ 0 m
 >...>
@@ -1681,7 +1688,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\iterators\filters\recursives\closure>
 : Esc [ 0 m
 >...>
@@ -1704,7 +1711,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\iterators\filters\recursives\dot>
 : Esc [ 0 m
 >...>
@@ -1729,7 +1736,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\iterators\filters\recursives\extension>
 : Esc [ 0 m
 >...>
@@ -1754,7 +1761,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\iterators\recursives\atoum\source>
 : Esc [ 0 m
 >...>
@@ -1781,7 +1788,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\iterators\recursives\directory\factory>
 : Esc [ 0 m
 >...>
@@ -1822,7 +1829,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\locale>
 : Esc [ 0 m
 >...>
@@ -1849,7 +1856,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mailers\mail>
 : Esc [ 0 m
 >...>
@@ -1886,7 +1893,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\controller>
 : Esc [ 0 m
 >...>
@@ -1955,7 +1962,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\controller\iterator>
 : Esc [ 0 m
 >...>
@@ -1990,7 +1997,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\controller\linker>
 : Esc [ 0 m
 >...>
@@ -2019,7 +2026,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\generator>
 : Esc [ 0 m
 >...>
@@ -2100,7 +2107,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\generator\method>
 : Esc [ 0 m
 >...>
@@ -2135,7 +2142,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\generator\method\exception>
 : Esc [ 0 m
 >...>
@@ -2156,7 +2163,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\php\method>
 : Esc [ 0 m
 >...>
@@ -2187,7 +2194,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\php\method\argument>
 : Esc [ 0 m
 >...>
@@ -2214,7 +2221,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\stream>
 : Esc [ 0 m
 >...>
@@ -2245,7 +2252,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\stream\controller>
 : Esc [ 0 m
 >...>
@@ -2286,7 +2293,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\stream\invoker>
 : Esc [ 0 m
 >...>
@@ -2309,7 +2316,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\streams\fs\controller>
 : Esc [ 0 m
 >...>
@@ -2354,7 +2361,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\streams\fs\controller\factory>
 : Esc [ 0 m
 >...>
@@ -2375,7 +2382,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\streams\fs\directory>
 : Esc [ 0 m
 >...>
@@ -2400,7 +2407,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\streams\fs\directory\controller>
 : Esc [ 0 m
 >...>
@@ -2431,7 +2438,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\streams\fs\file>
 : Esc [ 0 m
 >...>
@@ -2506,7 +2513,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\mock\streams\fs\file\controller>
 : Esc [ 0 m
 >...>
@@ -2600,7 +2607,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php>
 : Esc [ 0 m
 >...>
@@ -2637,7 +2644,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\exception>
 : Esc [ 0 m
 >...>
@@ -2658,7 +2665,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\mocker>
 : Esc [ 0 m
 >...>
@@ -2695,7 +2702,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\mocker\adapter>
 : Esc [ 0 m
 >...>
@@ -2718,7 +2725,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\mocker\adapter\invoker>
 : Esc [ 0 m
 >...>
@@ -2741,7 +2748,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\tokenizer>
 : Esc [ 0 m
 >...>
@@ -2768,7 +2775,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\tokenizer\iterator>
 : Esc [ 0 m
 >...>
@@ -2827,7 +2834,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\tokenizer\iterators\phpArgument>
 : Esc [ 0 m
 >...>
@@ -2854,7 +2861,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\tokenizer\iterators\phpClass>
 : Esc [ 0 m
 >...>
@@ -2883,7 +2890,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\tokenizer\iterators\phpConstant>
 : Esc [ 0 m
 >...>
@@ -2904,7 +2911,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\tokenizer\iterators\phpFunction>
 : Esc [ 0 m
 >...>
@@ -2933,7 +2940,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\tokenizer\iterators\phpImportation>
 : Esc [ 0 m
 >...>
@@ -2954,7 +2961,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\tokenizer\iterators\phpMethod>
 : Esc [ 0 m
 >...>
@@ -2975,7 +2982,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\tokenizer\iterators\phpNamespace>
 : Esc [ 0 m
 >...>
@@ -2998,7 +3005,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\tokenizer\iterators\phpProperty>
 : Esc [ 0 m
 >...>
@@ -3019,7 +3026,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\tokenizer\iterators\phpScript>
 : Esc [ 0 m
 >...>
@@ -3074,7 +3081,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\php\tokenizer\token>
 : Esc [ 0 m
 >...>
@@ -3117,7 +3124,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\reader>
 : Esc [ 0 m
 >...>
@@ -3142,7 +3149,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\readers\std\in>
 : Esc [ 0 m
 >...>
@@ -3165,7 +3172,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report>
 : Esc [ 0 m
 >...>
@@ -3198,7 +3205,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\field>
 : Esc [ 0 m
 >...>
@@ -3221,7 +3228,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\atoum\cli>
 : Esc [ 0 m
 >...>
@@ -3252,7 +3259,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\atoum\logo>
 : Esc [ 0 m
 >...>
@@ -3277,7 +3284,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\atoum\phing>
 : Esc [ 0 m
 >...>
@@ -3308,7 +3315,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\coverage>
 : Esc [ 0 m
 >...>
@@ -3337,7 +3344,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\coverage\html>
 : Esc [ 0 m
 >...>
@@ -3388,7 +3395,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\coverage\treemap>
 : Esc [ 0 m
 >...>
@@ -3427,7 +3434,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\duration\cli>
 : Esc [ 0 m
 >...>
@@ -3460,7 +3467,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\duration\phing>
 : Esc [ 0 m
 >...>
@@ -3493,7 +3500,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\errors\cli>
 : Esc [ 0 m
 >...>
@@ -3532,7 +3539,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\event\cli>
 : Esc [ 0 m
 >...>
@@ -3559,7 +3566,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\exceptions\cli>
 : Esc [ 0 m
 >...>
@@ -3598,7 +3605,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\failures\cli>
 : Esc [ 0 m
 >...>
@@ -3633,7 +3640,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\failures\execute>
 : Esc [ 0 m
 >...>
@@ -3664,9 +3671,8 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
->mageekguy\atoum\tests\units\report\fields\runner\failures\execute\macos\mac>-
--|vim>
+@ 0.4
+>mageekguy\atoum\tests\units\report\fields\runner\failures\execute\macos\macvim>
 : Esc [ 0 m
 >...>
 . CR/^M LF/^J
@@ -3696,9 +3702,8 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
->mageekguy\atoum\tests\units\report\fields\runner\failures\execute\macos\php>-
--|storm>
+@ 0.4
+>mageekguy\atoum\tests\units\report\fields\runner\failures\execute\macos\phpstorm>
 : Esc [ 0 m
 >...>
 . CR/^M LF/^J
@@ -3728,9 +3733,8 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
->mageekguy\atoum\tests\units\report\fields\runner\failures\execute\unix\gedi>-
--|t>
+@ 0.4
+>mageekguy\atoum\tests\units\report\fields\runner\failures\execute\unix\gedit>
 : Esc [ 0 m
 >...>
 . CR/^M LF/^J
@@ -3760,7 +3764,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\failures\execute\unix\gvim>
 : Esc [ 0 m
 >...>
@@ -3791,9 +3795,8 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
->mageekguy\atoum\tests\units\report\fields\runner\failures\execute\unix\phps>-
--|torm>
+@ 0.4
+>mageekguy\atoum\tests\units\report\fields\runner\failures\execute\unix\phpstorm>
 : Esc [ 0 m
 >...>
 . CR/^M LF/^J
@@ -3825,7 +3828,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\outputs\cli>
 : Esc [ 0 m
 >...>
@@ -3864,7 +3867,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\php\path\cli>
 : Esc [ 0 m
 >...>
@@ -3897,7 +3900,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\php\version\cli>
 : Esc [ 0 m
 >...>
@@ -3932,7 +3935,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\result\cli>
 : Esc [ 0 m
 >...>
@@ -3965,7 +3968,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\result\logo>
 : Esc [ 0 m
 >...>
@@ -3988,7 +3991,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\result\notifier>
 : Esc [ 0 m
 >...>
@@ -4019,7 +4022,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\result\notifier\image>
 : Esc [ 0 m
 >...>
@@ -4048,9 +4051,8 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
->mageekguy\atoum\tests\units\report\fields\runner\result\notifier\image\grow>-
--|l>
+@ 0.4
+>mageekguy\atoum\tests\units\report\fields\runner\result\notifier\image\growl>
 : Esc [ 0 m
 >...>
 . CR/^M LF/^J
@@ -4078,9 +4080,8 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
->mageekguy\atoum\tests\units\report\fields\runner\result\notifier\image\libn>-
--|otify>
+@ 0.4
+>mageekguy\atoum\tests\units\report\fields\runner\result\notifier\image\libnotify>
 : Esc [ 0 m
 >...>
 . CR/^M LF/^J
@@ -4106,7 +4107,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\result\notifier\terminal>
 : Esc [ 0 m
 >...>
@@ -4135,7 +4136,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\tap\plan>
 : Esc [ 0 m
 >...>
@@ -4160,7 +4161,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\tests\coverage\cli>
 : Esc [ 0 m
 >...>
@@ -4197,7 +4198,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\tests\coverage\phing>
 : Esc [ 0 m
 >...>
@@ -4238,7 +4239,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\tests\duration\cli>
 : Esc [ 0 m
 >...>
@@ -4273,7 +4274,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\tests\memory\cli>
 : Esc [ 0 m
 >...>
@@ -4308,7 +4309,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\tests\memory\phing>
 : Esc [ 0 m
 >...>
@@ -4343,7 +4344,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\tests\skipped>
 : Esc [ 0 m
 >...>
@@ -4368,7 +4369,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\tests\skipped\cli>
 : Esc [ 0 m
 >...>
@@ -4401,7 +4402,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\tests\uncompleted\cli>
 : Esc [ 0 m
 >...>
@@ -4442,7 +4443,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\runner\tests\void>
 : Esc [ 0 m
 >...>
@@ -4467,7 +4468,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\test\duration\cli>
 : Esc [ 0 m
 >...>
@@ -4502,7 +4503,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\test\duration\phing>
 : Esc [ 0 m
 >...>
@@ -4537,7 +4538,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\test\event\cli>
 : Esc [ 0 m
 >...>
@@ -4566,7 +4567,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\test\event\phing>
 : Esc [ 0 m
 >...>
@@ -4593,7 +4594,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\test\event\tap>
 : Esc [ 0 m
 >...>
@@ -4634,7 +4635,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\test\memory\cli>
 : Esc [ 0 m
 >...>
@@ -4667,7 +4668,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\test\memory\phing>
 : Esc [ 0 m
 >...>
@@ -4700,7 +4701,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\test\run\cli>
 : Esc [ 0 m
 >...>
@@ -4731,7 +4732,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\report\fields\test\run\phing>
 : Esc [ 0 m
 >...>
@@ -4762,7 +4763,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\reports\asynchronous>
 : Esc [ 0 m
 >...>
@@ -4785,7 +4786,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\reports\asynchronous\builder>
 : Esc [ 0 m
 >...>
@@ -4808,7 +4809,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\reports\asynchronous\clover>
 : Esc [ 0 m
 >...>
@@ -4843,7 +4844,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\reports\asynchronous\coveralls>
 : Esc [ 0 m
 >...>
@@ -4878,7 +4879,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\reports\asynchronous\vim>
 : Esc [ 0 m
 >...>
@@ -4901,7 +4902,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\reports\asynchronous\xunit>
 : Esc [ 0 m
 >...>
@@ -4930,7 +4931,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\reports\realtime\cli>
 : Esc [ 0 m
 >...>
@@ -4953,7 +4954,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\reports\realtime\cli\light>
 : Esc [ 0 m
 >...>
@@ -4976,7 +4977,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\reports\realtime\phing>
 : Esc [ 0 m
 >...>
@@ -5025,7 +5026,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\reports\realtime\tap>
 : Esc [ 0 m
 >...>
@@ -5048,7 +5049,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\runner>
 : Esc [ 0 m
 >...>
@@ -5142,7 +5143,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\runner\score>
 : Esc [ 0 m
 >...>
@@ -5175,7 +5176,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\score>
 : Esc [ 0 m
 >...>
@@ -5256,7 +5257,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\score\coverage>
 : Esc [ 0 m
 >...>
@@ -5325,7 +5326,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\script>
 : Esc [ 0 m
 >...>
@@ -5402,7 +5403,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\script\arguments\parser>
 : Esc [ 0 m
 >...>
@@ -5447,7 +5448,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\script\configurable>
 : Esc [ 0 m
 >...>
@@ -5480,7 +5481,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\script\prompt>
 : Esc [ 0 m
 >...>
@@ -5507,7 +5508,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\scripts\builder>
 : Esc [ 0 m
 >...>
@@ -5580,7 +5581,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\scripts\builder\vcs\svn>
 : Esc [ 0 m
 >...>
@@ -5623,7 +5624,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\scripts\phar\generator>
 : Esc [ 0 m
 >...>
@@ -5662,7 +5663,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\scripts\phar\stub>
 : Esc [ 0 m
 >...>
@@ -5687,7 +5688,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\scripts\runner>
 : Esc [ 0 m
 >...>
@@ -5785,7 +5786,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\scripts\tagger>
 : Esc [ 0 m
 >...>
@@ -5812,7 +5813,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\scripts\tagger\engine>
 : Esc [ 0 m
 >...>
@@ -5851,7 +5852,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\scripts\treemap>
 : Esc [ 0 m
 >...>
@@ -5896,7 +5897,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\scripts\treemap\analyzer\generic>
 : Esc [ 0 m
 >...>
@@ -5925,7 +5926,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\scripts\treemap\categorizer>
 : Esc [ 0 m
 >...>
@@ -5954,7 +5955,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\superglobals>
 : Esc [ 0 m
 >...>
@@ -5977,7 +5978,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\template>
 : Esc [ 0 m
 >...>
@@ -6050,7 +6051,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\template\data>
 : Esc [ 0 m
 >...>
@@ -6107,7 +6108,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\template\iterator>
 : Esc [ 0 m
 >...>
@@ -6146,7 +6147,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\template\parser>
 : Esc [ 0 m
 >...>
@@ -6179,7 +6180,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\template\tag>
 : Esc [ 0 m
 >...>
@@ -6208,7 +6209,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test>
 : Esc [ 0 m
 >...>
@@ -6375,7 +6376,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\adapter>
 : Esc [ 0 m
 >...>
@@ -6442,7 +6443,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\adapter\call>
 : Esc [ 0 m
 >...>
@@ -6479,7 +6480,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\adapter\call\arguments\decorator>
 : Esc [ 0 m
 >...>
@@ -6500,7 +6501,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\adapter\call\decorator>
 : Esc [ 0 m
 >...>
@@ -6525,7 +6526,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\adapter\call\decorators\addClass>
 : Esc [ 0 m
 >...>
@@ -6550,7 +6551,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\adapter\calls>
 : Esc [ 0 m
 >...>
@@ -6629,7 +6630,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\adapter\calls\decorator>
 : Esc [ 0 m
 >...>
@@ -6650,7 +6651,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\adapter\invoker>
 : Esc [ 0 m
 >...>
@@ -6701,7 +6702,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\adapter\storage>
 : Esc [ 0 m
 >...>
@@ -6730,7 +6731,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\assertion\manager>
 : Esc [ 0 m
 >...>
@@ -6765,7 +6766,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\assertion\manager\exception>
 : Esc [ 0 m
 >...>
@@ -6786,7 +6787,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\engine>
 : Esc [ 0 m
 >...>
@@ -6807,7 +6808,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\engines\concurrent>
 : Esc [ 0 m
 >...>
@@ -6838,7 +6839,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\engines\inline>
 : Esc [ 0 m
 >...>
@@ -6865,7 +6866,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\generator>
 : Esc [ 0 m
 >...>
@@ -6912,7 +6913,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\generator\exception>
 : Esc [ 0 m
 >...>
@@ -6933,7 +6934,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\mock\generator>
 : Esc [ 0 m
 >...>
@@ -6962,7 +6963,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\phpunit\asserters\assertArrayHasKey>
 : Esc [ 0 m
 >...>
@@ -6989,7 +6990,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\phpunit\asserters\assertArrayNotHasKey>
 : Esc [ 0 m
 >...>
@@ -7016,7 +7017,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\phpunit\asserters\assertContains>
 : Esc [ 0 m
 >...>
@@ -7039,7 +7040,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\phpunit\asserters\assertCount>
 : Esc [ 0 m
 >...>
@@ -7062,7 +7063,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\phpunit\asserters\assertEmpty>
 : Esc [ 0 m
 >...>
@@ -7085,7 +7086,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\phpunit\asserters\assertInstanceOf>
 : Esc [ 0 m
 >...>
@@ -7108,7 +7109,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\phpunit\asserters\assertNotContains>
 : Esc [ 0 m
 >...>
@@ -7131,7 +7132,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\phpunit\asserters\assertNotInstanceOf>
 : Esc [ 0 m
 >...>
@@ -7154,7 +7155,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\phpunit\mock\generator>
 : Esc [ 0 m
 >...>
@@ -7207,7 +7208,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\phpunit\test>
 : Esc [ 0 m
 >...>
@@ -7252,7 +7253,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\test\score>
 : Esc [ 0 m
 >...>
@@ -7285,7 +7286,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\tools\diff>
 : Esc [ 0 m
 >...>
@@ -7314,7 +7315,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\tools\diffs\variable>
 : Esc [ 0 m
 >...>
@@ -7341,7 +7342,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\writer>
 : Esc [ 0 m
 >...>
@@ -7372,7 +7373,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\writers\file>
 : Esc [ 0 m
 >...>
@@ -7405,7 +7406,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\writers\http>
 : Esc [ 0 m
 >...>
@@ -7442,7 +7443,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\writers\mail>
 : Esc [ 0 m
 >...>
@@ -7473,7 +7474,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\writers\std>
 : Esc [ 0 m
 >...>
@@ -7504,7 +7505,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\writers\std\err>
 : Esc [ 0 m
 >...>
@@ -7529,7 +7530,7 @@
 . CR/^M LF/^J
 >> >
 : Esc [ 1 ; 36 m
-@ 0.7
+@ 0.4
 >mageekguy\atoum\tests\units\writers\std\out>
 : Esc [ 0 m
 >...>
@@ -7572,8 +7573,7 @@
 . CR/^M LF/^J
 : Esc [ 0 ; 37 m
 : Esc [ 41 m
->Failure (213 tests, 1700/1705 methods, 0 void method, 0 skipped method, 5 u>-
--|ncompleted methods, 1 failure, 5 errors, 0 exception)!>
+>Failure (213 tests, 1700/1705 methods, 0 void method, 0 skipped method, 5 uncompleted methods, 1 failure, 5 errors, 0 exception)!>
 : Esc [ 0 m
 . CR/^M LF/^J
 >> >
@@ -7585,13 +7585,9 @@
 : Esc [ 0 ; 31 m
 >=> >
 : Esc [ 0 m
-@ 0.7
 >mageekguy\atoum\tests\units\test\phpunit\test::testAssertArrayHasKey():>
 . CR/^M LF/^J
->In file /Users/jubianchi/repositories/atoum/atoum/tests/units/classes/test/>-
--|phpunit/test.php on line 321, mageekguy\atoum\asserters\exception() failed>-
--|: message 'string(13) '5321f1e1287a1' is not an array nor an \arrayAccess >-
--|instance' is not identical to 'string(13) '5321f1e1287a1' is not an array'>
+>In file /Users/jubianchi/repositories/atoum/atoum/tests/units/classes/test/phpunit/test.php on line 321, mageekguy\atoum\asserters\exception() failed: message 'string(13) '5321f1e1287a1' is not an array nor an \arrayAccess instance' is not identical to 'string(13) '5321f1e1287a1' is not an array'>
 . CR/^M LF/^J
 >> >
 : Esc [ 0 ; 33 m
@@ -7602,102 +7598,62 @@
 : Esc [ 0 ; 33 m
 >=> >
 : Esc [ 0 m
-@ 0.7
->mageekguy\atoum\tests\units\test\phpunit\asserters\assertContains::testSetW>-
--|ithArguments():>
+>mageekguy\atoum\tests\units\test\phpunit\asserters\assertContains::testSetWithArguments():>
 . CR/^M LF/^J
 : Esc [ 0 ; 33 m
 >==> >
 : Esc [ 0 m
->Error CATCHABLE FATAL ERROR in /Users/jubianchi/repositories/atoum/atoum/te>-
--|sts/units/classes/test/phpunit/asserters/assertContains.php on unknown lin>-
--|e, generated by file /Users/jubianchi/repositories/atoum/atoum/classes/tes>-
--|t/phpunit/asserter/selector.php on line 12:>
+>Error CATCHABLE FATAL ERROR in /Users/jubianchi/repositories/atoum/atoum/tests/units/classes/test/phpunit/asserters/assertContains.php on unknown line, generated by file /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/asserter/selector.php on line 12:>
 . CR/^M LF/^J
->Argument 1 passed to mageekguy\atoum\test\phpunit\asserter\selector::__cons>-
--|truct() must be an instance of mageekguy\atoum\asserter, none given, calle>-
--|d in /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/assert>-
--|ers/assertContains.php on line 26 and defined>
+>Argument 1 passed to mageekguy\atoum\test\phpunit\asserter\selector::__construct() must be an instance of mageekguy\atoum\asserter, none given, called in /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/asserters/assertContains.php on line 26 and defined>
 . CR/^M LF/^J
 : Esc [ 0 ; 33 m
 >=> >
 : Esc [ 0 m
-@ 0.7
->mageekguy\atoum\tests\units\test\phpunit\asserters\assertCount::testSetWith>-
--|Arguments():>
+>mageekguy\atoum\tests\units\test\phpunit\asserters\assertCount::testSetWithArguments():>
 . CR/^M LF/^J
 : Esc [ 0 ; 33 m
 >==> >
 : Esc [ 0 m
->Error CATCHABLE FATAL ERROR in /Users/jubianchi/repositories/atoum/atoum/te>-
--|sts/units/classes/test/phpunit/asserters/assertCount.php on unknown line, >-
--|generated by file /Users/jubianchi/repositories/atoum/atoum/classes/test/p>-
--|hpunit/asserter/selector.php on line 12:>
+>Error CATCHABLE FATAL ERROR in /Users/jubianchi/repositories/atoum/atoum/tests/units/classes/test/phpunit/asserters/assertCount.php on unknown line, generated by file /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/asserter/selector.php on line 12:>
 . CR/^M LF/^J
->Argument 1 passed to mageekguy\atoum\test\phpunit\asserter\selector::__cons>-
--|truct() must be an instance of mageekguy\atoum\asserter, none given, calle>-
--|d in /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/assert>-
--|ers/assertCount.php on line 26 and defined>
+>Argument 1 passed to mageekguy\atoum\test\phpunit\asserter\selector::__construct() must be an instance of mageekguy\atoum\asserter, none given, called in /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/asserters/assertCount.php on line 26 and defined>
 . CR/^M LF/^J
 : Esc [ 0 ; 33 m
 >=> >
 : Esc [ 0 m
-@ 0.7
->mageekguy\atoum\tests\units\test\phpunit\asserters\assertEmpty::testSetWith>-
--|Arguments():>
+>mageekguy\atoum\tests\units\test\phpunit\asserters\assertEmpty::testSetWithArguments():>
 . CR/^M LF/^J
 : Esc [ 0 ; 33 m
 >==> >
 : Esc [ 0 m
->Error CATCHABLE FATAL ERROR in /Users/jubianchi/repositories/atoum/atoum/te>-
--|sts/units/classes/test/phpunit/asserters/assertEmpty.php on unknown line, >-
--|generated by file /Users/jubianchi/repositories/atoum/atoum/classes/test/p>-
--|hpunit/asserter/selector.php on line 12:>
+>Error CATCHABLE FATAL ERROR in /Users/jubianchi/repositories/atoum/atoum/tests/units/classes/test/phpunit/asserters/assertEmpty.php on unknown line, generated by file /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/asserter/selector.php on line 12:>
 . CR/^M LF/^J
->Argument 1 passed to mageekguy\atoum\test\phpunit\asserter\selector::__cons>-
--|truct() must be an instance of mageekguy\atoum\asserter, none given, calle>-
--|d in /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/assert>-
--|ers/assertEmpty.php on line 26 and defined>
+>Argument 1 passed to mageekguy\atoum\test\phpunit\asserter\selector::__construct() must be an instance of mageekguy\atoum\asserter, none given, called in /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/asserters/assertEmpty.php on line 26 and defined>
 . CR/^M LF/^J
 : Esc [ 0 ; 33 m
 >=> >
 : Esc [ 0 m
-@ 0.7
->mageekguy\atoum\tests\units\test\phpunit\asserters\assertNotContains::testS>-
--|etWithArguments():>
+>mageekguy\atoum\tests\units\test\phpunit\asserters\assertNotContains::testSetWithArguments():>
 . CR/^M LF/^J
 : Esc [ 0 ; 33 m
 >==> >
 : Esc [ 0 m
->Error CATCHABLE FATAL ERROR in /Users/jubianchi/repositories/atoum/atoum/te>-
--|sts/units/classes/test/phpunit/asserters/assertNotContains.php on unknown >-
--|line, generated by file /Users/jubianchi/repositories/atoum/atoum/classes/>-
--|test/phpunit/asserter/selector.php on line 12:>
+>Error CATCHABLE FATAL ERROR in /Users/jubianchi/repositories/atoum/atoum/tests/units/classes/test/phpunit/asserters/assertNotContains.php on unknown line, generated by file /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/asserter/selector.php on line 12:>
 . CR/^M LF/^J
->Argument 1 passed to mageekguy\atoum\test\phpunit\asserter\selector::__cons>-
--|truct() must be an instance of mageekguy\atoum\asserter, none given, calle>-
--|d in /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/assert>-
--|ers/assertContains.php on line 26 and defined>
+>Argument 1 passed to mageekguy\atoum\test\phpunit\asserter\selector::__construct() must be an instance of mageekguy\atoum\asserter, none given, called in /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/asserters/assertContains.php on line 26 and defined>
 . CR/^M LF/^J
 : Esc [ 0 ; 33 m
 >=> >
 : Esc [ 0 m
-@ 0.7
->mageekguy\atoum\tests\units\test\phpunit\test::testAssertContainsNotContain>-
--|s():>
+>mageekguy\atoum\tests\units\test\phpunit\test::testAssertContainsNotContains():>
 . CR/^M LF/^J
 : Esc [ 0 ; 33 m
 >==> >
 : Esc [ 0 m
->Error CATCHABLE FATAL ERROR in /Users/jubianchi/repositories/atoum/atoum/te>-
--|sts/units/classes/test/phpunit/test.php on unknown line, generated by file>-
--| /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/asserter/s>-
--|elector.php on line 12:>
+>Error CATCHABLE FATAL ERROR in /Users/jubianchi/repositories/atoum/atoum/tests/units/classes/test/phpunit/test.php on unknown line, generated by file /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/asserter/selector.php on line 12:>
 . CR/^M LF/^J
->Argument 1 passed to mageekguy\atoum\test\phpunit\asserter\selector::__cons>-
--|truct() must be an instance of mageekguy\atoum\asserter, none given, calle>-
--|d in /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/assert>-
--|ers/assertContains.php on line 26 and defined>
+>Argument 1 passed to mageekguy\atoum\test\phpunit\asserter\selector::__construct() must be an instance of mageekguy\atoum\asserter, none given, called in /Users/jubianchi/repositories/atoum/atoum/classes/test/phpunit/asserters/assertContains.php on line 26 and defined>
 . CR/^M LF/^J
 >> >
 : Esc [ 0 ; 37 m
@@ -7708,9 +7664,7 @@
 : Esc [ 0 ; 37 m
 >=> >
 : Esc [ 0 m
-@ 0.7
->mageekguy\atoum\tests\units\test\phpunit\asserters\assertContains::testSetW>-
--|ithArguments() with exit code 255:>
+>mageekguy\atoum\tests\units\test\phpunit\asserters\assertContains::testSetWithArguments() with exit code 255:>
 . CR/^M LF/^J
 : Esc [ 0 ; 37 m
 >==> >
@@ -7720,9 +7674,7 @@
 : Esc [ 0 ; 37 m
 >=> >
 : Esc [ 0 m
-@ 0.7
->mageekguy\atoum\tests\units\test\phpunit\asserters\assertCount::testSetWith>-
--|Arguments() with exit code 255:>
+>mageekguy\atoum\tests\units\test\phpunit\asserters\assertCount::testSetWithArguments() with exit code 255:>
 . CR/^M LF/^J
 : Esc [ 0 ; 37 m
 >==> >
@@ -7732,9 +7684,7 @@
 : Esc [ 0 ; 37 m
 >=> >
 : Esc [ 0 m
-@ 0.7
->mageekguy\atoum\tests\units\test\phpunit\asserters\assertEmpty::testSetWith>-
--|Arguments() with exit code 255:>
+>mageekguy\atoum\tests\units\test\phpunit\asserters\assertEmpty::testSetWithArguments() with exit code 255:>
 . CR/^M LF/^J
 : Esc [ 0 ; 37 m
 >==> >
@@ -7744,9 +7694,7 @@
 : Esc [ 0 ; 37 m
 >=> >
 : Esc [ 0 m
-@ 0.7
->mageekguy\atoum\tests\units\test\phpunit\asserters\assertNotContains::testS>-
--|etWithArguments() with exit code 255:>
+>mageekguy\atoum\tests\units\test\phpunit\asserters\assertNotContains::testSetWithArguments() with exit code 255:>
 . CR/^M LF/^J
 : Esc [ 0 ; 37 m
 >==> >
@@ -7756,11 +7704,9 @@
 : Esc [ 0 ; 37 m
 >=> >
 : Esc [ 0 m
-@ 0.7
->mageekguy\atoum\tests\units\test\phpunit\test::testAssertContainsNotContain>-
--|s() with exit code 255:>
+>mageekguy\atoum\tests\units\test\phpunit\test::testAssertContainsNotContains() with exit code 255:>
 . CR/^M LF/^J
-: Esc [ 0 ; 37 m
+: Esc [ 37 m
 >==> >
 : Esc [ 0 m
 >output(0) "">
