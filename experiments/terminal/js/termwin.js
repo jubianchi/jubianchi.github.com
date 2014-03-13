@@ -18,7 +18,7 @@ var termwin = {
 
         prompt
             .addClass('prompt')
-            .text(text)
+            .html(text)
         ;
 
         this.output(prompt);
