@@ -8,19 +8,7 @@ var termwin = {
     },
 
     clear: function() {
-        $('pre', this.$window).remove();
-
-        return this;
-    },
-
-    focus: function() {
-        this.cursor.blink();
-
-        return this;
-    },
-
-    blur: function() {
-        this.cursor.unblink();
+        $('p', this.$window).remove();
 
         return this;
     },
@@ -33,8 +21,7 @@ var termwin = {
             .text(text)
         ;
 
-        this.cursor.hide();
-        this.output(prompt.after(this.cursor.show().$cursor));
+        this.output(prompt);
 
         return this;
     },
@@ -52,7 +39,7 @@ var termwin = {
     },
 
     output: function(text) {
-        var row = $('<pre/>');
+        var row = $('<p/>');
 
         if (text instanceof String) {
             row.text(text);
@@ -60,8 +47,10 @@ var termwin = {
             row.append(text);
         }
 
+        this.cursor.hide();
+
         this.$window
-            .append(row)
+            .append(row.append(this.cursor.show().$cursor))
             .stop(true, true)
             .animate({ scrollTop: this.$window[0].scrollHeight }, 250)
         ;

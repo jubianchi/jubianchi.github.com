@@ -1,89 +1,18 @@
-var reseq = {
-    init: function(tsq) {
-        this.data = tsq.split('\n');
+var colors8 = ['black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white'];
 
-        this.buffer = '';
-        this.styled = false;
-
-        return this;
-    },
-
-    execute: function(term) {
-        this.data.forEach(
-            function(line) {
-                if(line.match(/^\|/)) this.textLine(line, term);
-                if(line.match(/^\./)) this.controlCharLine(line, term);
-                if(line.match(/^:/)) this.escapeSeqLine(line, term);
-                if(line.match(/^&/)) this.labelLine(line, term);
-                if(line.match(/^"/)) this.descriptionLine(line, term);
-                if(line.match(/^@/)) this.descriptionLine(line, term);
-            },
-            this
-        );
-    },
-
-    textLine: function(line, term) {
-        line = line.replace(/^\|/, '');
-        line = line.replace(/\|$/, '');
-
-        this.buffer = this.buffer + line.replace(' ', '&nbsp;');
-
-        if(this.buffer.match(/\|\.$/)) {
-            term.output(this.buffer.replace(/\|\.$/, '<br/>'));
-
-            this.buffer = '';
-        }
-    },
-
-    controlCharLine: function(line, term) {
-        var char = line.match(/^\. ([^\/]*)/);
-
-        switch(char[1]) {
-            case 'BS':
-                this.buffer = this.buffer.substr(0, this.buffer.length - 1);
-                break;
-
-            case 'LF':
-                term.output(this.buffer + '<br/>');
-                this.buffer = '';
-                break;
-        }
-    },
-
-    escapeSeqLine: function(line, term) {
-        line = line.replace(/^: Esc \[\s*/, '');
-
-        var color = line.match(/(\d+)/);
-
-        if(color !== null) {
-            if(color[1] > 0) {
-                if(this.styled) {
-                    this.buffer = this.buffer + '</span>';
-                }
-
-                this.buffer = this.buffer + '<span style="color: #' + colors[color[1]] + '">';
-            } else {
-                if(this.styled) {
-                    this.buffer = this.buffer + '</span>';
-                }
-            }
-        }
-    },
-
-    labelLine: function(line, term) {
-
-    },
-
-    descriptionLine: function(line, term) {
-
-    },
-
-    delayLine: function(line, term) {
-
-    }
-};
-
-var colors = [
+/**
+ * Hoa
+ *
+ *
+ * @license
+ *
+ * New BSD License
+ *
+ * Copyright © 2007-2014, Ivan Enderlin. All rights reserved.
+ *
+ * https://github.com/jubianchi/Console/blob/master/Cursor.php
+ */
+var colors256 = [
     '000000', '800000', '008000', '808000', '000080', '800080',
     '008080', 'c0c0c0', '808080', 'ff0000', '00ff00', 'ffff00',
     '0000ff', 'ff00ff', '00ffff', 'ffffff', '000000', '00005f',
@@ -128,3 +57,190 @@ var colors = [
     '949494', '9e9e9e', 'a8a8a8', 'b2b2b2', 'bcbcbc', 'c6c6c6',
     'd0d0d0', 'dadada', 'e4e4e4', 'eeeeee'
 ];
+
+var reseq = {
+    init: function(tsq) {
+        this.data = tsq.split('\n');
+
+        this.buffer = '';
+        this.styles = {};
+
+        return this;
+    },
+
+    execute: function(term) {
+        term.stackAction(term.disableInput, [], term);
+
+        this.data.forEach(
+            function(line) {
+                if(line.match(/^\|/)) this.textLine(line, term);
+                if(line.match(/^>/)) this.outputLine(line, term);
+                if(line.match(/^\./)) this.controlCharLine(line, term);
+                if(line.match(/^:/)) this.escapeSeqLine(line, term);
+                if(line.match(/^&/)) this.labelLine(line, term);
+                if(line.match(/^"/)) this.descriptionLine(line, term);
+                if(line.match(/^@/)) this.delayLine(line, term);
+                if(line.match(/^!/)) {
+                    term.stackAction(term.output, [this.buffer], term);
+                    this.buffer = '';
+
+                    this.resetFgColor();
+                    this.resetBgColor();
+
+                    term.stackAction(term.prompt, [], term);
+                }
+            },
+            this
+        );
+
+        term.stackAction(term.enableInput, [], term);
+    },
+
+    textLine: function(line, term) {
+        line = line.replace(/^\|/, '');
+        line = line.replace(/\|$/, '');
+        line = line.replace(/\|\.$/, '');
+
+        line.split('').forEach(function(c) {
+            term.stackAction(term.termwin.type, [c], term.termwin);
+        });
+    },
+
+    outputLine: function(line, term) {
+        line = line.replace(/^>/, '');
+        line = line.replace(/>$/, '');
+        line = line.replace(/\s{1}/g, '&nbsp;');
+
+        if(line.match(/>\.$/)) {
+            line = line.replace(/>\.$/, '<br/>');
+
+            this.resetBold();
+            this.resetFgColor();
+            this.resetBgColor();
+        }
+
+        this.buffer = this.buffer + this.applyStyle(line);
+    },
+
+    controlCharLine: function(line, term) {
+        var char = line.match(/^\. ((?:[^\/]+\/.*? ?)+)/);
+
+        if(char) {
+            char[1].split(' ').forEach(function(c) {
+                c = c.match(/([^\/]+)/);
+
+                switch(c[1]) {
+                    case 'BS':
+                        term.stackAction(term.termwin.backspace, [], term.termwin);
+                        break;
+                }
+            }, this);
+        }
+    },
+
+    escapeSeqLine: function(line, term) {
+        line = line.replace(/^: Esc \[\s*/, '');
+
+        var color = line.match(/((?:\d+\s*;?\s*)+)/);
+
+        if(color !== null) {
+            color = color[1].split(' ; ');
+
+            if(color[0] > 0) {
+                color.forEach(function(c, i) {
+                    c = parseInt(c.replace(/^\s+|\s+$/g,''));
+
+                    if(c == 0) {
+                        this.resetBold();
+                        this.resetFgColor();
+                        this.resetBgColor();
+
+                        return;
+                    }
+
+                    if(c == 1) {
+                        this.setBold();
+
+                        return;
+                    }
+
+                    if(c == 39) {
+                        this.resetFgColor();
+
+                        return;
+                    }
+
+                    if(c == 49) {
+                        this.resetBgColor();
+
+                        return;
+                    }
+
+                    if(c == 38) {
+                        c = parseInt(color[i + 2].replace(/^\s+|\s+$/g,''));
+                        this.setFgColor('#' + colors256[c]);
+
+                        return;
+                    }
+
+                    if(c == 48) {
+                        c = parseInt(color[i + 2].replace(/^\s+|\s+$/g,''));
+                        this.setBgColor('#' + colors256[c]);
+
+                        return;
+                    }
+
+                    if(c >= 30 && c <= 37 && (!color[i - 1] || color[i - 1] != 5)) {
+                        this.setFgColor(colors8[c - 30]);
+
+                        return;
+                    }
+
+                    if(c >= 40 && c <= 47 && (!color[i - 1] || color[i - 1] != 5)) {
+                        this.setBgColor(colors8[c - 40]);
+                    }
+                }, this);
+            }
+        }
+    },
+
+    setBold: function() {
+        this.styles['weight'] = 'bold';
+    },
+
+    resetBold: function() {
+        this.styles['weight'] = 'normal';
+    },
+
+    setFgColor: function(color) {
+        this.styles['fg'] = color;
+    },
+
+    resetFgColor: function() {
+        this.styles['fg'] = null;
+    },
+
+    setBgColor: function(color) {
+        this.styles['bg'] = color;
+    },
+
+    resetBgColor: function() {
+        this.styles['bg'] = null;
+    },
+
+    applyStyle: function(line) {
+        return '<span style="background-color: ' + (this.styles['bg'] || 'transparent') + '; color: ' + (this.styles['fg'] || 'white') + '; font-weight: ' + (this.styles['weight'] || 'normal') + '">' + line + '</span>';
+    },
+
+    labelLine: function(line, term) {
+
+    },
+
+    descriptionLine: function(line, term) {
+        term.stackAction(term.status, [line.replace(/^"/, '')], term);
+    },
+
+    delayLine: function(line, term) {
+
+    }
+};

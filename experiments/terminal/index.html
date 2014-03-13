@@ -50,12 +50,77 @@
         <div class="window">
             <span class="cursor">&nbsp;</span>
         </div>
+
+        <footer></footer>
     </div>
 
     <aside>
         Click on the terminal window to start it
     </aside>
 </article>
+
+<section>
+    <time datetime="{{ page.date }}">
+        <strong>Mar</strong>
+        <span>13</span>
+        <em>2014</em>
+    </time>
+
+    <div class="left">
+        <h1>Web terminal</h1>
+
+        <p>
+            I started this experiment as a tiny challenge to reproduce the terminals we can find on the
+            <a href="http://vagrantcloud.com">vagrantcloud</a>'s homepage.
+        </p>
+
+        <p>
+            My concern was to produce a client-side, standalone library which would be able to emulate a
+            pseudo-terminal in a web page.
+        </p>
+
+        <p>
+            After about two days of work, here is where I am : a nice-looking terminal supporting some cool things:
+            <ul>
+                <li>
+                    Programmatically create commands (everything is JS powered): I wrote some basic commands like
+                    <code>clear</code> or <code>help</code> which your can try in the above demo.
+                </li>
+                <li>
+                    It can parse and replay <a href="https://www.gnu.org/software/teseq/"><code>teseq</code></a>-like scripts : I began on parsing the standard
+                    <code>teseq</code> <a href="https://www.gnu.org/software/teseq/manual/teseq.html#Output-Format">file format</a>
+                    but I quickly had problem so I made change to the expected format (for example, <code>teseq</code> treats output
+                    line as a single type whereas my pseudo-terminal has to differentiate user inputs and commands outputs).
+                    This is really cool: you can record your own terminal using <code>script</code> and <code>teseq</code>
+                    and then quiclky share it on any web page you can edit.
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            It still lacks some features (timings support in <code>teseq</code> parser, history support, cursor moves, ...),
+            which I'll add when I have time for it. It also massively uses <a href="http://jquery.com/">jQuery</a> for events binding. Removing
+            this dependency would be great. Also, it could be fun to rewrite everything with <a href="http://kangax.github.io/es5-compat-table/es6/">ECMAScript 6</a>.
+        </p>
+
+        <p>
+            Fell free to <a href="#disqus_thread">comment</a> or open PR
+            <a href="https://github.com/jubianchi/jubianchi.github.com/tree/master/experiments/terminal">on github</a>.
+        </p>
+    </div>
+</section>
+
+<section id="disqus_thread"></section>
+
+<script type="text/javascript">
+    var disqus_shortname = 'jubianchifr';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
 
 <script src="js/terminal.js"></script>
 <script src="js/termwin.js"></script>
@@ -72,38 +137,14 @@ function motd(output) {
     output('Everything started when I discovered <strong>the awesome landing page of <a href="https://vagrantcloud.com" target="_blank">vagrantcloud.com</a></strong>.<br/>');
     output('I found the shell mockups really great and <strong>I tried to create my own</strong>.<br/><br/>');
     output('I really enjoyed working on this POC so <strong>I hope you\'ll enjoy the demo</strong> :)<br/><br/>');
-    output('Type <code>help</code> to get some help<br/><br/>');
 }
 
+var term;
+
 $(function() {
-    var term = terminal.init($('.terminal')),
-        script = false;
+    var script = false;
 
-    term.$term.click(function(ev) {
-        ev.stopPropagation();
-
-        term.focus();
-
-        if(script === false) {
-            $.get('typescript.tsq').success(function(data) {
-                reseq.init(data).execute(term);
-            });
-
-            script = true;
-        }
-    });
-
-    $(document).click(function() {
-        term.blur();
-    });
-
-    $(document).on('keydown', function(ev) {
-        if(ev.keyCode === 8 && term.focused()) {
-            ev.preventDefault();
-
-            term.termwin.backspace();
-        }
-    });
+    term = terminal.init($('.terminal'));
 
     $(document).on('keypress', function(ev) {
         if(term.focused()) {
@@ -113,6 +154,12 @@ $(function() {
                 var line = term.termwin.cursor.$cursor.prevUntil('.prompt').text().split('').reverse().join('');
 
                 switch(line) {
+                    case 'reseq':
+                        $.get('typescript.tsq')
+                            .success(function(data) {
+                                reseq.init(data).execute(term);
+                            });
+                        break;
                     case 'clear':
                     case 'reset':
                         term.termwin.clear();
@@ -120,7 +167,7 @@ $(function() {
 
                     case 'help':
                         term.output('Commands:');
-                        term.output('<ul><li><code>clear</code>: clear the screen</li><li><code>reset</code>: alias of <code>clear</code></li><li><code>help</code>: displays this message</li></ul>');
+                        term.output('<ul><li><code>reseq</code>: replay a teseq script</li><li><code>clear</code>: clear the screen</li><li><code>reset</code>: alias of <code>clear</code></li><li><code>help</code>: displays this message</li></ul>');
                         term.output('Other inputs are echoed back')
                         break;
 
@@ -129,8 +176,6 @@ $(function() {
                 }
 
                 term.prompt();
-            } else {
-                term.termwin.type(String.fromCharCode(ev.which));
             }
         }
     });

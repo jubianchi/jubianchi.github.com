@@ -1,1041 +1,277 @@
-: Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-: Esc [ 23 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear italicized or fraktur text.
-: Esc [ 24 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear underlining.
-: Esc [ J
-& ED: ERASE IN PAGE
-" Clear from the cursor to the end of the screen.
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-: Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 42 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color green.
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-| |
-. xE2 x9C x94
-| |
-. xE2 xAE x81
-: Esc [ 42 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color green.
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-| julien.bianchi |
-: Esc [ 48 ; 5 ; 33 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 33.
-: Esc [ 32 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color green.
-. xE2 xAE x80
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-| ~/Downloads/teseq-1.1 |
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 38 ; 5 ; 33 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 33.
-. xE2 xAE x80
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-. LF/^J
-: Esc [ 40 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color black.
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-| $ |
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 30 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color black.
-. xE2 xAE x80
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-| |
-: Esc [ K
-& EL: ERASE IN LINE
-" Clear from the cursor to the end of the line.
-: Esc [ 135 C
-& CUF: CURSOR RIGHT
-" Move the cursor right 135 characters.
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-: Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 38 ; 5 ; 33 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 33.
-. xE2 xAE x82
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-: Esc [ 48 ; 5 ; 33 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 33.
-| php 5.4.24 |
-: Esc [ 38 ; 5 ; 64 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 64.
-. xE2 xAE x82
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-: Esc [ 48 ; 5 ; 64 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 64.
-| nodejs 0.10.26 |
-: Esc [ 38 ; 5 ; 160 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 160.
-. xE2 xAE x82
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-: Esc [ 48 ; 5 ; 160 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 160.
-| ruby 2.0.0p247 |
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-. xE2 xAE x82
-: Esc [ 38 ; 5 ; 160 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 160.
-: Esc [ 48 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 254.
-| java 1.6.0_65 |
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 198 D
-& CUB: CURSOR LEFT
-" Move the cursor left 198 characters.
-: Esc [ 32 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color green.
+" Recorded backspaces are flawlessly replayed inside the terminal
 |l|
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-. BS/^H
-: Esc [ 32 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color green.
-|l|
-: Esc [ 32 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color green.
 |s|
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-| -lha|.
+| -lha|
+. BS/^H
 ||.
-: Esc k
-|ls|
-: Esc \
-& ST: STRING TERMINATOR
-|total 1792|.
-|drwxr-xr-x@ 30 julien.bianchi  staff   1,0K 12 mar 13:05 |
+>total 1792>.
+>drwxr-xr-x@ 30 julien.bianchi  staff   1,0K 12 mar 13:05 >
 : Esc [ 1 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
 : Esc [ 36 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color cyan.
-|.|
+>.>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|drwx------+ 13 julien.bianchi  staff   442B 12 mar 13:00 |
+>>.
+>drwx------+ 13 julien.bianchi  staff   442B 12 mar 13:00 >
 : Esc [ 1 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
 : Esc [ 36 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color cyan.
-|..|
+>..>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--@  1 julien.bianchi  staff   152B 10 jui  2013 AUTHORS|.
-|-rw-r--r--@  1 julien.bianchi  staff    34K 14 nov  2010 COPYING|.
-|-rw-r--r--@  1 julien.bianchi  staff   2,8K 14 nov  2010 ChangeLog|.
-|-rw-r--r--@  1 julien.bianchi  staff    15K 11 d|
-. xC3 xA9
-|c  2010 INSTALL|.
-|-rw-r--r--   1 julien.bianchi  staff    45K 12 mar 13:02 Makefile|.
-|-rw-r--r--@  1 julien.bianchi  staff   2,4K 10 mai  2013 Makefile.am|.
-|-rw-r--r--@  1 julien.bianchi  staff    45K 11 jui  2013 Makefile.in|.
-|-rw-r--r--@  1 julien.bianchi  staff   889B 10 jui  2013 NEWS|.
-|-rw-r--r--@  1 julien.bianchi  staff   2,0K 10 jui  2013 README|.
-|-rw-r--r--@  1 julien.bianchi  staff    35K 11 jui  2013 aclocal.m4|.
-|-rwxr-xr-x@  1 julien.bianchi  staff   3,7K 11 d|
-. xC3 xA9
-|c  2010 |
+>>.
+>-rw-r--r--@  1 julien.bianchi  staff   152B 10 jui  2013 AUTHORS>.
+>-rw-r--r--@  1 julien.bianchi  staff    34K 14 nov  2010 COPYING>.
+>-rw-r--r--@  1 julien.bianchi  staff   2,8K 14 nov  2010 ChangeLog>.
+>-rw-r--r--@  1 julien.bianchi  staff    15K 11 dc   2010 INSTALL>.
+>-rw-r--r--   1 julien.bianchi  staff    45K 12 mar 13:02 Makefile>.
+>-rw-r--r--@  1 julien.bianchi  staff   2,4K 10 mai  2013 Makefile.am>.
+>-rw-r--r--@  1 julien.bianchi  staff    45K 11 jui  2013 Makefile.in>.
+>-rw-r--r--@  1 julien.bianchi  staff   889B 10 jui  2013 NEWS>.
+>-rw-r--r--@  1 julien.bianchi  staff   2,0K 10 jui  2013 README>.
+>-rw-r--r--@  1 julien.bianchi  staff    35K 11 jui  2013 aclocal.m4>.
+>-rwxr-xr-x@  1 julien.bianchi  staff   3,7K 11 dc   2010 >
 : Esc [ 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color red.
-|compile|
+>compile>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--   1 julien.bianchi  staff    21K 12 mar 13:02 config.log|.
-|-rwxr-xr-x   1 julien.bianchi  staff    33K 12 mar 13:02 |
+>>.
+>-rw-r--r--   1 julien.bianchi  staff    21K 12 mar 13:02 config.log>.
+>-rwxr-xr-x   1 julien.bianchi  staff    33K 12 mar 13:02 >
 : Esc [ 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color red.
-|config.status|
+>config.status>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rwxr-xr-x@  1 julien.bianchi  staff   172K 11 jui  2013 |
+>>.
+>-rwxr-xr-x@  1 julien.bianchi  staff   172K 11 jui  2013 >
 : Esc [ 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color red.
-|configure|
+>configure>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--@  1 julien.bianchi  staff   2,7K 11 jui  2013 configure.ac|.
-|-rwxr-xr-x@  1 julien.bianchi  staff    18K 11 d|
-. xC3 xA9
-|c  2010 |
+>>.
+>-rw-r--r--@  1 julien.bianchi  staff   2,7K 11 jui  2013 configure.ac>.
+>-rwxr-xr-x@  1 julien.bianchi  staff    18K 11 dc   2010 >
 : Esc [ 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color red.
-|depcomp|
+>depcomp>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|drwxr-xr-x@  9 julien.bianchi  staff   306B 11 jui  2013 |
+>>.
+>drwxr-xr-x@  9 julien.bianchi  staff   306B 11 jui  2013 >
 : Esc [ 1 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
 : Esc [ 36 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color cyan.
-|doc|
+>doc>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rwxr-xr-x@  1 julien.bianchi  staff    13K 11 d|
-. xC3 xA9
-|c  2010 |
+>>.
+>-rwxr-xr-x@  1 julien.bianchi  staff    13K 11 dc   2010 >
 : Esc [ 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color red.
-|install-sh|
+>install-sh>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rwxr-xr-x@  1 julien.bianchi  staff   5,5K 11 d|
-. xC3 xA9
-|c  2010 |
+>>.
+>-rwxr-xr-x@  1 julien.bianchi  staff   5,5K 11 dc   2010 >
 : Esc [ 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color red.
-|mdate-sh|
+>mdate-sh>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rwxr-xr-x@  1 julien.bianchi  staff    11K 11 d|
-. xC3 xA9
-|c  2010 |
+>>.
+>-rwxr-xr-x@  1 julien.bianchi  staff    11K 11 dc   2010 >
 : Esc [ 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color red.
-|missing|
+>missing>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rwxr-xr-x   1 julien.bianchi  staff   7,3K 12 mar 13:02 |
+>>.
+>-rwxr-xr-x   1 julien.bianchi  staff   7,3K 12 mar 13:02 >
 : Esc [ 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color red.
-|reseq|
+>reseq>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--@  1 julien.bianchi  staff   7,3K 11 jui  2013 reseq.in|.
-|-rwxr-xr-x   1 julien.bianchi  staff   2,9K 12 mar 13:02 |
+>>.
+>-rw-r--r--@  1 julien.bianchi  staff   7,3K 11 jui  2013 reseq.in>.
+>-rwxr-xr-x   1 julien.bianchi  staff   2,9K 12 mar 13:02 >
 : Esc [ 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color red.
-|run-tests|
+>run-tests>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|drwxr-xr-x@ 28 julien.bianchi  staff   952B 12 mar 13:02 |
+>>.
+>drwxr-xr-x@ 28 julien.bianchi  staff   952B 12 mar 13:02 >
 : Esc [ 1 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
 : Esc [ 36 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color cyan.
-|src|
+>src>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rwxr-xr-x   1 julien.bianchi  staff    75K 12 mar 13:02 |
+>>.
+>-rwxr-xr-x   1 julien.bianchi  staff    75K 12 mar 13:02 >
 : Esc [ 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color red.
-|teseq|
+>teseq>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|drwxr-xr-x@ 31 julien.bianchi  staff   1,0K 11 jui  2013 |
+>>.
+>drwxr-xr-x@ 31 julien.bianchi  staff   1,0K 11 jui  2013 >
 : Esc [ 1 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
 : Esc [ 36 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color cyan.
-|tests|
+>tests>
 : Esc [ 39 ; 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-" Set background color default.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--@  1 julien.bianchi  staff   288K 11 d|
-. xC3 xA9
-|c  2010 texinfo.tex|.
-|-rw-r--r--   1 julien.bianchi  staff    43B 12 mar 13:05 typescript|.
-: Esc [ 1 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
-: Esc [ 3 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set italicized text.
-: Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-: Esc [ 23 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear italicized or fraktur text.
-: Esc [ 24 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear underlining.
-: Esc [ J
-& ED: ERASE IN PAGE
-" Clear from the cursor to the end of the screen.
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-: Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 42 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color green.
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-| |
-. xE2 x9C x94
-| |
-. xE2 xAE x81
-: Esc [ 42 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color green.
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-| julien.bianchi |
-: Esc [ 48 ; 5 ; 33 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 33.
-: Esc [ 32 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color green.
-. xE2 xAE x80
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-| ~/Downloads/teseq-1.1 |
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 38 ; 5 ; 33 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 33.
-. xE2 xAE x80
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-. LF/^J
-: Esc [ 40 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color black.
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-| $ |
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 30 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color black.
-. xE2 xAE x80
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-| |
-: Esc [ K
-& EL: ERASE IN LINE
-" Clear from the cursor to the end of the line.
-: Esc [ 135 C
-& CUF: CURSOR RIGHT
-" Move the cursor right 135 characters.
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-: Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 38 ; 5 ; 33 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 33.
-. xE2 xAE x82
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-: Esc [ 48 ; 5 ; 33 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 33.
-| php 5.4.24 |
-: Esc [ 38 ; 5 ; 64 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 64.
-. xE2 xAE x82
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-: Esc [ 48 ; 5 ; 64 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 64.
-| nodejs 0.10.26 |
-: Esc [ 38 ; 5 ; 160 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 160.
-. xE2 xAE x82
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-: Esc [ 48 ; 5 ; 160 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 160.
-| ruby 2.0.0p247 |
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-. xE2 xAE x82
-: Esc [ 38 ; 5 ; 160 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 160.
-: Esc [ 48 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 254.
-| java 1.6.0_65 |
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 198 D
-& CUB: CURSOR LEFT
-" Move the cursor left 198 characters.
-: Esc [ 32 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color green.
+>>.
+>-rw-r--r--@  1 julien.bianchi  staff   288K 11 dc   2010 texinfo.tex>.
+>-rw-r--r--   1 julien.bianchi  staff    43B 12 mar 13:05 typescript>.
+" As you can see, the terminal supports formating
+!!
 |l|
 : Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
 . BS/^H
 : Esc [ 32 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color green.
 |l|
 : Esc [ 32 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color green.
 |l|
 : Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-| -lha|
-. BS/^H BS/^H BS/^H
-|   |
-. BS/^H BS/^H BS/^H BS/^H
 | |
-. BS/^H BS/^H LF/^J LF/^J
-: Esc k
-|ll|
-: Esc \
-& ST: STRING TERMINATOR
-|total 896K|.
-|-rw-r--r--  1 julien.bianchi  152 jui 10  2013 |
+|-|
+|l|
+|h|
+|a|
+. BS/^H BS/^H BS/^H BS/^H BS/^H
+||.
+>total 896K>.
+>-rw-r--r--  1 julien.bianchi  152 jui 10  2013 >
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|AUTHORS|
+>AUTHORS>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--  1 julien.bianchi  35K nov 14  2010 |
+>>.
+>-rw-r--r--  1 julien.bianchi  35K nov 14  2010 >
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|COPYING|
+>COPYING>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--  1 julien.bianchi 2,9K nov 14  2010 |
+>>.
+>-rw-r--r--  1 julien.bianchi 2,9K nov 14  2010 >
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|ChangeLog|
+>ChangeLog>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--  1 julien.bianchi  16K d|
-. xC3 xA9
-|c 11  2010 |
+>>.
+>-rw-r--r--  1 julien.bianchi  16K dc  11  2010 >
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|INSTALL|
+>INSTALL>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--  1 julien.bianchi  46K mar 12 13:02 |
+>>.
+>-rw-r--r--  1 julien.bianchi  46K mar 12 13:02 >
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|Makefile|
+>Makefile>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--  1 julien.bianchi 2,4K mai 10  2013 |
+>>.
+>-rw-r--r--  1 julien.bianchi 2,4K mai 10  2013 >
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|Makefile.am|
+>Makefile.am>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--  1 julien.bianchi  46K jui 11  2013 |
+>>.
+>-rw-r--r--  1 julien.bianchi  46K jui 11  2013 >
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|Makefile.in|
+>Makefile.in>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--  1 julien.bianchi  889 jui 10  2013 |
+>>.
+>-rw-r--r--  1 julien.bianchi  889 jui 10  2013 >
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|NEWS|
+>NEWS>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--  1 julien.bianchi 2,1K jui 10  2013 |
+>>.
+>-rw-r--r--  1 julien.bianchi 2,1K jui 10  2013 >
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|README|
+>README>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--  1 julien.bianchi  36K jui 11  2013 |
+>>.
+>-rw-r--r--  1 julien.bianchi  36K jui 11  2013 >
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|aclocal.m4|
+>aclocal.m4>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rwxr-xr-x  1 julien.bianchi 3,7K d|
-. xC3 xA9
-|c 11  2010 |
+>>.
+>-rwxr-xr-x  1 julien.bianchi 3,7K dc  11  2010 >
 : Esc [ 1 ; 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
-" Set foreground color red.
-|compile|
+>compile>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|*|.
-|-rw-r--r--  1 julien.bianchi  21K mar 12 13:02 |
+>*>.
+>-rw-r--r--  1 julien.bianchi  21K mar 12 13:02 >
 : Esc [ 1 ; 32 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
-" Set foreground color green.
-|config.log|
+>config.log>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rwxr-xr-x  1 julien.bianchi  34K mar 12 13:02 |
+>>.
+>-rwxr-xr-x  1 julien.bianchi  34K mar 12 13:02 >
 : Esc [ 1 ; 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
-" Set foreground color red.
-|config.status|
+>config.status>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|*|.
-|-rwxr-xr-x  1 julien.bianchi 173K jui 11  2013 |
+>*>.
+>-rwxr-xr-x  1 julien.bianchi 173K jui 11  2013 >
 : Esc [ 1 ; 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
-" Set foreground color red.
-|configure|
+>configure>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|*|.
-|-rw-r--r--  1 julien.bianchi 2,7K jui 11  2013 |
+>*>.
+>-rw-r--r--  1 julien.bianchi 2,7K jui 11  2013 >
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|configure.ac|
+>configure.ac>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rwxr-xr-x  1 julien.bianchi  19K d|
-. xC3 xA9
-|c 11  2010 |
+>>.
+>-rwxr-xr-x  1 julien.bianchi  19K dc  11  2010 >
 : Esc [ 1 ; 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
-" Set foreground color red.
-|depcomp|
+>depcomp>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|*|.
-|drwxr-xr-x  9 julien.bianchi  306 jui 11  2013 |
+>*>.
+>drwxr-xr-x  9 julien.bianchi  306 jui 11  2013 >
 : Esc [ 34 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color blue.
-|doc|
+>doc>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|/|.
-|-rwxr-xr-x  1 julien.bianchi  14K d|
-. xC3 xA9
-|c 11  2010 |
+>/>.
+>-rwxr-xr-x  1 julien.bianchi  14K dc  11  2010 >
 : Esc [ 1 ; 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
-" Set foreground color red.
-|install-sh|
+>install-sh>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|*|.
-|-rwxr-xr-x  1 julien.bianchi 5,5K d|
-. xC3 xA9
-|c 11  2010 |
+>*>.
+>-rwxr-xr-x  1 julien.bianchi 5,5K dc  11  2010 >
 : Esc [ 1 ; 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
-" Set foreground color red.
-|mdate-sh|
+>mdate-sh>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|*|.
-|-rwxr-xr-x  1 julien.bianchi  12K d|
-. xC3 xA9
-|c 11  2010 |
+>*>.
+>-rwxr-xr-x  1 julien.bianchi  12K dc  11  2010 >
 : Esc [ 1 ; 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
-" Set foreground color red.
-|missing|
+>missing>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|*|.
-|-rwxr-xr-x  1 julien.bianchi 7,4K mar 12 13:02 |
+>*>.
+>-rwxr-xr-x  1 julien.bianchi 7,4K mar 12 13:02 >
 : Esc [ 1 ; 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
-" Set foreground color red.
-|reseq|
+>reseq>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|*|.
-|-rw-r--r--  1 julien.bianchi 7,3K jui 11  2013 |
+>*>.
+>-rw-r--r--  1 julien.bianchi 7,3K jui 11  2013 >
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|reseq.in|
+>reseq.in>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rwxr-xr-x  1 julien.bianchi 2,9K mar 12 13:02 |
+>>.
+>-rwxr-xr-x  1 julien.bianchi 2,9K mar 12 13:02 >
 : Esc [ 1 ; 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
-" Set foreground color red.
-|run-tests|
+>run-tests>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|*|.
-|drwxr-xr-x 28 julien.bianchi  952 mar 12 13:02 |
+>*>.
+>drwxr-xr-x 28 julien.bianchi  952 mar 12 13:02 >
 : Esc [ 34 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color blue.
-|src|
+>src>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|/|.
-|-rwxr-xr-x  1 julien.bianchi  76K mar 12 13:02 |
+>/>.
+>-rwxr-xr-x  1 julien.bianchi  76K mar 12 13:02 >
 : Esc [ 1 ; 31 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
-" Set foreground color red.
-|teseq|
+>teseq>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|*|.
-|drwxr-xr-x 31 julien.bianchi 1,1K jui 11  2013 |
+>*>.
+>drwxr-xr-x 31 julien.bianchi 1,1K jui 11  2013 >
 : Esc [ 34 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color blue.
-|tests|
+>tests>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|/|.
-|-rw-r--r--  1 julien.bianchi 289K d|
-. xC3 xA9
-|c 11  2010 |
+>/>.
+>-rw-r--r--  1 julien.bianchi 289K dc  11  2010 >
 : Esc [ 32 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color green.
-|texinfo.tex|
+>texinfo.tex>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-|-rw-r--r--  1 julien.bianchi   43 mar 12 13:05 |
+>>.
+>-rw-r--r--  1 julien.bianchi   43 mar 12 13:05 >
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-|typescript|
+>typescript>
 : Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-. LF/^J
-: Esc [ 1 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set bold text.
-: Esc [ 3 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set italicized text.
-: Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-: Esc [ 23 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear italicized or fraktur text.
-: Esc [ 24 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear underlining.
-: Esc [ J
-& ED: ERASE IN PAGE
-" Clear from the cursor to the end of the screen.
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-: Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 42 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color green.
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-| |
-. xE2 x9C x94
-| |
-. xE2 xAE x81
-: Esc [ 42 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color green.
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-| julien.bianchi |
-: Esc [ 48 ; 5 ; 33 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 33.
-: Esc [ 32 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color green.
-. xE2 xAE x80
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-| ~/Downloads/teseq-1.1 |
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 38 ; 5 ; 33 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 33.
-. xE2 xAE x80
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-. LF/^J
-: Esc [ 40 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color black.
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-| $ |
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 30 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color black.
-. xE2 xAE x80
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-| |
-: Esc [ K
-& EL: ERASE IN LINE
-" Clear from the cursor to the end of the line.
-: Esc [ 135 C
-& CUF: CURSOR RIGHT
-" Move the cursor right 135 characters.
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-: Esc [ 0 m
-& SGR: SELECT GRAPHIC RENDITION
-" Clear graphic rendition to defaults.
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 38 ; 5 ; 33 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 33.
-. xE2 xAE x82
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-: Esc [ 48 ; 5 ; 33 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 33.
-| php 5.4.24 |
-: Esc [ 38 ; 5 ; 64 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 64.
-. xE2 xAE x82
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-: Esc [ 48 ; 5 ; 64 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 64.
-| nodejs 0.10.26 |
-: Esc [ 38 ; 5 ; 160 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 160.
-. xE2 xAE x82
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-: Esc [ 48 ; 5 ; 160 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 160.
-| ruby 2.0.0p247 |
-: Esc [ 38 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 254.
-. xE2 xAE x82
-: Esc [ 38 ; 5 ; 160 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color to index 160.
-: Esc [ 48 ; 5 ; 254 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color to index 254.
-| java 1.6.0_65 |
-: Esc [ 39 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set foreground color default.
-: Esc [ 49 m
-& SGR: SELECT GRAPHIC RENDITION
-" Set background color default.
-: Esc [ 198 D
+>>.
+!!

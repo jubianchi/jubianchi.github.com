@@ -11,11 +11,21 @@
 @termianl-prompt-fg: #049DBF;
 @terminal-prompt-font: @terminal-font;
 
+@keyframes blink {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+}
+
+@-webkit-keyframes blink {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+}
+
 .terminal {
     background-color: @terminal-bg;
     width: 80%;
     margin: 0 auto;
-    min-height: 250px;
+    height: 450px;
     border-radius: @terminal-border-radius;
     color: @terminal-fg;
     font-family: @terminal-font;
@@ -26,6 +36,9 @@
 
         .cursor {
             visibility: visible;
+            -webkit-animation: blink 1s cubic-bezier(1.0,0,0,1.0) infinite;
+            -moz-animation: blink 1s cubic-bezier(1.0,0,0,1.0) infinite;
+            animation: blink 1s cubic-bezier(1.0,0,0,1.0) infinite;
         }
     }
 
@@ -50,13 +63,24 @@
         }
     }
 
+    footer {
+        background-color: @terminal-header-bg;
+        border-bottom-left-radius: @terminal-border-radius;
+        border-bottom-right-radius: @terminal-border-radius;
+        height: 25px;
+        line-height: 25px;
+        font-size: 1em;
+        text-align: left;
+        padding-left: @terminal-border-radius;
+    }
+
     .window {
         padding: @terminal-border-radius @terminal-border-radius * 2;
-        max-height: 350px;
+        height: 345px;
+        max-height: 345px;
         overflow: auto;
 
         p {
-            font-weight: bold;
             margin: @terminal-border-radius / 2 0;
 
             * {

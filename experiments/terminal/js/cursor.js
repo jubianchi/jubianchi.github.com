@@ -1,7 +1,6 @@
 var cursor = {
     init: function($element) {
         this.$cursor = $element;
-        this.blinker = null;
 
         return this;
     },
@@ -14,23 +13,6 @@ var cursor = {
 
     backspace: function() {
         this.$cursor.prev('span:not(.prompt)').remove();
-
-        return this;
-    },
-
-    blink: function() {
-        this.$cursor.blinker = setInterval(
-            function() {
-                this.$cursor.toggleClass('hide');
-            }.bind(this),
-            500
-        );
-
-        return this;
-    },
-
-    unblink: function() {
-        clearInterval(this.$cursor.blinker);
 
         return this;
     },
