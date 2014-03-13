@@ -79,23 +79,68 @@
             pseudo-terminal in a web page.
         </p>
 
+        <p>After about two days of work, here is where I am : a nice-looking terminal supporting some cool things.</p>
+
+        <h2>Commands</h2>
+
         <p>
-            After about two days of work, here is where I am : a nice-looking terminal supporting some cool things:
-            <ul>
-                <li>
-                    Programmatically create commands (everything is JS powered): I wrote some basic commands like
-                    <code>clear</code> or <code>help</code> which your can try in the above demo.
-                </li>
-                <li>
-                    It can parse and replay <a href="https://www.gnu.org/software/teseq/"><code>teseq</code></a>-like scripts : I began on parsing the standard
-                    <code>teseq</code> <a href="https://www.gnu.org/software/teseq/manual/teseq.html#Output-Format">file format</a>
-                    but I quickly had problem so I made change to the expected format (for example, <code>teseq</code> treats output
-                    line as a single type whereas my pseudo-terminal has to differentiate user inputs and commands outputs).
-                    This is really cool: you can record your own terminal using <code>script</code> and <code>teseq</code>
-                    and then quiclky share it on any web page you can edit.
-                </li>
-            </ul>
+            Commands are plain javascript functions. In the current version, they are handled with a dumb <code>switch</code>
+            with no command line parsing (no arguments recognition or advanced features). Here is an example:
         </p>
+
+        <pre class="line-numbers"><code class="language-bash">switch(line) {
+    case 'reseq':
+        $.get('typescript.tsq')
+            .success(function(data) {
+                reseq.init(data).execute(term);
+            });
+        break;
+    case 'reseq --replay atoum':
+        $.get('atoum.tsq')
+                .success(function(data) {
+                    reseq.init(data).execute(term);
+                });
+        break;
+    case 'clear':
+    case 'reset':
+        term.termwin.clear();
+        break;
+
+    case 'help':
+        term.output('Help message');
+        break;
+
+    default:
+        (window[term.$term.attr('data-callback')] || function() {})(line, term.output);
+}</code></pre>
+
+        <h2>teseq scripts</h2>
+
+        <p>
+            The terminal can parse and replay <a href="https://www.gnu.org/software/teseq/"><code>teseq</code></a>-like scripts :
+            I began on parsing the standard <code>teseq</code>
+            <a href="https://www.gnu.org/software/teseq/manual/teseq.html#Output-Format">file format</a>
+            but I quickly had problem so I made change to the expected format (for example, <code>teseq</code> treats output
+            line as a single type whereas my pseudo-terminal has to differentiate user inputs and commands outputs).
+            This is really cool: you can record your own terminal using <code>script</code> and <code>teseq</code>
+            and then quiclky share it on any web page you can edit. Here is an example:
+        </p>
+
+        <pre class="line-numbers"><code class="language-bash">" This line will be displayed as a status mesasge
+|l|
+|s|
+| -lha|
+. BS/^H
+||.
+>total 1792>.
+>drwxr-xr-x@ 30 julien.bianchi  staff   1,0K 12 mar 13:05 >
+: Esc [ 1 m
+: Esc [ 36 m
+>.>
+: Esc [ 39 ; 49 m
+: Esc [ 0 m
+>>.
+!!</code></pre>
 
         <p>
             It still lacks some features (timings support in <code>teseq</code> parser, history support, cursor moves, ...),
@@ -104,7 +149,7 @@
         </p>
 
         <p>
-            Fell free to <a href="#disqus_thread">comment</a> or open PR
+            Fell free to <a href="#disqus_thread">comment</a>, push code or open issues
             <a href="https://github.com/jubianchi/jubianchi.github.com/tree/master/experiments/terminal">on github</a>.
         </p>
     </div>
@@ -122,6 +167,10 @@
     })();
 </script>
 
+<script src="../../js/prismjs/prism.js"></script>
+<script src="../../js/prismjs/components/prism-bash.js"></script>
+<script src="../../js/prismjs/components/prism-javascript.js"></script>
+<script src="../../js/prismjs/plugins/line-numbers/prism-line-numbers.js"></script>
 <script src="js/terminal.js"></script>
 <script src="js/termwin.js"></script>
 <script src="js/cursor.js"></script>
@@ -155,10 +204,18 @@ $(function() {
 
                 switch(line) {
                     case 'reseq':
+                    case 'reseq --replay':
+                    case 'reseq --replay typescript':
                         $.get('typescript.tsq')
                             .success(function(data) {
                                 reseq.init(data).execute(term);
                             });
+                        break;
+                    case 'reseq --replay atoum':
+                        $.get('atoum.tsq')
+                                .success(function(data) {
+                                    reseq.init(data).execute(term);
+                                });
                         break;
                     case 'clear':
                     case 'reset':

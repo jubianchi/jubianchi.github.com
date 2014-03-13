@@ -190,6 +190,8 @@ var reseq = {
                         return;
                     }
 
+                    console.log(c);
+
                     if(c >= 30 && c <= 37 && (!color[i - 1] || color[i - 1] != 5)) {
                         this.setFgColor(colors8[c - 30]);
 
