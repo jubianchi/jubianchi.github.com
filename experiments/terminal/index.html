@@ -200,7 +200,12 @@ $(function() {
             ev.preventDefault();
 
             if(ev.keyCode === 13) {
-                var line = term.termwin.cursor.$cursor.prevUntil('.prompt').text().split('').reverse().join('');
+                var line = term.termwin.cursor.$cursor.prevUntil('.prompt').text()
+                    .split('').reverse().join('')
+                    .replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                ;
+
+                console.log(line);
 
                 switch(line) {
                     case 'reseq':
