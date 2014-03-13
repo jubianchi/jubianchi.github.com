@@ -62,7 +62,6 @@ var reseq = {
     init: function(tsq) {
         this.data = tsq.split('\n');
 
-        this.buffer = '';
         this.styles = {};
         this.promise = null;
         this.delay = null;
@@ -70,12 +69,12 @@ var reseq = {
         return this;
     },
 
-    stackAction: function(callback, args, thisObj) {
-        var delay = this.delay,
+    stackAction: function(callback, args, thisObj, delay) {
+        var time = (delay === undefined ? this.delay : delay),
             promiseFactory = function() {
-                return new Promise(function(resolve, reject) {
-                    if(!delay) {
-                        delay = 0.1;
+                return new Promise(function(resolve) {
+                    if(time === null || time === undefined) {
+                        time = 0.3;
                     }
 
                     setTimeout(
@@ -84,10 +83,10 @@ var reseq = {
 
                             resolve();
                         },
-                        delay * 1000
+                        time * 1000
                     );
                 });
-            }.bind(this);
+            };
 
         this.delay = null;
 
@@ -113,9 +112,6 @@ var reseq = {
                 if(line.match(/^"/)) this.descriptionLine(line, term);
                 if(line.match(/^@/)) this.delayLine(line, term);
                 if(line.match(/^!/)) {
-                    this.stackAction(term.output, [this.buffer], term);
-                    this.buffer = '';
-
                     this.resetFgColor();
                     this.resetBgColor();
 
@@ -129,44 +125,105 @@ var reseq = {
     },
 
     textLine: function(line, term) {
+        var newline = false;
+
         line = line.replace(/^\|/, '');
         line = line.replace(/\|$/, '');
-        line = line.replace(/\|\.$/, '');
+
+        if(line.match(/\|\.$/)) {
+            line = line.replace(/\|\.$/, '');
+            newline = true;
+        }
 
         line.split('').forEach(function(c) {
             this.stackAction(term.termwin.type, [c], term.termwin);
         }, this);
+
+        if(newline) {
+            this.stackAction(term.termwin.newline, [], term.termwin);
+        }
     },
 
     outputLine: function(line, term) {
+        var newline = false;
+
         line = line.replace(/^>/, '');
         line = line.replace(/>$/, '');
         line = line.replace(/\s{1}/g, '&nbsp;');
 
         if(line.match(/>\.$/)) {
-            line = line.replace(/>\.$/, '<br/>');
+            line = this.applyStyle(line.replace(/>\.$/, ''));
+            newline = true;
 
             this.resetBold();
             this.resetFgColor();
             this.resetBgColor();
+        } else {
+            line = this.applyStyle(line);
         }
 
-        this.buffer = this.buffer + this.applyStyle(line);
+        this.stackAction(term.output, [line, newline], term, this.delay || 0);
     },
 
     controlCharLine: function(line, term) {
         var char = line.match(/^\. ((?:[^\/]+\/.*? ?)+)/);
 
         if(char) {
+            var last = null,
+                repeat = 1;
+
             char[1].split(' ').forEach(function(c) {
                 c = c.match(/([^\/]+)/);
 
-                switch(c[1]) {
-                    case 'BS':
-                        this.stackAction(term.termwin.backspace, [], term.termwin);
-                        break;
+                if(c[1] !== last && last !== null) {
+                    this.stackAction(
+                        function() {
+                            this['controlChar' + last](term, repeat);
+                        }.bind(this),
+                        [],
+                        this,
+                        0
+                    );
+
+                    repeat = 1;
+                    last = null;
+                }
+
+                if(last === c[1]) {
+                    repeat += 1;
+                } else {
+                    last = c[1];
+                }
+
+                if(last == 'LF') {
+                    this.resetBold();
+                    this.resetFgColor();
+                    this.resetBgColor();
                 }
             }, this);
+
+            this.stackAction(
+                function() {
+                    this['controlChar' + last](term, repeat);
+                }.bind(this),
+                [],
+                this,
+                0
+            );
+        }
+    },
+
+    controlCharBS: function(term, repeat) {
+        var span = $('span:not(.cursor):last', term.termwin.$window);
+
+        for(var i = 0; i < (repeat || 1); i++) {
+            term.termwin.backspace();
+        }
+    },
+
+    controlCharLF: function(term, repeat) {
+        for(var i = 0; i < (repeat || 1); i++) {
+            term.termwin.newline();
         }
     },
 

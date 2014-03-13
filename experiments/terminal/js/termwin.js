@@ -38,23 +38,39 @@ var termwin = {
         return this;
     },
 
-    output: function(text) {
-        var row = $('<p/>');
+    output: function(text, newline) {
+        var currentRow = $('p:last', this.$window);
 
-        if (text instanceof String) {
-            row.text(text);
-        } else {
-            row.append(text);
+        if(currentRow.size() === 0) {
+            currentRow = $('<p/>').appendTo(this.$window);
         }
 
         this.cursor.hide();
 
+        if (text instanceof String) {
+            currentRow.html(currentRow.html() + text);
+        } else {
+            currentRow.append(text);
+        }
+
+        if(newline) {
+            this.newline();
+        } else {
+            currentRow.append(this.cursor.show().$cursor);
+        }
+
+        return this;
+    },
+
+    writeln: function(text) {
+        return this.output(text, true);
+    },
+
+    newline: function() {
         this.$window
-            .append(row.append(this.cursor.show().$cursor))
+            .append($('<p/>').append(this.cursor.show().$cursor))
             .stop(true, true)
             .animate({ scrollTop: this.$window[0].scrollHeight }, 250)
         ;
-
-        return this;
     }
 };

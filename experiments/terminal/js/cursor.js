@@ -6,13 +6,29 @@ var cursor = {
     },
 
     type: function(char) {
-        this.$cursor.hide().before('<span>' + char + '</span>').show();
+        this.write('<span>' + char + '</span>');
+
+        return this;
+    },
+
+    write: function(text) {
+        this.$cursor.hide().before(text).show();
 
         return this;
     },
 
     backspace: function() {
-        this.$cursor.prev('span:not(.prompt)').remove();
+        var prev = this.$cursor.prev('span:not(.prompt)');
+
+        if(prev) {
+            var text = prev.text();
+
+            if(text.length === 1) {
+                prev.remove();
+            }
+
+            prev.text(text.substr(0, text.length - 1));
+        }
 
         return this;
     },

@@ -176,14 +176,14 @@ function echoBack(input, output) {
 }
 
 function motd(output) {
-    output('Hello World!<br/>');
-    output('I\'m an experiment from <a href="https://github.com/jubianchi" target="_blank">@jubianchi</a><br/><br/>');
-    output('Everything started when I discovered <strong>the awesome landing page of <a href="https://vagrantcloud.com" target="_blank">vagrantcloud.com</a></strong>.<br/>');
-    output('I found the shell mockups really great and <strong>I tried to create my own</strong>.<br/><br/>');
-    output('I really enjoyed working on this POC so <strong>I hope you\'ll enjoy the demo</strong> :)<br/><br/>');
+    output('Hello World!<br/>', true);
+    output('I\'m an experiment from <a href="https://github.com/jubianchi" target="_blank">@jubianchi</a><br/><br/>', true);
+    output('Everything started when I discovered <strong>the awesome landing page of <a href="https://vagrantcloud.com" target="_blank">vagrantcloud.com</a></strong>.<br/>', true);
+    output('I found the shell mockups really great and <strong>I tried to create my own</strong>.<br/><br/>', true);
+    output('I really enjoyed working on this POC so <strong>I hope you\'ll enjoy the demo</strong> :)<br/><br/>', true);
 
     var date = new Date();
-    output('Started on ' + date.toLocaleDateString() + ' at ' + date.toLocaleTimeString() + '<br/><br/>');
+    output('Started on ' + date.toLocaleDateString() + ' at ' + date.toLocaleTimeString() + '<br/>', true);
 }
 
 var term;
@@ -202,6 +202,8 @@ $(function() {
                     .split('').reverse().join('')
                     .replace(/</g, '&lt;').replace(/>/g, '&gt;')
                 ;
+
+                term.termwin.newline();
 
                 switch(line) {
                     case 'reseq':
@@ -226,7 +228,7 @@ $(function() {
                     case 'cat typescript.tsq':
                         $.get('typescript.tsq')
                             .success(function(data) {
-                                term.output(data.split('\n').join('<br/>'));
+                                term.output(data.split('\n').join('<br/>'), true);
                                 term.prompt();
                             });
                         return;
@@ -239,7 +241,7 @@ $(function() {
                     case 'cat atoum.tsq':
                         $.get('atoum.tsq')
                             .success(function(data) {
-                                term.output(data.split('\n').join('<br/>'));
+                                term.output(data.split('\n').join('<br/>'), true);
                                 term.prompt();
                             });
                         return;
@@ -262,7 +264,7 @@ $(function() {
 
                     default:
                         if(line) {
-                            term.output('<span style="color: red">Unknown command ' + line + '</span>')
+                            term.output('<span style="color: red">Unknown command ' + line + '</span>', true)
                         }
                 }
 

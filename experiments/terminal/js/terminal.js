@@ -55,8 +55,8 @@ var terminal = {
         return this;
     },
 
-    output: function(text) {
-        this.termwin.output(text);
+    output: function(text, newline) {
+        this.termwin.output(text, newline);
 
         return this;
     },
