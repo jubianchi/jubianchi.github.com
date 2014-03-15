@@ -1,0 +1,2648 @@
+|Script started on Sat Mar 15 22:28:30 2014|.
+: Esc [ 1 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set bold text.
+: Esc [ 3 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set italicized text.
+|%|
+: Esc [ 23 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear italicized or fraktur text.
+: Esc [ 1 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set bold text.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|                                                                           |-
+-|                                                                          |-
+-|                             |
+. CR/^M
+| |
+. CR/^M
+: Esc k
+|../jubianchi.fr|
+: Esc \
+& ST: STRING TERMINATOR
+. CR/^M
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 23 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear italicized or fraktur text.
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ J
+& ED: ERASE IN PAGE
+" Clear from the cursor to the end of the screen.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 42 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color green.
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+| |
+. xE2 x9C x94
+| |
+. xE2 xAE x81
+: Esc [ 42 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color green.
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+| jubianchi |
+: Esc [ 48 ; 5 ; 243 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 243.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+. xE2 xAE x80
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+| 22:28:31 |
+: Esc [ 48 ; 5 ; 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 33.
+: Esc [ 38 ; 5 ; 243 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 243.
+. xE2 xAE x80
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+| ~/repositories/jubianchi/jubianchi.fr |
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 38 ; 5 ; 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 33.
+. xE2 xAE x80
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+. CR/^M LF/^J
+: Esc [ 40 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color black.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+| $ |
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 30 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color black.
+. xE2 xAE x80
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+| |
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 126 C
+& CUF: CURSOR RIGHT
+" Move the cursor right 126 characters.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 38 ; 5 ; 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 33.
+. xE2 xAE x82
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+: Esc [ 48 ; 5 ; 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 33.
+| php 5.4.24 |
+: Esc [ 38 ; 5 ; 64 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 64.
+. xE2 xAE x82
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+: Esc [ 48 ; 5 ; 64 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 64.
+| nodejs 0.10.25 |
+: Esc [ 38 ; 5 ; 160 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 160.
+. xE2 xAE x82
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+: Esc [ 48 ; 5 ; 160 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 160.
+| ruby 1.9.3p484 |
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 173 D
+& CUB: CURSOR LEFT
+" Move the cursor left 173 characters.
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|v|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|v|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|a|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|v|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|a|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|g|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|g|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|r|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|r|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|a|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|a|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|n|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|v|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|a|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|g|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|r|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|a|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|n|
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|t|
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+| |
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|b|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|b|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|o|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|o|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|x|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H BS/^H BS/^H
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+|b|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+|o|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+|x |
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|a|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+: Esc [ 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color yellow.
+|a|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+: Esc [ 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color yellow.
+|d|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+. BS/^H BS/^H
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+|a|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+|dd |
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|j|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+: Esc [ 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color yellow.
+|j|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+: Esc [ 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color yellow.
+|u|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+. BS/^H BS/^H
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+|j|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+|ubianchi/php-master|
+. CR/^M CR/^M LF/^J
+: Esc k
+|vagrant|
+: Esc \
+& ST: STRING TERMINATOR
+: Esc [ 1 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set bold text.
+|==> box: Loading metadata for box 'jubianchi/php-master'|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M LF/^J
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: URL: https://vagrantcloud.com/jubianchi/php-master|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M LF/^J
+: Esc [ 1 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set bold text.
+|==> box: Adding box 'jubianchi/php-master' (v0.1.0) for provider: virtualbo|-
+-|x|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M LF/^J
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Downloading: https://vagrantcloud.com/jubianchi/php-master/version|-
+-|/1/provider/virtualbox.box|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M LF/^J
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 0% (Rate: 5742k/s, Estimated time remaining: 0:07:40)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 1% (Rate: 7778k/s, Estimated time remaining: 0:03:40)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 3% (Rate: 8448k/s, Estimated time remaining: 0:02:44)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 4% (Rate: 8761k/s, Estimated time remaining: 0:02:20)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 5% (Rate: 8947k/s, Estimated time remaining: 0:02:06)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 6% (Rate: 9564k/s, Estimated time remaining: 0:01:58)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 7% (Rate: 9545k/s, Estimated time remaining: 0:01:51)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 8% (Rate: 9470k/s, Estimated time remaining: 0:01:45)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 10% (Rate: 9544k/s, Estimated time remaining: 0:01:40)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 11% (Rate: 9552k/s, Estimated time remaining: 0:01:36)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 12% (Rate: 9758k/s, Estimated time remaining: 0:01:33)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 13% (Rate: 9661k/s, Estimated time remaining: 0:01:30)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 14% (Rate: 9756k/s, Estimated time remaining: 0:01:28)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 15% (Rate: 9643k/s, Estimated time remaining: 0:01:25)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 16% (Rate: 9056k/s, Estimated time remaining: 0:01:25)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 17% (Rate: 8900k/s, Estimated time remaining: 0:01:24)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 18% (Rate: 8959k/s, Estimated time remaining: 0:01:22)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 20% (Rate: 8798k/s, Estimated time remaining: 0:01:20)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 21% (Rate: 8763k/s, Estimated time remaining: 0:01:18)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 22% (Rate: 9328k/s, Estimated time remaining: 0:01:17)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 23% (Rate: 9176k/s, Estimated time remaining: 0:01:16)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 24% (Rate: 9088k/s, Estimated time remaining: 0:01:14)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 25% (Rate: 9075k/s, Estimated time remaining: 0:01:13)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 26% (Rate: 9112k/s, Estimated time remaining: 0:01:11)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 27% (Rate: 9051k/s, Estimated time remaining: 0:01:10)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 28% (Rate: 9064k/s, Estimated time remaining: 0:01:09)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 29% (Rate: 8996k/s, Estimated time remaining: 0:01:08)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 31% (Rate: 8967k/s, Estimated time remaining: 0:01:07)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 32% (Rate: 8744k/s, Estimated time remaining: 0:01:06)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 33% (Rate: 8574k/s, Estimated time remaining: 0:01:05)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 34% (Rate: 8746k/s, Estimated time remaining: 0:01:04)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 35% (Rate: 8508k/s, Estimated time remaining: 0:01:03)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 36% (Rate: 8568k/s, Estimated time remaining: 0:01:02)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 37% (Rate: 8691k/s, Estimated time remaining: 0:01:00)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 38% (Rate: 8770k/s, Estimated time remaining: 0:00:59)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 39% (Rate: 8655k/s, Estimated time remaining: 0:00:58)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 40% (Rate: 9039k/s, Estimated time remaining: 0:00:57)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 41% (Rate: 8937k/s, Estimated time remaining: 0:00:56)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 42% (Rate: 8854k/s, Estimated time remaining: 0:00:55)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 43% (Rate: 8525k/s, Estimated time remaining: 0:00:54)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 44% (Rate: 8622k/s, Estimated time remaining: 0:00:53)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 45% (Rate: 8491k/s, Estimated time remaining: 0:00:52)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 46% (Rate: 8362k/s, Estimated time remaining: 0:00:51)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 47% (Rate: 8332k/s, Estimated time remaining: 0:00:50)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 48% (Rate: 8562k/s, Estimated time remaining: 0:00:49)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 49% (Rate: 8304k/s, Estimated time remaining: 0:00:48)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 50% (Rate: 8239k/s, Estimated time remaining: 0:00:47)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 51% (Rate: 8278k/s, Estimated time remaining: 0:00:46)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 52% (Rate: 8249k/s, Estimated time remaining: 0:00:46)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 53% (Rate: 8206k/s, Estimated time remaining: 0:00:45)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 54% (Rate: 8307k/s, Estimated time remaining: 0:00:44)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 55% (Rate: 8453k/s, Estimated time remaining: 0:00:42)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 57% (Rate: 8770k/s, Estimated time remaining: 0:00:41)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 58% (Rate: 9151k/s, Estimated time remaining: 0:00:40)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 59% (Rate: 9399k/s, Estimated time remaining: 0:00:39)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 60% (Rate: 9740k/s, Estimated time remaining: 0:00:37)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 61% (Rate: 9841k/s, Estimated time remaining: 0:00:36)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 63% (Rate: 9774k/s, Estimated time remaining: 0:00:35)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 64% (Rate: 9705k/s, Estimated time remaining: 0:00:34)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 65% (Rate: 9785k/s, Estimated time remaining: 0:00:33)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 66% (Rate: 9838k/s, Estimated time remaining: 0:00:31)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 67% (Rate: 9928k/s, Estimated time remaining: 0:00:30)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 69% (Rate: 9.8M/s, Estimated time remaining: 0:00:29)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 70% (Rate: 9.8M/s, Estimated time remaining: 0:00:28)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 71% (Rate: 10.0M/s, Estimated time remaining: 0:00:26)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 72% (Rate: 9973k/s, Estimated time remaining: 0:00:25)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 73% (Rate: 9960k/s, Estimated time remaining: 0:00:24)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 75% (Rate: 9916k/s, Estimated time remaining: 0:00:23)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 76% (Rate: 9.7M/s, Estimated time remaining: 0:00:22)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 77% (Rate: 9964k/s, Estimated time remaining: 0:00:20)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 78% (Rate: 10.0M/s, Estimated time remaining: 0:00:19)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 80% (Rate: 9.9M/s, Estimated time remaining: 0:00:18)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 81% (Rate: 9.8M/s, Estimated time remaining: 0:00:17)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 82% (Rate: 9971k/s, Estimated time remaining: 0:00:16)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 83% (Rate: 9893k/s, Estimated time remaining: 0:00:15)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 84% (Rate: 9799k/s, Estimated time remaining: 0:00:14)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 86% (Rate: 9805k/s, Estimated time remaining: 0:00:12)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 87% (Rate: 9928k/s, Estimated time remaining: 0:00:11)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 88% (Rate: 9947k/s, Estimated time remaining: 0:00:10)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 89% (Rate: 9993k/s, Estimated time remaining: 0:00:09)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 90% (Rate: 9844k/s, Estimated time remaining: 0:00:08)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 92% (Rate: 9897k/s, Estimated time remaining: 0:00:07)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 93% (Rate: 9832k/s, Estimated time remaining: 0:00:06)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 94% (Rate: 9757k/s, Estimated time remaining: 0:00:05)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 95% (Rate: 9743k/s, Estimated time remaining: 0:00:04)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 96% (Rate: 9925k/s, Estimated time remaining: 0:00:03)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 98% (Rate: 9910k/s, Estimated time remaining: 0:00:01)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|    box: Progress: 99% (Rate: 9848k/s, Estimated time remaining: --:--:--)|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 1 ; 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set bold text.
+" Set foreground color green.
+|==> box: Successfully added box 'jubianchi/php-master' (v0.1.0) for 'virtua|-
+-|lbox'!|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M LF/^J
+: Esc [ 1 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set bold text.
+: Esc [ 3 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set italicized text.
+|%|
+: Esc [ 23 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear italicized or fraktur text.
+: Esc [ 1 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set bold text.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|                                                                           |-
+-|                                                                          |-
+-|                             |
+. CR/^M
+| |
+. CR/^M
+: Esc k
+|../jubianchi.fr|
+: Esc \
+& ST: STRING TERMINATOR
+. CR/^M
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 23 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear italicized or fraktur text.
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ J
+& ED: ERASE IN PAGE
+" Clear from the cursor to the end of the screen.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 42 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color green.
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+| |
+. xE2 x9C x94
+| |
+. xE2 xAE x81
+: Esc [ 42 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color green.
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+| jubianchi |
+: Esc [ 48 ; 5 ; 243 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 243.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+. xE2 xAE x80
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+| 22:30:20 |
+: Esc [ 48 ; 5 ; 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 33.
+: Esc [ 38 ; 5 ; 243 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 243.
+. xE2 xAE x80
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+| ~/repositories/jubianchi/jubianchi.fr |
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 38 ; 5 ; 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 33.
+. xE2 xAE x80
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+. CR/^M LF/^J
+: Esc [ 40 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color black.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+| $ |
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 30 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color black.
+. xE2 xAE x80
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+| |
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 126 C
+& CUF: CURSOR RIGHT
+" Move the cursor right 126 characters.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 38 ; 5 ; 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 33.
+. xE2 xAE x82
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+: Esc [ 48 ; 5 ; 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 33.
+| php 5.4.24 |
+: Esc [ 38 ; 5 ; 64 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 64.
+. xE2 xAE x82
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+: Esc [ 48 ; 5 ; 64 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 64.
+| nodejs 0.10.25 |
+: Esc [ 38 ; 5 ; 160 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 160.
+. xE2 xAE x82
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+: Esc [ 48 ; 5 ; 160 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 160.
+| ruby 1.9.3p484 |
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 173 D
+& CUB: CURSOR LEFT
+" Move the cursor left 173 characters.
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|v|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|v|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|a|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|v|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|a|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|g|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|g|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|r|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|r|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|a|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|a|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|n|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H BS/^H BS/^H BS/^H BS/^H BS/^H
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|v|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|a|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|g|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|r|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|a|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|n|
+: Esc [ 32 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color green.
+|t|
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+| |
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|i|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|i|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|n|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+: Esc [ 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color yellow.
+|i|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+: Esc [ 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color yellow.
+|n|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+: Esc [ 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color yellow.
+|i|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+. BS/^H BS/^H BS/^H
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+|i|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+|n|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+|it |
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+|j|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+. BS/^H
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+: Esc [ 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color yellow.
+|j|
+: Esc [ 4 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set underlined text.
+: Esc [ 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color yellow.
+|u|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+. BS/^H BS/^H
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+|j|
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+|ubianchi/php-master|
+. CR/^M CR/^M LF/^J
+: Esc k
+|vagrant|
+: Esc \
+& ST: STRING TERMINATOR
+: Esc [ 0 ; 31 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+" Set foreground color red.
+|`Vagrantfile` already exists in this directory. Remove it before|
+. CR/^M LF/^J
+|running `vagrant init`.|
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+. CR/^M LF/^J
+: Esc [ 1 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set bold text.
+: Esc [ 3 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set italicized text.
+|%|
+: Esc [ 23 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear italicized or fraktur text.
+: Esc [ 1 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set bold text.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+|                                                                           |-
+-|                                                                          |-
+-|                             |
+. CR/^M
+| |
+. CR/^M
+: Esc k
+|../jubianchi.fr|
+: Esc \
+& ST: STRING TERMINATOR
+. CR/^M
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 23 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear italicized or fraktur text.
+: Esc [ 24 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear underlining.
+: Esc [ J
+& ED: ERASE IN PAGE
+" Clear from the cursor to the end of the screen.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 41 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color red.
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+| |
+. xE2 x9C x98
+| |
+. xE2 xAE x81
+: Esc [ 41 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color red.
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+| jubianchi |
+: Esc [ 48 ; 5 ; 243 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 243.
+: Esc [ 31 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color red.
+. xE2 xAE x80
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+| 22:30:34 |
+: Esc [ 48 ; 5 ; 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 33.
+: Esc [ 38 ; 5 ; 243 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 243.
+. xE2 xAE x80
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+| ~/repositories/jubianchi/jubianchi.fr |
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 38 ; 5 ; 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 33.
+. xE2 xAE x80
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+. CR/^M LF/^J
+: Esc [ 40 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color black.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+| $ |
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 30 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color black.
+. xE2 xAE x80
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+| |
+: Esc [ K
+& EL: ERASE IN LINE
+" Clear from the cursor to the end of the line.
+: Esc [ 126 C
+& CUF: CURSOR RIGHT
+" Move the cursor right 126 characters.
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+: Esc [ 0 m
+& SGR: SELECT GRAPHIC RENDITION
+" Clear graphic rendition to defaults.
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 38 ; 5 ; 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 33.
+. xE2 xAE x82
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+: Esc [ 48 ; 5 ; 33 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 33.
+| php 5.4.24 |
+: Esc [ 38 ; 5 ; 64 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 64.
+. xE2 xAE x82
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+: Esc [ 48 ; 5 ; 64 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 64.
+| nodejs 0.10.25 |
+: Esc [ 38 ; 5 ; 160 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 160.
+. xE2 xAE x82
+: Esc [ 38 ; 5 ; 254 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color to index 254.
+: Esc [ 48 ; 5 ; 160 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color to index 160.
+| ruby 1.9.3p484 |
+: Esc [ 39 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set foreground color default.
+: Esc [ 49 m
+& SGR: SELECT GRAPHIC RENDITION
+" Set background color default.
+: Esc [ 173 D
+& CUB: CURSOR LEFT
+" Move the cursor left 173 characters.
+. CR/^M CR/^M LF/^J LF/^J
+|Script done on Sat Mar 15 22:30:37 2014|.

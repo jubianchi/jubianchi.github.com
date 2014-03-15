@@ -1,0 +1,187 @@
+: Esc [ 0 m
+" Use <code>vagrant box add {{box}}</code> to import a box
+|v|
+@ 0.1
+|a|
+@ 0.1
+|g|
+@ 0.1
+|r|
+@ 0.1
+|a|
+@ 0.1
+|n|
+@ 0.1
+|t|
+@ 0.1
+| |
+@ 0.1
+|b|
+@ 0.1
+|o|
+@ 0.1
+|x|
+@ 0.1
+| |
+@ 0.1
+|a|
+@ 0.1
+|d|
+@ 0.1
+|d|
+@ 0.1
+| |
+@ 0.1
+|{{box}}|
+@ 1
+||.
+: Esc [ 1 m
+>==> box: Loading metadata for box '{{box}}'>
+@ 0.2
+: Esc [ 0 m
+. CR/^M LF/^J
+>    box: URL: https://vagrantcloud.com/{{box}}>
+@ 0.2
+: Esc [ 0 m
+. CR/^M LF/^J
+: Esc [ 1 m
+>==> box: Adding box '{{box}}' (v0.1.0) for provider: virtualbox>
+@ 0.2
+: Esc [ 0 m
+. CR/^M LF/^J
+: Esc [ 0 m
+>    box: Downloading: https://vagrantcloud.com/{{box}}/version/1/provider/virtualbox.box>.
+: Esc [ 0 m
+@ 1
+: Esc [ 0 m
+>    box: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)>
+@ 1
+: Esc k
+>    box: Progress: 1% (Rate: 7778k/s, Estimated time remaining: 0:03:40)>
+@ 0.5
+: Esc k
+>    box: Progress: 10% (Rate: 9544k/s, Estimated time remaining: 0:01:40)>
+@ 0.5
+: Esc k
+>    box: Progress: 20% (Rate: 8798k/s, Estimated time remaining: 0:01:20)>
+@ 0.5
+: Esc k
+>    box: Progress: 30% (Rate: 8967k/s, Estimated time remaining: 0:01:07)>
+@ 0.5
+: Esc k
+>    box: Progress: 40% (Rate: 9039k/s, Estimated time remaining: 0:00:57)>
+@ 0.5
+: Esc k
+>    box: Progress: 50% (Rate: 8239k/s, Estimated time remaining: 0:00:47)>
+@ 0.5
+: Esc k
+>    box: Progress: 60% (Rate: 9740k/s, Estimated time remaining: 0:00:37)>
+@ 0.5
+: Esc k
+>    box: Progress: 70% (Rate: 9.8M/s, Estimated time remaining: 0:00:28)>
+@ 0.5
+: Esc k
+>    box: Progress: 80% (Rate: 9.9M/s, Estimated time remaining: 0:00:18)>
+@ 0.5
+: Esc k
+>    box: Progress: 90% (Rate: 9844k/s, Estimated time remaining: 0:00:08)>
+@ 0.5
+: Esc k
+>    box: Progress: 100% (Rate: 0/s, Estimated time remaining: 0:00:00)>
+@ 0.5
+>>.
+: Esc [ 0 m
+: Esc [ 1 ; 32 m
+>==> box: Successfully added box '{{box}}' (v0.1.0) for 'virtualbox'!>.
+: Esc [ 0 m
+: Esc [ 1 m
+: Esc [ 3 m
+!!
+@ 1
+: Esc [ 0 m
+" Use <code>vagrant init {{box}}</code> to start a new <code>Vagrantfile</code>
+|v|
+@ 0.1
+|a|
+@ 0.1
+|g|
+@ 0.1
+|r|
+@ 0.1
+|a|
+@ 0.1
+|n|
+@ 0.1
+|t|
+@ 0.1
+| |
+@ 0.1
+|i|
+@ 0.1
+|n|
+@ 0.1
+|i|
+@ 0.1
+|t|
+@ 0.1
+| |
+@ 0.1
+|{{box}}|
+@ 1
+||.
+@ 0.05
+>A `Vagrantfile` has been placed in this directory. You are now>
+@ 0.05
+. CR/^M LF/^J
+>ready to `vagrant up` your first virtual environment! Please read>
+@ 0.05
+. CR/^M LF/^J
+>the comments in the Vagrantfile as well as documentation on>
+@ 0.05
+. CR/^M LF/^J
+>`vagrantup.com` for more information on using Vagrant.>
+@ 0.1
+: Esc [ 0 m
+. CR/^M LF/^J
+!!
+@ 0.3
+|c|
+@ 0.1
+|a|
+@ 0.1
+|t|
+@ 0.1
+| |
+@ 0.1
+|V|
+@ 0.1
+|a|
+@ 0.1
+|g|
+@ 0.1
+|r|
+@ 0.1
+|a|
+@ 0.1
+|n|
+@ 0.1
+|t|
+@ 0.1
+|f|
+@ 0.1
+|i|
+@ 0.1
+|l|
+@ 0.1
+|e|
+||.
+@ 0.2
+>VAGRANTFILE_API_VERSION = "2">.
+>>.
+>Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|>.
+>  config.vm.box = "{{box}}">.
+>>.
+>  # ...>.
+>end>.
+@ 0.2
+!!

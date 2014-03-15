@@ -150,7 +150,12 @@ var reseq = {
         }
 
         if(line.match(/>\.$/)) {
-            line = this.applyStyle(line.replace(/>\.$/, ''));
+            line = line.replace(/>\.$/, '');
+            if(line.replace(/\s/g, '') === '') {
+                line = '&nbsp;';
+            }
+
+            line = this.applyStyle(line);
             newline = true;
 
             this.resetBold();
@@ -228,7 +233,7 @@ var reseq = {
     },
 
     escapeSeqLine: function(line, term) {
-        line = line.replace(/^: Esc \[\s*/, '');
+        line = line.replace(/^: Esc \[?\s*/, '');
 
         var color = line.match(/((?:\d+\s*;?\s*)+)/);
 
@@ -288,6 +293,14 @@ var reseq = {
                     this.setBgColor(colors8[c - 40]);
                 }
             }, this);
+        } else {
+            if(line === 'k') {
+                this.stackAction(function() {
+                    $('p:last', term.termwin.$window).remove();
+                    term.termwin.newline();
+                }, [], this);
+
+            }
         }
     },
 
