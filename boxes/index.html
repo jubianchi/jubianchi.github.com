@@ -160,7 +160,9 @@ $(function() {
 
     $.get('boxes.json')
         .success(function(data) {
-            data = JSON.parse(data);
+            if(data instanceof Object === false) {
+                data = JSON.parse(data);
+            }
 
             data.forEach(function(box) {
                 var tr = $('<tr/>').appendTo($('#boxes tbody')),
