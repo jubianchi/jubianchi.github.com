@@ -39,7 +39,7 @@ var termwin = {
     },
 
     output: function(text, newline) {
-        var currentRow = $('p:last', this.$window);
+        var currentRow = this.$window.children('p:last');
 
         if(currentRow.size() === 0) {
             currentRow = $('<p/>').appendTo(this.$window);
