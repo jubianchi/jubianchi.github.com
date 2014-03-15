@@ -1,0 +1,84 @@
+[
+    {
+        "name": "jubianchi/debian-wheezy-chef-i386",
+        "version": {
+            "id": 1,
+            "name": "0.1.0"
+        },
+        "providers": {
+            "virtualbox": "http://boxes.jubianchi.fr/debian-wheezy-chef-i386-vbox.box",
+            "vmware": "http://boxes.jubianchi.fr/debian-wheezy-chef-i386-vmware.box"
+        }
+    },
+    {
+        "name": "jubianchi/debian-wheezy-chef-amd64",
+        "version": {
+            "id": 1,
+            "name": "0.1.0"
+        },
+        "providers": {
+            "virtualbox": "http://boxes.jubianchi.fr/debian-wheezy-chef-amd64-vbox.box",
+            "vmware": "http://boxes.jubianchi.fr/debian-wheezy-chef-amd64-vmware.box"
+        }
+    },
+    {
+        "name": "jubianchi/php-54",
+        "version": {
+            "id": 1,
+            "name": "0.1.0"
+        },
+        "providers": {
+            "virtualbox": "http://boxes.jubianchi.fr/php-54-0.1.0.box"
+        }
+    },
+    {
+        "name": "jubianchi/php-55",
+        "version": {
+            "id": 2,
+            "name": "0.2.0"
+        },
+        "providers": {
+            "virtualbox": "http://boxes.jubianchi.fr/php-55-0.2.0.box"
+        }
+    },
+    {
+        "name": "jubianchi/php-56",
+        "version": {
+            "id": 1,
+            "name": "0.1.0"
+        },
+        "providers": {
+            "virtualbox": "http://boxes.jubianchi.fr/php-56-0.1.0.box"
+        }
+    },
+    {
+        "name": "jubianchi/php-master",
+        "version": {
+            "id": 1,
+            "name": "0.1.0"
+        },
+        "providers": {
+            "virtualbox": "http://boxes.jubianchi.fr/php-master-0.1.0.box"
+        }
+    },
+    {
+        "name": "jubianchi/php-54-dev",
+        "version": {
+            "id": 1,
+            "name": "0.1.0"
+        },
+        "providers": {
+            "virtualbox": "http://boxes.jubianchi.fr/php-54-dev.box"
+        }
+    },
+    {
+        "name": "jubianchi/php-55-dev",
+        "version": {
+            "id": 2,
+            "name": "0.2.0"
+        },
+        "providers": {
+            "virtualbox": "http://boxes.jubianchi.fr/php-55-dev-0.2.0.box"
+        }
+    }
+]
