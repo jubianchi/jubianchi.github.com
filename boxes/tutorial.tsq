@@ -45,7 +45,7 @@
 : Esc [ 0 m
 . CR/^M LF/^J
 : Esc [ 1 m
->==> box: Adding box '{{box}}' (v0.1.0) for provider: virtualbox>
+>==> box: Adding box '{{box}}' (v{{version}}) for provider: virtualbox>
 @ 0.2
 : Esc [ 0 m
 . CR/^M LF/^J
@@ -92,7 +92,7 @@
 >>.
 : Esc [ 0 m
 : Esc [ 1 ; 32 m
->==> box: Successfully added box '{{box}}' (v0.1.0) for 'virtualbox'!>.
+>==> box: Successfully added box '{{box}}' (v{{version}}) for 'virtualbox'!>.
 : Esc [ 0 m
 : Esc [ 1 m
 : Esc [ 3 m

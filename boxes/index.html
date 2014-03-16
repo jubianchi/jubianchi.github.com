@@ -55,7 +55,7 @@
 <article id="web-term">
     <div class="terminal" data-prompt="<strong>boxes@jubianchi.fr $</strong> ">
         <header>
-            <h1>Terminal</h1>
+            <h1>Terminal <small>~/vagrant-boxes</small></h1>
         </header>
 
         <div class="window">
@@ -76,87 +76,30 @@
 <script src="../experiments/terminal/js/cursor.js"></script>
 <script src="../experiments/terminal/js/reseq.js"></script>
 <script>
-var term, boxes = [], box;
-
 $(function() {
-    term = terminal.init($('.terminal'));
+    var term = terminal.init($('.terminal')),
+        boxes = [],
+        index = [],
+        lastBox,
+        formatData = function(data, box) {
+            return data
+                .replace(/\{\{box\}\}/g, box.name)
+                .replace(/\{\{version\}\}/g, box.version.name)
+                .replace(/\{\{versionid\}\}/g, box.version.id)
+            ;
+        },
+        getScript = function(box, cb) {
+            lastBox = box.name;
 
-    $(document).on('keypress', function(ev) {
-        if(term.focused()) {
-            ev.preventDefault();
+            $.get('tutorial.tsq')
+                .success(function(data) {
+                    getScript = function(box) {
+                        cb(formatData(data, box));
+                    };
 
-            if(ev.ctrlKey) {
-                switch(ev.keyCode) {
-                    case 12:
-                        term.termwin.clear();
-                        term.prompt();
-                        break;
-                }
-
-                return;
-            }
-
-            if(ev.keyCode === 13) {
-                var line = term.termwin.cursor.$cursor.prevUntil('.prompt').text()
-                    .split('').reverse().join('')
-                    .replace(/</g, '&lt;').replace(/>/g, '&gt;')
-                    .replace(/\s/g, ' ')
-                ;
-
-                term.termwin.newline();
-
-                switch(line) {
-                    case 'replay':
-                        $.get('tutorial.tsq')
-                            .success(function(data) {
-                                reseq.init(data.replace(/\{\{box\}\}/g, (box || 'jubianchi/debian-wheezy-chef-i386'))).execute(term);
-                            });
-                        break;
-
-                    case 'github':
-                            term.output('<div style="margin: 1em" data-repo="jubianchi/vagrant-boxes"></div>')
-                            $("[data-repo]").github();
-                        break;
-
-                    case 'issues':
-                        document.location.href = 'https://github.com/jubianchi/vagrant-boxes/issues';
-                        break;
-
-                    case 'clear':
-                    case 'reset':
-                        term.termwin.clear();
-                        break;
-
-                    case 'help':
-                        term.output('<h1>jubianchi/vagrant-boxes</h1>', true);
-                        term.output('A set of generic vagrant base-boxes', true);
-                        term.output('&nbsp;', true);
-                        term.output('Commands:');
-                        term.output('<ul><li><code>replay</code>: replay the tutorial</li><li><code>github</code>: open github repository</li><li><code>issues</code>: open issues</li></ul>');
-                        term.output('Keys:');
-                        term.output('<ul><li><code>^L</code>: clear the screen</li></ul>')
-                        break;
-
-                    default:
-                        if(line) {
-                            if(boxes.indexOf(line) >= 0) {
-                                box = line;
-
-                                $.get('tutorial.tsq')
-                                    .success(function(data) {
-                                        console.log(data);
-                                        reseq.init(data.replace(/\{\{box\}\}/g, line)).execute(term);
-                                    });
-                            } else {
-                                term.output('<span style="color: red">Unknown command ' + line + '</span>', true)
-                            }
-                        }
-                }
-
-                term.prompt();
-            }
-        }
-    });
+                    cb(formatData(data, box));
+                });
+        };
 
     $.get('boxes.json')
         .success(function(data) {
@@ -164,7 +107,7 @@ $(function() {
                 data = JSON.parse(data);
             }
 
-            data.forEach(function(box) {
+            (index = data).forEach(function(box) {
                 var tr = $('<tr/>').appendTo($('#boxes tbody')),
                     td = $('<td/>').appendTo(tr);
 
@@ -183,10 +126,9 @@ $(function() {
 
                         term.focus();
 
-                        $.get('tutorial.tsq')
-                            .success(function(data) {
-                                reseq.init(data.replace(/\{\{box\}\}/g, box.name)).execute(term);
-                            });
+                        getScript(box, function(data) {
+                            reseq.init(data).execute(term)
+                        });
                     })
                     .appendTo(td)
                 ;
@@ -215,6 +157,86 @@ $(function() {
             });
         })
     ;
+
+    $(document).on('keypress', function(ev) {
+        if(term.focused()) {
+            ev.preventDefault();
+
+            if(ev.ctrlKey) {
+                switch(ev.keyCode) {
+                    case 12:
+                        term.termwin.clear();
+                        term.prompt();
+                        break;
+                }
+
+                return;
+            }
+
+            if(ev.keyCode === 13) {
+                var line = term.termwin.cursor.$cursor.prevUntil('.prompt').text()
+                    .split('').reverse().join('')
+                    .replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                    .replace(/\s/g, ' ')
+                ;
+
+                term.termwin.newline();
+
+                switch(line) {
+                    case 'replay':
+                        var name = (lastBox ? lastBox : 'jubianchi/debian-wheezy-chef-i386');
+
+                        getScript(index[boxes.indexOf(name)], function(data) {
+                            reseq.init(data).execute(term)
+                        });
+                        break;
+
+                    case 'github':
+                            term.output('<div style="margin: 1em" data-repo="jubianchi/vagrant-boxes"></div>')
+                            $("[data-repo]").github({
+                                iconStars:  true,
+                                iconForks:  true,
+                                iconIssues: true
+                            });
+                        break;
+
+                    case 'issues':
+                        document.location.href = 'https://github.com/jubianchi/vagrant-boxes/issues';
+                        break;
+
+                    case 'clear':
+                    case 'reset':
+                        term.termwin.clear();
+                        break;
+
+                    case 'help':
+                        term.output('<h1>jubianchi/vagrant-boxes</h1>', true);
+                        term.output('A set of generic vagrant base-boxes', true);
+                        term.output('&nbsp;', true);
+                        term.output('Commands:');
+                        term.output('<ul><li><code>replay</code>: replay the tutorial</li><li><code>github</code>: open github repository</li><li><code>issues</code>: open issues</li></ul>');
+                        term.output('Keys:');
+                        term.output('<ul><li><code>^L</code>: clear the screen</li></ul>')
+                        break;
+
+                    default:
+                        if(line) {
+                            var i;
+
+                            if((i = boxes.indexOf(line)) >= 0) {
+                                getScript(index[i], function(data) {
+                                    reseq.init(data).execute(term)
+                                });
+                            } else {
+                                term.output('<span style="color: red">Unknown command ' + line + '</span>', true)
+                            }
+                        }
+                }
+
+                term.prompt();
+            }
+        }
+    });
 });
 </script>
 
