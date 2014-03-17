@@ -20,7 +20,7 @@ var terminal = {
             if(ev.keyCode === 8 && this.focused()) {
                 ev.preventDefault();
 
-                this.termwin.backspace();
+                if(this.readonly === false) this.termwin.backspace();
             }
         }.bind(this));
 
@@ -29,7 +29,24 @@ var terminal = {
                 ev.preventDefault();
 
                 if(ev.keyCode != 13 && this.readonly === false) {
-                    this.termwin.type(String.fromCharCode(ev.which));
+                    this.termwin.cursor.type(String.fromCharCode(ev.which));
+                }
+
+                if(ev.ctrlKey) {
+                    switch(ev.keyCode) {
+                        case 12:
+                            if(this.readonly === false) {
+                                this.termwin.clear();
+                                this.prompt();
+                            }
+                            break;
+
+                        case 17:
+                            if(this.readonly === false) {
+                                this.termwin.cursor.clearLeft();
+                            }
+                            break;
+                    }
                 }
             }
         }.bind(this));
@@ -55,8 +72,8 @@ var terminal = {
         return this;
     },
 
-    output: function(text, newline) {
-        this.termwin.output(text, newline);
+    output: function(text, newline, style) {
+        this.termwin.output(text, newline, style);
 
         return this;
     },

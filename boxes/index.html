@@ -163,17 +163,23 @@ $(function() {
             ev.preventDefault();
 
             if(ev.ctrlKey) {
+                console.log(ev.keyCode);
+
                 switch(ev.keyCode) {
                     case 12:
                         term.termwin.clear();
                         term.prompt();
+                        break;
+
+                    case 17:
+                        term.termwin.cursor.clearLeft();
                         break;
                 }
 
                 return;
             }
 
-            if(ev.keyCode === 13) {
+            if(ev.keyCode === 13 && term.readonly === false) {
                 var line = term.termwin.cursor.$cursor.prevUntil('.prompt').text()
                     .split('').reverse().join('')
                     .replace(/</g, '&lt;').replace(/>/g, '&gt;')

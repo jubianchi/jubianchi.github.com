@@ -200,16 +200,12 @@ $(function() {
 
             if(ev.ctrlKey) {
                 switch(ev.keyCode) {
-                    case 12:
-                        term.termwin.clear();
-                        term.prompt();
-                        break;
-
                     case 4:
                         term.termwin.newline();
                         term.output('[exited]');
                         term.disableInput();
                         term.termwin.cursor.hide();
+                        break;
                 }
 
                 return;
@@ -228,6 +224,13 @@ $(function() {
                     case 'reseq':
                         term.output('Arguments:');
                         term.output('<ul><li><code>ls.tsq</code>: replay a teseq script</li><li><code>atoum.tsq</code>: replay a sample atoum test</li></ul>');
+                        break;
+
+                    case 'reseq test.tsq':
+                        $.get('test.tsq')
+                                .success(function(data) {
+                                    reseq.init(data).execute(term);
+                                });
                         break;
 
                     case 'reseq ls.tsq':
@@ -279,7 +282,7 @@ $(function() {
                         term.output('Commands:');
                         term.output('<ul><li><code>reseq</code>: replay a teseq script</li><li><code>cat</code>: display files</li><li><code>clear</code>: clear the screen</li><li><code>reset</code>: alias of <code>clear</code></li><li><code>help</code>: displays this message</li><li><code>exit</code>: exit terminal session</li></ul>');
                         term.output('Keys:');
-                        term.output('<ul><li><code>^D</code>: exit terminal session</li><li><code>^L</code>: clear the screen</li></ul>')
+                        term.output('<ul><li><code>^D</code>: exit terminal session</li><li><code>^L</code>: clear the screen</li><li><code>^Q</code>: clear line</li></ul>')
                         break;
 
                     case 'exit':
