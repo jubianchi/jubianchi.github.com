@@ -26,19 +26,19 @@ var termwin = {
         return this;
     },
 
-    type: function(char) {
-        this.cursor.type(char);
-
-        return this;
-    },
-
     backspace: function() {
         this.cursor.backspace();
 
         return this;
     },
 
-    output: function(text, newline) {
+    clearLine: function() {
+        this.cursor.clearLeft();
+
+        return this;
+    },
+
+    output: function(text, newline, style) {
         var currentRow = this.$window.children('p:last');
 
         if(currentRow.size() === 0) {
@@ -47,16 +47,14 @@ var termwin = {
 
         this.cursor.hide();
 
-        if (text instanceof String) {
-            currentRow.html(currentRow.html() + text);
+        if (typeof text === 'string') {
+            this.cursor.write(text, style);
         } else {
-            currentRow.append(text);
+            currentRow.append(text).append(this.cursor.show().$cursor);
         }
 
         if(newline) {
             this.newline();
-        } else {
-            currentRow.append(this.cursor.show().$cursor);
         }
 
         return this;
