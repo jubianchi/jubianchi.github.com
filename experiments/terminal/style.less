@@ -72,6 +72,10 @@
             font-size: @terminal-border-radius * 2.25;
             color: @terminal-header-fg;
             margin: 0;
+
+            small {
+                color: @terminal-header-fg;
+            }
         }
     }
 
@@ -86,6 +90,11 @@
         padding-left: @terminal-border-radius;
         margin: 0;
         color: white;
+    }
+
+    code {
+        color: @terminal-fg;
+        background-color: @termianl-prompt-fg;
     }
 
     .window {
@@ -108,10 +117,6 @@
             .prompt {
                 color: @termianl-prompt-fg;
             }
-        }
-
-        code {
-            background-color: @termianl-prompt-fg;
         }
 
         a, strong {

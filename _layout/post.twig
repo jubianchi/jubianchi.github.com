@@ -1,17 +1,21 @@
 {% extends "default.twig" %}
 
 {% block content %}
-    <section>
+    <article>
         {% include "_partials/time.twig" %}
 
-        <div class="left">
+        <header>
             <h1>{{ page.title }}</h1>
+        </header>
 
+        <div class="content">
             {{ content }}
         </div>
-    </section>
 
-    {% include '_partials/tags.twig' %}
+        <footer>
+            {% include '_partials/tags.twig' %}
+        </footer>
+    </article>
 
     {% include '_partials/disqus.twig' %}
 {% endblock %}

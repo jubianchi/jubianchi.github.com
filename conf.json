@@ -2,7 +2,11 @@
     "blacklist": [
         "Vagrantfile",
         "composer.json",
-        "composer.lock"
+        "composer.lock",
+        ".vagrant",
+        "gulpfile.js",
+        "packages.json",
+        "node_modules"
     ],
     "timezone": "Europe/Paris",
     "destination": "_site"

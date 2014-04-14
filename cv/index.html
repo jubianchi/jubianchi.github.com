@@ -7,6 +7,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../styles/ui.css"/>
     <link rel="stylesheet" href="github.css"/>
     <link rel="stylesheet" href="print.css" media="print"/>
 </head>
@@ -14,7 +15,7 @@
 <body>
 
 <header>
-    <img id="avatar" src="images/nyantocat.gif"/>
+    <img class="avatar" src="images/nyantocat.gif"/>
 
     <h1>Julien Bianchi <small><em>aka jubianchi</em></small></h1>
 
@@ -31,17 +32,19 @@
     </ul>
 </header>
 
-<section class="fake">
+<article class="fake">
     <time>
         <em></em>
         <strong>Futur</strong>
         <span>??</span>
     </time>
 
-    <div class="left">
+    <header>
         <h1>Travaille pour vous ?</h1>
+    </header>
 
-        <h2>Mes crit&egrave;res</h2>
+    <div class="content">
+        <h5>Mes crit&egrave;res</h5>
 
         <ul>
             <li>Un poste bas&eacute; &agrave; Lyon ou en t&eacute;l&eacute;travail</li>
@@ -50,7 +53,7 @@
             <li>En PHP ou avec d'autres technos</li>
         </ul>
 
-        <h2>Qu'est-ce que je peux apporter ?</h2>
+        <h5>Qu'est-ce que je peux apporter ?</h5>
 
         <ul>
             <li>Expertise PHP</li>
@@ -60,18 +63,20 @@
             <li>Et plus encore...</li>
         </ul>
     </div>
-</section>
+</article>
 
-<section>
+<article>
     <time datetime="2013-01-01">
         <strong>janvier</strong>
         <span>2013</span>
     </time>
 
-    <div class="left">
+    <header>
         <h1>Ing&eacute;nieur qualit&eacute; @ <a href="http://www.pmsipilot.com" title="PMSIpilot">PMSIpilot</a></h1>
-        <h2>Plateforme BI dans le domaine de la sant&eacute;</h2>
+        <small>Plateforme BI dans le domaine de la sant&eacute;</small>
+    </header>
 
+    <div class="content">
         <p>Au sein d'une <strong>&eacute;quipe de 20 d&eacute;veloppeurs</strong> :</p>
         <ul>
             <li>Formation/Accompagnement</li>
@@ -81,18 +86,20 @@
             <li>Outillage (Jenkins, Gitlab, Vagrant, CLI, ...)</li>
         </ul>
     </div>
-</section>
+</article>
 
-<section>
+<article>
     <time datetime="2011-10-01">
         <strong>octobre</strong>
         <span>2011</span>
     </time>
 
-    <div class="left">
+    <header>
         <h1>D&eacute;veloppeur PHP @ <a href="http://www.pmsipilot.com" title="PMSIpilot">PMSIpilot</a></h1>
-        <h2>Plateforme de reporting dans le domaine de la sant&eacute;</h2>
+        <small>Plateforme de reporting dans le domaine de la sant&eacute;</small>
+    </header>
 
+    <div class="content">
         <p>Au sein d'une <strong>&eacute;quipe de 20 d&eacute;veloppeurs</strong> :</p>
         <ul>
             <li>D&eacute;veloppement sur Symfony 1</li>
@@ -101,18 +108,20 @@
             <li>R&eacute;f&eacute;rent Git</li>
         </ul>
     </div>
-</section>
+</article>
 
-<section>
+<article>
     <time datetime="2010-08-01">
         <strong>ao&ucirc;t</strong>
         <span>2010</span>
     </time>
 
-    <div class="left">
+    <header>
         <h1>D&eacute;veloppeur web @ <a href="http://www.mageekstore.com/" title="Mageekstore">Mageekstore</a></h1>
-        <h2>e-Commerce &amp; logistique</h2>
+        <small>e-Commerce &amp; logistique</small>
+    </header>
 
+    <div class="content">
         <p>En <strong>totale autonomie</strong> (seul repr&eacute;sentant de la technique) :</p>
         <ul>
             <li>D&eacute;veloppement sur Prestashop</li>
@@ -121,18 +130,20 @@
             <li>R&amp;D/D&eacute;veloppement d'outils pour la logistique</li>
         </ul>
     </div>
-</section>
+</article>
 
-<section>
+<article>
     <time datetime="2007-09-01">
         <strong>September</strong>
         <span>2007</span>
     </time>
 
-    <div class="left">
+    <header>
         <h1>D&eacute;veloppeur @ [<a href="http://www.multi-active.com/" title="Multi-Active">Multi-Active</a>, <a href="http://www.leni.fr/" title="L&eacute;ni France">L&eacute;ni France</a>]</h1>
-        <h2>Plateforme d'organisation/gestion d'&eacute;v&egrave;nements</h2>
+        <small>Plateforme d'organisation/gestion d'&eacute;v&egrave;nements</small>
+    </header>
 
+    <div class="content">
         <p>Au sein d'une <strong>&eacute;quipe de 10 personnes</strong> (d&eacute;veloppeurs et graphistes) :</p>
         <ul>
             <li>D&eacute;veloppement PHP</li>
@@ -140,76 +151,30 @@
             <li>D&eacute;veloppeur/R&eacute;f&eacute;rent C# (Window &amp; Windows Mobile)</li>
         </ul>
     </div>
-</section>
+</article>
 
 <hr/>
 
-<section class="list">
+<article class="list">
     <img src="images/skill.png"/>
 
-    <div class="left">
-        <h1>
-            XP
-            <ul class="legend">
-                <li>
-                    Je connais
-                    <div class="rating">
-                        <span>&#9734;</span>
-                        <span>&#9734;</span>
-                        <span class="fill">&#9734;</span>
-                    </div>
-                </li>
+    <header>
+        <h1>XP</h1>
+    </header>
 
-                <li>
-                    J'utilise
-                    <div class="rating">
-                        <span>&#9734;</span>
-                        <span class="fill">&#9734;</span>
-                        <span class="fill">&#9734;</span>
-                    </div>
-                </li>
-
-                <li>
-                    Je ma&icirc;trise
-                    <div class="rating">
-                        <span class="fill">&#9734;</span>
-                        <span class="fill">&#9734;</span>
-                        <span class="fill">&#9734;</span>
-                    </div>
-                </li>
-            </ul>
-        </h1>
-
-        <ul>
+    <div class="content">
+        <ul class="inline legend">
             <li>
-                PHP
+                <span>Je connais</span>
                 <div class="rating">
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
                     <span class="fill">&#9734;</span>
                 </div>
             </li>
 
             <li>
-                JS
-                <div class="rating">
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                </div>
-            </li>
-
-            <li>
-                Shell
-                <div class="rating">
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                </div>
-            </li>
-
-            <li>
-                Ruby
+                <span>J'utilise</span>
                 <div class="rating">
                     <span>&#9734;</span>
                     <span class="fill">&#9734;</span>
@@ -218,65 +183,7 @@
             </li>
 
             <li>
-                Java
-                <div class="rating">
-                    <span>&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                </div>
-            </li>
-        </ul>
-
-        <ul>
-            <li>
-                Linux
-                <div class="rating">
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                </div>
-            </li>
-
-            <li>
-                OS X
-                <div class="rating">
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                </div>
-            </li>
-
-            <li>
-                Windows
-                <div class="rating">
-                    <span>&#9734;</span>
-                    <span>&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                </div>
-            </li>
-        </ul>
-
-        <ul>
-            <li>
-                Git
-                <div class="rating">
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                </div>
-            </li>
-
-            <li>
-                Vagrant
-                <div class="rating">
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                    <span class="fill">&#9734;</span>
-                </div>
-            </li>
-
-            <li>
-                Jenkins
+                <span>Je ma&icirc;trise</span>
                 <div class="rating">
                     <span class="fill">&#9734;</span>
                     <span class="fill">&#9734;</span>
@@ -285,11 +192,116 @@
             </li>
         </ul>
 
-        <p id="more-xp">MySQL, PostgreSQL, MongoDB, Redis, Chef, Capistrano, ...</p>
+        <ul class="skills inline">
+            <li>
+                <span>PHP</span>
+                <div class="rating">
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                </div>
+            </li>
+
+            <li>
+                <span>JS</span>
+                <div class="rating">
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                </div>
+            </li>
+
+            <li>
+                <span>Shell</span>
+                <div class="rating">
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                </div>
+            </li>
+
+            <li>
+                <span>Ruby</span>
+                <div class="rating">
+                    <span>&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                </div>
+            </li>
+
+            <li>
+                <span>Java</span>
+                <div class="rating">
+                    <span>&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="skills inline">
+            <li>
+                <span>Linux</span>
+                <div class="rating">
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                </div>
+            </li>
+
+            <li>
+                <span>OS X</span>
+                <div class="rating">
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                </div>
+            </li>
+
+            <li>
+                <span>Windows</span>
+                <div class="rating">
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="skills inline">
+            <li>
+                <span>Git</span>
+                <div class="rating">
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                </div>
+            </li>
+
+            <li>
+                <span>Vagrant</span>
+                <div class="rating">
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                </div>
+            </li>
+
+            <li>
+                <span>Jenkins</span>
+                <div class="rating">
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                    <span class="fill">&#9734;</span>
+                </div>
+            </li>
+        </ul>
+
+        <p id="more-xp"><small>MySQL, PostgreSQL, MongoDB, Redis, Chef, Capistrano, ...</small></p>
     </div>
-</section>
+</article>
 
-<section>
+<article>
     <div class="logo-github">
         <div class="ear-one-left"></div>
         <div class="ear-one-none"></div>
@@ -313,31 +325,39 @@
         <div class="chin-right"></div>
     </div>
 
-    <div class="left">
+    <header>
         <h1>OSS</h1>
+    </header>
 
-        <h2><small>contributeur @</small><a href="https://github.com/atoum">atoum</a><small> : Framework de test unitaire pour PHP</small></h2>
-        <h2><small>contributeur @</small><a href="https://github.com/hoaproject">hoaproject</a><small> : Ensemble de librairies PHP</small></h2>
-        <h2><small>auteur de</small> <a href="https://github.com/jubianchi/hhvm-cookbook">hhvm-cookbook</a><small> : Automatisation de l'installation de HHVM avec OpsCode Chef</small></h2>
-        <h2><small>auteur de</small> <a href="https://github.com/jubianchi/phpswitch">phpswitch</a><small> : G&eacute;rer et changer facilement de version de PHP</small></h2>
-        <h2><small>auteur de</small> <a href="https://github.com/jubianchi/bashelor">bashelor</a><small> : Gestionnaire de d&eacute;pendances pour les scripts Shell</small></h2>
-        <p><a href="https://github.com/jubianchi?tab=repositories" title="repositories">et plus encore</a>...</p>
+    <div class="content">
+        <ul>
+            <li><small>contributeur @</small><a href="https://github.com/atoum">atoum</a><small> : Framework de test unitaire pour PHP</small></li>
+            <li><small>contributeur @</small><a href="https://github.com/hoaproject">hoaproject</a><small> : Ensemble de librairies PHP</small></li>
+            <li><small>auteur de</small> <a href="https://github.com/jubianchi/hhvm-cookbook">hhvm-cookbook</a><small> : Automatisation de l'installation de HHVM avec OpsCode Chef</small></li>
+            <li><small>auteur de</small> <a href="https://github.com/jubianchi/phpswitch">phpswitch</a><small> : G&eacute;rer et changer facilement de version de PHP</small></li>
+            <li><small>auteur de</small> <a href="https://github.com/jubianchi/bashelor">bashelor</a><small> : Gestionnaire de d&eacute;pendances pour les scripts Shell</small></li>
+            <li><a href="https://github.com/jubianchi?tab=repositories" title="repositories">et plus encore</a>...</li>
+        </ul>
     </div>
-</section>
+</article>
 
 
-<section>
+<article>
     <img src="images/talk.png"/>
 
-    <div class="left">
+    <header>
         <h1>Talks</h1>
+    </header>
 
-        <h2>atoum <small>[<a href="https://speakerdeck.com/jubianchi/inspection-continue-avec-atoum-sonar" title="Inspection continue avec atoum &amp; Sonar (AFUP)">lien</a>, <a href="https://speakerdeck.com/jubianchi/atoum-and-netbeans" title="atoum &amp; Netbeans (AFUP)">lien</a>]</small></h2>
-        <h2>Behat <small>[<a href="https://speakerdeck.com/jubianchi/presentation-de-behat" title="Tests fonctionnels avec Behat (AFUP)">lien</a>]</small></h2>
-        <h2>Vagrant <small>[<a href="https://speakerdeck.com/jubianchi/vagrant" title="Vagrant (PMSIpilot)">lien</a>, <a href="https://speakerdeck.com/jubianchi/vagrant-and-cie-du-dev-a-la-prod" title="Vagrant &amp; Cie. : du d&eacute;v. &agrave; la prod (M6Web)">lien</a>]</small></h2>
-        <h2>Hoa Project <small>[<a href="http://keynote.hoa-project.net/AFUPLyon13/AFUPLyon13.html" title="Hoa, un ensemble de biblioth&egrave;ques PHP (AFUP)">lien</a>]</small></h2>
+    <div class="content">
+        <ul>
+            <li>atoum <small>[<a href="https://speakerdeck.com/jubianchi/inspection-continue-avec-atoum-sonar" title="Inspection continue avec atoum &amp; Sonar (AFUP)">lien</a>, <a href="https://speakerdeck.com/jubianchi/atoum-and-netbeans" title="atoum &amp; Netbeans (AFUP)">lien</a>]</small></li>
+            <li>Behat <small>[<a href="https://speakerdeck.com/jubianchi/presentation-de-behat" title="Tests fonctionnels avec Behat (AFUP)">lien</a>]</small></li>
+            <li>Vagrant <small>[<a href="https://speakerdeck.com/jubianchi/vagrant" title="Vagrant (PMSIpilot)">lien</a>, <a href="https://speakerdeck.com/jubianchi/vagrant-and-cie-du-dev-a-la-prod" title="Vagrant &amp; Cie. : du d&eacute;v. &agrave; la prod (M6Web)">lien</a>]</small></li>
+            <li>Hoa Project <small>[<a href="http://keynote.hoa-project.net/AFUPLyon13/AFUPLyon13.html" title="Hoa, un ensemble de biblioth&egrave;ques PHP (AFUP)">lien</a>]</small></li>
+        </ul>
     </div>
-</section>
+</article>
 
 <hr/>
 

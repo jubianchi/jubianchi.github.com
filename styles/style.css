@@ -296,3 +296,7 @@ blockquote:before {
 ::-webkit-scrollbar-corner {
     background-color: transparent;
 }
+
+.token.operator {
+    background: none!important;
+}

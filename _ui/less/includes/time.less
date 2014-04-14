@@ -1,0 +1,51 @@
+time {
+    float: left;
+    font-size: 1em;
+    display: block;
+    position: relative;
+    width: 7em;
+    height: 7em;
+    background-color: @white;
+    border-radius: .6em;
+    box-shadow: 0 1px 0 @light-gray, 0 2px 0 @white, 0 3px 0 @light-gray, 0 4px 0 @white, 0 5px 0 @light-gray, 0 0 0 1px @light-gray;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: rotate(0deg) skewY(0deg);
+    -webkit-transform-origin: 50% 10%;
+    transform-origin: 50% 10%;
+    margin-right: 2em;
+    margin-bottom: 1em;
+
+    * {
+        display: block;
+        width: 100%;
+        font-size: 1em;
+        font-weight: bold;
+        font-style: normal;
+        text-align: center;
+    }
+
+    strong {
+        position: absolute;
+        top: 0;
+        padding: .4em 0;
+        color: @white;
+        background-color: @red;
+        border-bottom: 1px dashed @black;
+        box-shadow: 0 2px 0 @red;
+    }
+
+    em {
+        position: absolute;
+        bottom: 0.3em;
+        color: @red;
+        font-style: normal;
+    }
+
+    span {
+        font-size: 2.8em;
+        letter-spacing: -0.05em;
+        padding-top: 0.8em;
+        color: @black;
+    }
+}

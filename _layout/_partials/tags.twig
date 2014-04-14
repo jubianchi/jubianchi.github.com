@@ -1,8 +1,8 @@
 {% if page.tags %}
-    <ul class="list tags">
+    <ul class="inline">
         <li class="legend">Publié dans :</li>
         {% for tag in page.tags %}
-            <li><span class="label">{{ tag }}</span></li>
+            <li>{{ tag }}</li>
         {%  endfor %}
     </ul>
 {% endif %}

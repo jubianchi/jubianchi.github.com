@@ -1,0 +1,26 @@
+blockquote {
+    margin: 1em 0;
+    padding: 0.25em 40px;
+    line-height: 1.45;
+    position: relative;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    p:last-of-type {
+        margin-top: 1em;
+    }
+
+    &:before {
+        font-style: italic;
+        display: block;
+        content: "\201C";
+        font-size: 80px;
+        position: absolute;
+        left: 0px;
+        top: -30px;
+        color: #7a7a7a;
+    }
+}

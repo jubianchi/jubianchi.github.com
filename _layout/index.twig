@@ -5,14 +5,14 @@
 
     {% for page in pages|reverse %}
         {% if page.type and not page.draft %}
-            <section>
+            <article>
                 <time datetime="{{ page.date }}">
                     <strong>{{ page.date|date('M') }}</strong>
                     <span>{{ page.date|date('d') }}</span>
                     <em>{{ page.date|date('Y') }}</em>
                 </time>
 
-                <div class="left">
+                <header>
                     <h1>
                         {% if page.type == 'quote' %}
                             {{ page.title }}
@@ -22,18 +22,22 @@
                             <a href="{{ page.location }}">{{ page.title }}</a>
                         {% endif %}
                     </h1>
+                </header>
 
+                <div class="content">
                     {% if page.type == 'quote' or page.type == 'deck' %}
                         <p>{{ page.html }}</p>
                     {% else %}
                         <p>{{ page.summary }}</p>
                     {% endif %}
                 </div>
-            </section>
 
-            {% include '_partials/tags.twig' %}
+                <footer>
+                    {% include '_partials/tags.twig' %}
+                </footer>
 
-            <hr/>
+                {% if not loop.last %}<hr/>{% endif %}
+            </article>
         {% endif %}
     {% endfor %}
 {% endblock %}
