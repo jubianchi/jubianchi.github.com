@@ -553,3 +553,29 @@ a.label:focus {
 .label-danger[href]:focus {
   background-color: #c9302c;
 }
+.token.operator {
+  background-color: transparent!important;
+}
+::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #999999;
+}
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background: #555555;
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
