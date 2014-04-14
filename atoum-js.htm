@@ -9,7 +9,7 @@
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAenp6AO6//wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERERERAAABEQAAAAEQABIhARARASIAEiERERERIgAREAERAQARABETARERMBEAEREREREREQABEREREREQAAEREAABERAAAREAAAABEAABEAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAIPBAACH4QAAz/MAAP//AAD//wAA" rel="icon" type="image/x-icon" />
 
     <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
-    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/ui.css" rel="stylesheet">
 
     <link href="js/prismjs/prism.css" rel="stylesheet" />
     <link href="js/prismjs/prism-okaidia.css" rel="stylesheet" />
@@ -22,7 +22,7 @@
 <body>
 
 <header>
-    <a href="index.htm"><img id="avatar" src="images/nyantocat.gif"/></a>
+    <a href="index.htm"><img class="avatar" src="images/nyantocat.gif"/></a>
 
     <h1>Julien Bianchi <small><em>aka jubianchi</em></small></h1>
 
@@ -36,16 +36,18 @@
         <li><a href="cv/index.html" title="jubianchi.fr">CV</a></li>
     </ul>
 </header>
-    <section>
+    <article>
             <time datetime="2013-04-27 00:27:00">
         <strong>Apr</strong>
         <span>27</span>
         <em>2013</em>
     </time>
 
-        <div class="left">
+        <header>
             <h1>atoum.js : un poisson d'avril, mais pas que…</h1>
+        </header>
 
+        <div class="content">
             <p>Ce soir j'ai publié la version <code>0.0.4</code> d'<a href="https://github.com/jubianchi/atoum.js">atoum.js</a> sur la plateforme <a href="https://npmjs.org/package/atoum.js">NPM</a>. Cette version est donc la quatrième itération que je réalise sur le projet et la seconde officiellement taguée sur Github, je me suis donc dit qu'il était temps de clarifier un peu mes intentions et ma vision de ce projet.</p>
 
 <p>Comme vous le savez certainement, lorsque j'ai démarré atoum.js, je le faisais uniquement pour publier quelque chose qui, je pensais, allait faire réagir pour le premier avril. Je pensais provoquer un peu et éventuellement recueillir quelques critiques, car je n'étais pas certain de la viabilité de la philosophie d'<a href="http://atoum.org">atoum</a> dans des projets javascript.</p>
@@ -80,16 +82,18 @@
 <div data-repo="jubianchi/atoum.js"></div>
 
         </div>
-    </section>
 
-        <ul class="list tags">
+        <footer>
+                <ul class="inline">
         <li class="legend">Publié dans :</li>
-                    <li><span class="label">javascript</span></li>
-                    <li><span class="label">atoum</span></li>
-                    <li><span class="label">test</span></li>
+                    <li>javascript</li>
+                    <li>atoum</li>
+                    <li>test</li>
             </ul>
+        </footer>
+    </article>
 
-        <section id="disqus_thread"></section>
+        <section class="disqus" id="disqus_thread"></section>
 
     <script type="text/javascript">
         var disqus_shortname = 'jubianchifr';

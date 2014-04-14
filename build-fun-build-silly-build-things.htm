@@ -9,7 +9,7 @@
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAenp6AO6//wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERERERAAABEQAAAAEQABIhARARASIAEiERERERIgAREAERAQARABETARERMBEAEREREREREQABEREREREQAAEREAABERAAAREAAAABEAABEAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAIPBAACH4QAAz/MAAP//AAD//wAA" rel="icon" type="image/x-icon" />
 
     <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
-    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/ui.css" rel="stylesheet">
 
     <link href="js/prismjs/prism.css" rel="stylesheet" />
     <link href="js/prismjs/prism-okaidia.css" rel="stylesheet" />
@@ -22,7 +22,7 @@
 <body>
 
 <header>
-    <a href="index.htm"><img id="avatar" src="images/nyantocat.gif"/></a>
+    <a href="index.htm"><img class="avatar" src="images/nyantocat.gif"/></a>
 
     <h1>Julien Bianchi <small><em>aka jubianchi</em></small></h1>
 
@@ -36,16 +36,18 @@
         <li><a href="cv/index.html" title="jubianchi.fr">CV</a></li>
     </ul>
 </header>
-    <section>
+    <article>
             <time datetime="2012-11-21 11:15:00">
         <strong>Nov</strong>
         <span>21</span>
         <em>2012</em>
     </time>
 
-        <div class="left">
+        <header>
             <h1>Build fun, build silly, build things</h1>
+        </header>
 
+        <div class="content">
             <blockquote>
   <p>it's important to play</p>
   
@@ -65,16 +67,18 @@
 
             <script async class="speakerdeck-embed" data-id="f45b665015820130009522000a1e9b2a" data-ratio="1.77777777777778" src="js/speakerdeck.js"></script>
         </div>
-    </section>
 
-        <ul class="list tags">
+        <footer>
+                <ul class="inline">
         <li class="legend">Publié dans :</li>
-                    <li><span class="label">quote</span></li>
-                    <li><span class="label">deck</span></li>
-                    <li><span class="label">open source</span></li>
+                    <li>quote</li>
+                    <li>deck</li>
+                    <li>open source</li>
             </ul>
+        </footer>
+    </article>
 
-        <section id="disqus_thread"></section>
+        <section class="disqus" id="disqus_thread"></section>
 
     <script type="text/javascript">
         var disqus_shortname = 'jubianchifr';

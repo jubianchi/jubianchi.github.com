@@ -9,7 +9,7 @@
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAenp6AO6//wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERERERAAABEQAAAAEQABIhARARASIAEiERERERIgAREAERAQARABETARERMBEAEREREREREQABEREREREQAAEREAABERAAAREAAAABEAABEAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAIPBAACH4QAAz/MAAP//AAD//wAA" rel="icon" type="image/x-icon" />
 
     <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
-    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/ui.css" rel="stylesheet">
 
     <link href="js/prismjs/prism.css" rel="stylesheet" />
     <link href="js/prismjs/prism-okaidia.css" rel="stylesheet" />
@@ -22,7 +22,7 @@
 <body>
 
 <header>
-    <a href="index.htm"><img id="avatar" src="images/nyantocat.gif"/></a>
+    <a href="index.htm"><img class="avatar" src="images/nyantocat.gif"/></a>
 
     <h1>Julien Bianchi <small><em>aka jubianchi</em></small></h1>
 
@@ -36,16 +36,18 @@
         <li><a href="cv/index.html" title="jubianchi.fr">CV</a></li>
     </ul>
 </header>
-    <section>
+    <article>
             <time datetime="2012-07-03 13:58:00">
         <strong>Jul</strong>
         <span>03</span>
         <em>2012</em>
     </time>
 
-        <div class="left">
+        <header>
             <h1>How to test your Symfony2 project with Behat on TravisCI</h1>
+        </header>
 
+        <div class="content">
             <p>This week end, I finally decided to work on the <a href="http://behat-viewer.org">Behat Viewer</a> continuous integration : this project is entirely tested with <a href="http://behat.org">Behat</a> and until now, the tests were launched manually each time I wanted to push changes to the public repository. Running the project like this did not fully satisfied me : there was no build history and the results were not publicly available. So I decided to take advantage of the great tools we have : I kept  <a href="http://behat.org">Behat</a> as my functional testing framework and choose <a href="http://travis-ci.org">Travis CI</a> as the continuous integration plateform. In this post I will detail the configuration I use to run these tests on the Travis CI virtual machines.</p>
 
 <p>As you may know <a href="http://travis-ci.org">Travis CI</a> is a continuous integration plateform for open source projects hosted on (GitHub)[http://github.com]. To test our projects on it, we only need to <a href="http://about.travis-ci.org/docs/user/getting-started/">enable Travis CI on our repositories</a> and add <a href="http://about.travis-ci.org/docs/user/build-configuration/">a little configuration file (.travis.yml)</a> in our project : we are going to see how to build this file because this is this single file that will describe our build process.</p>
@@ -108,18 +110,20 @@ before_script:
 <p>This is my first post entirely written in English so please excuse me for any mistake I made :)</p>
 
         </div>
-    </section>
 
-        <ul class="list tags">
+        <footer>
+                <ul class="inline">
         <li class="legend">Publié dans :</li>
-                    <li><span class="label">CI</span></li>
-                    <li><span class="label">travis</span></li>
-                    <li><span class="label">symfony</span></li>
-                    <li><span class="label">behat</span></li>
-                    <li><span class="label">BDD</span></li>
+                    <li>CI</li>
+                    <li>travis</li>
+                    <li>symfony</li>
+                    <li>behat</li>
+                    <li>BDD</li>
             </ul>
+        </footer>
+    </article>
 
-        <section id="disqus_thread"></section>
+        <section class="disqus" id="disqus_thread"></section>
 
     <script type="text/javascript">
         var disqus_shortname = 'jubianchifr';

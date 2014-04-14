@@ -9,7 +9,7 @@
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAenp6AO6//wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERERERAAABEQAAAAEQABIhARARASIAEiERERERIgAREAERAQARABETARERMBEAEREREREREQABEREREREQAAEREAABERAAAREAAAABEAABEAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAIPBAACH4QAAz/MAAP//AAD//wAA" rel="icon" type="image/x-icon" />
 
     <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
-    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/ui.css" rel="stylesheet">
 
     <link href="js/prismjs/prism.css" rel="stylesheet" />
     <link href="js/prismjs/prism-okaidia.css" rel="stylesheet" />
@@ -22,7 +22,7 @@
 <body>
 
 <header>
-    <a href="index.htm"><img id="avatar" src="images/nyantocat.gif"/></a>
+    <a href="index.htm"><img class="avatar" src="images/nyantocat.gif"/></a>
 
     <h1>Julien Bianchi <small><em>aka jubianchi</em></small></h1>
 
@@ -36,16 +36,18 @@
         <li><a href="cv/index.html" title="jubianchi.fr">CV</a></li>
     </ul>
 </header>
-    <section>
+    <article>
             <time datetime="2012-03-15 12:08:00">
         <strong>Mar</strong>
         <span>15</span>
         <em>2012</em>
     </time>
 
-        <div class="left">
+        <header>
             <h1>You must know it works</h1>
+        </header>
 
+        <div class="content">
             <blockquote>
   <p>Every time QA, or worse a <strong>user</strong>, finds a problem, you should be surprised, chagrined, and determined to prevent it from happening again.</p>
   
@@ -57,16 +59,18 @@
 </blockquote>
 
         </div>
-    </section>
 
-        <ul class="list tags">
+        <footer>
+                <ul class="inline">
         <li class="legend">Publié dans :</li>
-                    <li><span class="label">quote</span></li>
-                    <li><span class="label">test</span></li>
-                    <li><span class="label">best practice</span></li>
+                    <li>quote</li>
+                    <li>test</li>
+                    <li>best practice</li>
             </ul>
+        </footer>
+    </article>
 
-        <section id="disqus_thread"></section>
+        <section class="disqus" id="disqus_thread"></section>
 
     <script type="text/javascript">
         var disqus_shortname = 'jubianchifr';

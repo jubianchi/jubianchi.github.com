@@ -9,13 +9,14 @@
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAenp6AO6//wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERERERAAABEQAAAAEQABIhARARASIAEiERERERIgAREAERAQARABETARERMBEAEREREREREQABEREREREQAAEREAABERAAAREAAAABEAABEAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAIPBAACH4QAAz/MAAP//AAD//wAA" rel="icon" type="image/x-icon" />
 
     <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
-    <link href="../styles/style.css" rel="stylesheet">
+    <link href="../styles/ui.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
     <link href="../styles/github.css" rel="stylesheet" />
     <link href="../styles/font-awesome.css" rel="stylesheet" />
 
     <link rel="stylesheet/less" type="text/css" href="../experiments/terminal/style.less" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+
 
     <script src="../js/jquery.js"></script>
     <script src="../js/promise.js"></script>
@@ -25,7 +26,7 @@
 <body>
 
 <header>
-    <a href="../index.htm"><img id="avatar" src="../images/nyantocat.gif"/></a>
+    <a href="../index.htm"><img class="avatar" src="../images/nyantocat.gif"/></a>
 
     <h1>Julien Bianchi <small><em>aka jubianchi</em></small></h1>
 
@@ -40,19 +41,19 @@
     </ul>
 </header>
 
-<section class="full">
-    <div>
+<article class="full">
+    <header>
         <h1>Vagrant boxes</h1>
-    </div>
+    </header>
 
-    <div class="list">
-        <table class="clear" id="boxes">
+    <div class="content">
+        <table class="table table-striped" id="boxes">
             <tbody></tbody>
         </table>
     </div>
-</section>
+</article>
 
-<article id="web-term">
+<div id="web-term">
     <div class="terminal" data-prompt="<strong>boxes@jubianchi.fr $</strong> ">
         <header>
             <h1>Terminal <small>~/vagrant-boxes</small></h1>
@@ -68,7 +69,7 @@
     <aside>
         Focus the terminal to see how to use the boxes
     </aside>
-</article>
+</div>
 
 <script src="../js/jquery.github.js"></script>
 <script src="../experiments/terminal/js/terminal.js"></script>
@@ -109,7 +110,8 @@ $(function() {
 
             (index = data).forEach(function(box) {
                 var tr = $('<tr/>').appendTo($('#boxes tbody')),
-                    td = $('<td/>').appendTo(tr);
+                    td = $('<td/>').appendTo(tr),
+                    ul = $('<ul/>').addClass('inline').appendTo(td);
 
                 $('<a/>')
                     .text(box.name + ' (' + box.version.name + ')')
@@ -117,41 +119,50 @@ $(function() {
                     .appendTo(td)
                 ;
 
-                $('<a/>')
-                    .html('<i class="fa fa-terminal"/>')
-                    .attr('href', '#web-term')
-                    .addClass('label label-default')
-                    .click(function(ev) {
-                        ev.stopPropagation();
-
-                        term.focus();
-
-                        getScript(box, function(data) {
-                            reseq.init(data).execute(term)
-                        });
-                    })
-                    .appendTo(td)
-                ;
-
                 if(box.providers) {
                     if(box.providers.virtualbox) {
-                        $('<a/>')
-                            .html('<i class="fa fa-cloud-download"/> virtualbox')
-                            .attr('href', box.providers.virtualbox)
-                            .addClass('label label-default')
-                            .appendTo(td)
+                        $('<li/>')
+                            .append(
+                                $('<a/>')
+                                    .html('<i class="fa fa-cloud-download"/> virtualbox')
+                                    .attr('href', box.providers.virtualbox)
+                                    .addClass('label label-default')
+                            )
+                            .appendTo(ul)
                         ;
                     }
 
                     if(box.providers.vmware) {
-                        $('<a/>')
-                            .html('<i class="fa fa-cloud-download"/> vmware')
-                            .attr('href', box.providers.vmware)
-                            .addClass('label label-default')
-                            .appendTo(td)
+                        $('<li/>')
+                            .append(
+                                $('<a/>')
+                                    .html('<i class="fa fa-cloud-download"/> vmware')
+                                    .attr('href', box.providers.vmware)
+                                    .addClass('label label-default')
+                            )
+                            .appendTo(ul)
                         ;
                     }
                 }
+
+                $('<li/>')
+                    .append(
+                        $('<a/>')
+                            .html('<i class="fa fa-terminal"/>')
+                            .attr('href', '#web-term')
+                            .addClass('label label-default')
+                            .click(function(ev) {
+                                ev.stopPropagation();
+
+                                term.focus();
+
+                                getScript(box, function(data) {
+                                    reseq.init(data).execute(term)
+                                });
+                            })
+                    )
+                    .appendTo(ul)
+                ;
 
                 boxes = boxes.concat([box.name]);
             });

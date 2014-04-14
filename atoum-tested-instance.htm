@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jubianchi.fr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julien Bianchi <contact@jubianchi.fr>">
+
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAenp6AO6//wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERERERAAABEQAAAAEQABIhARARASIAEiERERERIgAREAERAQARABETARERMBEAEREREREREQABEREREREQAAEREAABERAAAREAAAABEAABEAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAIPBAACH4QAAz/MAAP//AAD//wAA" rel="icon" type="image/x-icon" />
+
+    <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300' rel='stylesheet' type='text/css'>
+    <link href="styles/ui.css" rel="stylesheet">
+
+    <link href="js/prismjs/prism.css" rel="stylesheet" />
+    <link href="js/prismjs/prism-okaidia.css" rel="stylesheet" />
+    <link href="js/prismjs/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+    <link href="styles/github.css" rel="stylesheet" />
+
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+
+<header>
+    <a href="index.htm"><img class="avatar" src="images/nyantocat.gif"/></a>
+
+    <h1>Julien Bianchi <small><em>aka jubianchi</em></small></h1>
+
+    <ul>
+        <li><a href="mailto:contact@jubianchi.fr" title="email">email</a></li>
+        <li><a href="https://twitter.com/jubianchi" title="twitter">twitter</a></li>
+        <li><a href="https://github.com/jubianchi" title="github">github</a></li>
+        <li><a href="https://speakerdeck.com/jubianchi" title="speakerdeck">speakerdeck</a></li>
+        <li><a href="https://coderwall.com/jubianchi" title="coderwall">coderwall</a></li>
+        <li><a href="http://osrc.dfm.io/jubianchi" title="Open Source Report Card">OSRC</a></li>
+        <li><a href="cv/index.html" title="jubianchi.fr">CV</a></li>
+    </ul>
+</header>
+    <article>
+            <time>
+        <strong>&nbsp;</strong>
+        <span>Draft</span>
+    </time>
+
+        <header>
+            <h1>atoum feature preview #1 : newTestedInstance & testedInstance</h1>
+        </header>
+
+        <div class="content">
+            <p>Cet article est le premier d'une série qui va vous présenter les fonctionnalités à venir dans atoum.
+Ces fonctionnalités ne sont actuellement pas disponible sur le <code>master</code> d'atoum mais vous pouvez les
+tester en utilisant la branche <code>edge</code> :</p>
+
+<pre class="line-numbers"><code class="language-javascript">{
+    "require-dev": {
+        "atoum/atoum": "dev-edge"
+    }
+}</code></pre>
+
+<p>Pour vous présenter cette nouvelle fonctionnalité, nous allons tout d'abord commencer par regarder un exemple
+de test atoum standard :</p>
+
+<pre class="line-numbers"><code class="language-php">namespace jubianchi\atoum\preview\tests\units;
+
+use atoum;
+use jubianchi\atoum\preview\foo as testedClass;
+
+class foo extends atoum
+{
+    public function testBar()
+    {
+        $this
+            ->if($foo = new testedClass())
+            ->then
+                ->object($foo->bar())->isIdenticalTo($foo)
+        ;
+    }
+}</code></pre>
+
+<p>Ce test, tout à fait anodin, présente en réalité deux défauts :</p>
+
+<ul>
+<li>on manipule d'une part beaucoup le nom de la classe testée</li>
+<li>on manipule les instances de la classe testée au travers de variables</li>
+</ul>
+
+<p>Répéter le nom de la classe testée dans le test peut devenir un problème lorsqu'on souhaite renommer la classe : cela
+nous oblige à intervenir dans le code du test. Dans l'exemple précédent, on utilise déjà un alias pour parer les
+éventuels problèmes mais atoum va vous aider à supprimer presque totalement la nécessité de toucher au code du test
+dans ce cas :</p>
+
+<pre class="line-numbers"><code class="language-php">namespace jubianchi\atoum\preview\tests\units;
+
+use atoum;
+
+class foo extends atoum
+{
+    public function testBar()
+    {
+        $this
+            ->if($this->newTestedInstance())
+            ->then
+                ->object($this->testedInstance->bar())
+                    ->isTestedInstance()
+        ;
+    }
+}</code></pre>
+
+<p>Et voilà, le nom de la classe <code>foo</code> n'apparait plus qu'une fois dans le code du test !</p>
+
+<p>Vous l'aurez compris, c'est <code>newTestedInstance</code> et <code>testedInstance</code> que je veux vous présenter.
+Ces deux nouveaux <em>handlers</em> vont vous permettre, respectivement, d'instancier une nouvelle instance de la classe testée
+et d'y accéder.</p>
+
+<p>Vous avez également remarquer l'assertion <code>isTestedInstance</code> qui permet de vérifier qu'un objet est identique à
+l'instance de test courante.</p>
+
+<p><code>newTestedInstance</code> vous permettra donc de créer une nouvelle instance de la classe testée très facilement.</p>
+
+<p>Si le constructeur de la classe testée ne nécessite aucun argument, vous pourrez appeler <code>newTestedInstance</code>
+en omettant les paranthèses.</p>
+
+<p>Si vous souhaitez passer des arguments au constructeur de la classe, passez-les simplement à <code>newTestedInstance</code>.</p>
+
+<p>Enfin, si la classe testée est abstraite, <code>newTestedInstance</code> instanciera un mock de cette dernière.</p>
+
+<p>N'oubliez pas que vous pouvez tester tout cela en utilisant la branche <code>edge</code> d'atoum. La <em>pull-request</em>
+contenant le code est disponible <a href="https://github.com/atoum/atoum/pull/320">ici</a> : n'hésitez pas à ajoutez vos commentaires.</p>
+
+        </div>
+
+        <footer>
+                <ul class="inline">
+        <li class="legend">Publié dans :</li>
+                    <li>php</li>
+                    <li>atoum</li>
+                    <li>test</li>
+            </ul>
+        </footer>
+    </article>
+
+    
+<hr/>
+
+<footer>&bull;&bull;&bull;</footer>
+
+<script src="js/prismjs/prism.js"></script>
+<script src="js/prismjs/components/prism-bash.js"></script>
+<script src="js/prismjs/components/prism-php.js"></script>
+<script src="js/prismjs/components/prism-php-extras.js"></script>
+<script src="js/prismjs/components/prism-css.js"></script>
+<script src="js/prismjs/plugins/line-numbers/prism-line-numbers.js"></script>
+<script src="js/jquery.github.js"></script>
+<script>$(function() { $("[data-repo]").github(); });</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-10349389-8', 'jubianchi.fr');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>
