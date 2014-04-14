@@ -1,7 +1,7 @@
 {% extends "default.twig" %}
 
 {% block content %}
-    <section>
+    <article>
         {% include "_partials/time.twig" %}
 
         <div class="left">
@@ -9,9 +9,13 @@
 
             {{ content }}
         </div>
-    </section>
 
-    <script type="text/javascript" src="https://asciinema.org/a/{{ page.asciinema_id }}.js" id="asciicast-{{ page.asciinema_id }}" async></script>
+        <script type="text/javascript" src="https://asciinema.org/a/{{ page.asciinema_id }}.js" id="asciicast-{{ page.asciinema_id }}" async></script>
+
+        <footer>
+            {% include '_partials/tags.twig' %}
+        </footer>
+    </article>
 
     {% include '_partials/disqus.twig' %}
 {% endblock %}
