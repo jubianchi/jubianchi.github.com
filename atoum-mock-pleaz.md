@@ -152,3 +152,6 @@ soeurs, <code>twice</code> et <code>thrice</code>.
 
 Nous avons également introduit une nouvelles petites syntaxe dans atoum pour remplace les appels à <code>exactly</code> :
 vous pouvez maitenant utiliser <code>->{n}</code> (où <code>n</code> est un entier).
+
+N'oubliez pas que vous pouvez tester tout cela en utilisant la branche <code>edge</code> d'atoum. La _pull-request_
+contenant le code est disponible [ici](https://github.com/atoum/atoum/pull/320) : n'hésitez pas à ajoutez vos commentaires.
