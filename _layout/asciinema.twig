@@ -4,17 +4,15 @@
     <article>
         {% include "_partials/time.twig" %}
 
-        <div class="left">
+        <header>
             <h1>{{ page.title }}</h1>
+        </header>
 
+        <div class="content">
             {{ content }}
+
+            <script type="text/javascript" src="https://asciinema.org/a/{{ page.asciinema_id }}.js" id="asciicast-{{ page.asciinema_id }}" async></script>
         </div>
-
-        <script type="text/javascript" src="https://asciinema.org/a/{{ page.asciinema_id }}.js" id="asciicast-{{ page.asciinema_id }}" async></script>
-
-        <footer>
-            {% include '_partials/tags.twig' %}
-        </footer>
     </article>
 
     {% include '_partials/disqus.twig' %}
