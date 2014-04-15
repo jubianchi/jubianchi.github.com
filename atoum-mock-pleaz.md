@@ -14,7 +14,7 @@
 }
 ***
 
-Cet article est le premier d'une série qui va vous présenter les fonctionnalités à venir dans atoum.
+Cet article est le second d'une série qui va vous présenter les fonctionnalités à venir dans atoum.
 Ces fonctionnalités ne sont actuellement pas disponible sur le <code>master</code> d'atoum mais vous pouvez les
 tester en utilisant la branche <code>edge</code> :
 
