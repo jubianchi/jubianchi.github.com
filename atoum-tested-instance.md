@@ -2,8 +2,7 @@
 {
     "title": "atoum feature preview #1 : newTestedInstance & testedInstance",
     "type": "post",
-    "draft": true,
-    "date": "2014-04-14 22:29:00",
+    "date": "2014-04-16 21:04:00",
     "layout": "post.twig",
     "tags": ["php", "atoum", "test"],
     "twitter": {
@@ -63,7 +62,7 @@ class foo extends atoum
     public function testBar()
     {
         $this
-            ->if($this->newTestedInstance())
+            ->if($this->newTestedInstance)
             ->then
                 ->object($this->testedInstance->bar())
                     ->isTestedInstance()
@@ -85,9 +84,63 @@ l'instance de test courante.
 Si le constructeur de la classe testée ne nécessite aucun argument, vous pourrez appeler <code>newTestedInstance</code>
 en omettant les paranthèses.
 
-Si vous souhaitez passer des arguments au constructeur de la classe, passez-les simplement à <code>newTestedInstance</code>.
+Si vous souhaitez passer des arguments au constructeur de la classe, passez-les simplement à <code>newTestedInstance</code> :
 
-Enfin, si la classe testée est abstraite, <code>newTestedInstance</code> instanciera un mock de cette dernière.
+<pre class="line-numbers"><code class="language-php">namespace jubianchi\atoum\preview\tests\units;
+
+use atoum;
+
+class foo extends atoum
+{
+    public function testBar()
+    {
+        $this
+            ->if($this->newTestedInstance(uniqid(), uniqid())
+            ->then
+                ->object($this->testedInstance->bar())
+                    ->isTestedInstance()
+        ;
+    }
+}</code></pre>
+
+Enfin, si la classe testée est abstraite, <code>newTestedInstance</code> instanciera automatiquement un mock de cette dernière.
+
+Une dernière chose pour finir : si vous utilisez une version de PHP supérieur ou égale à 5.4, les tests sur les exceptions
+peuvent également être améliorés :
+
+<pre class="line-numbers"><code class="language-php">namespace jubianchi\atoum\preview\tests\units;
+
+use atoum;
+use jubianchi\atoum\preview\foo as testedClass;
+
+class foo extends atoum
+{
+    // Avant
+    public function testBar()
+    {
+        $this
+            ->if($foo = new testedClass())
+            ->then
+                ->exception(function() use ($foo) { $foo->bar(); })
+                    ->IsInstanceOf('RuntimeException')
+        ;
+    }
+
+    // Après
+    public function testBar()
+    {
+        $this
+            ->if($this->newTestedInstance)
+            ->then
+                ->exception(function() { $this->testedInstance->bar(); })
+                    ->IsInstanceOf('RuntimeException')
+        ;
+    }
+}</code></pre>
+
+Et voilà, plus de <code>use</code> !
+
+Merci à <a href="http://blog.mageekbox.net/">@mageekguy</a> pour tout le travaille qu'il a fourni pour vous proposer ces nouvelles fonctionnalités !
 
 N'oubliez pas que vous pouvez tester tout cela en utilisant la branche <code>edge</code> d'atoum. La _pull-request_
 contenant le code est disponible [ici](https://github.com/atoum/atoum/pull/320) : n'hésitez pas à ajoutez vos commentaires.
