@@ -37,9 +37,10 @@
     </ul>
 </header>
     <article>
-            <time>
-        <strong>&nbsp;</strong>
-        <span>Draft</span>
+            <time datetime="2014-04-16 21:04:00">
+        <strong>Apr</strong>
+        <span>16</span>
+        <em>2014</em>
     </time>
 
         <header>
@@ -98,7 +99,7 @@ class foo extends atoum
     public function testBar()
     {
         $this
-            ->if($this->newTestedInstance())
+            ->if($this->newTestedInstance)
             ->then
                 ->object($this->testedInstance->bar())
                     ->isTestedInstance()
@@ -120,9 +121,63 @@ l'instance de test courante.</p>
 <p>Si le constructeur de la classe testée ne nécessite aucun argument, vous pourrez appeler <code>newTestedInstance</code>
 en omettant les paranthèses.</p>
 
-<p>Si vous souhaitez passer des arguments au constructeur de la classe, passez-les simplement à <code>newTestedInstance</code>.</p>
+<p>Si vous souhaitez passer des arguments au constructeur de la classe, passez-les simplement à <code>newTestedInstance</code> :</p>
 
-<p>Enfin, si la classe testée est abstraite, <code>newTestedInstance</code> instanciera un mock de cette dernière.</p>
+<pre class="line-numbers"><code class="language-php">namespace jubianchi\atoum\preview\tests\units;
+
+use atoum;
+
+class foo extends atoum
+{
+    public function testBar()
+    {
+        $this
+            ->if($this->newTestedInstance(uniqid(), uniqid())
+            ->then
+                ->object($this->testedInstance->bar())
+                    ->isTestedInstance()
+        ;
+    }
+}</code></pre>
+
+<p>Enfin, si la classe testée est abstraite, <code>newTestedInstance</code> instanciera automatiquement un mock de cette dernière.</p>
+
+<p>Une dernière chose pour finir : si vous utilisez une version de PHP supérieur ou égale à 5.4, les tests sur les exceptions
+peuvent également être améliorés :</p>
+
+<pre class="line-numbers"><code class="language-php">namespace jubianchi\atoum\preview\tests\units;
+
+use atoum;
+use jubianchi\atoum\preview\foo as testedClass;
+
+class foo extends atoum
+{
+    // Avant
+    public function testBar()
+    {
+        $this
+            ->if($foo = new testedClass())
+            ->then
+                ->exception(function() use ($foo) { $foo->bar(); })
+                    ->IsInstanceOf('RuntimeException')
+        ;
+    }
+
+    // Après
+    public function testBar()
+    {
+        $this
+            ->if($this->newTestedInstance)
+            ->then
+                ->exception(function() { $this->testedInstance->bar(); })
+                    ->IsInstanceOf('RuntimeException')
+        ;
+    }
+}</code></pre>
+
+<p>Et voilà, plus de <code>use</code> !</p>
+
+<p>Merci à <a href="http://blog.mageekbox.net/">@mageekguy</a> pour tout le travaille qu'il a fourni pour vous proposer ces nouvelles fonctionnalités !</p>
 
 <p>N'oubliez pas que vous pouvez tester tout cela en utilisant la branche <code>edge</code> d'atoum. La <em>pull-request</em>
 contenant le code est disponible <a href="https://github.com/atoum/atoum/pull/320">ici</a> : n'hésitez pas à ajoutez vos commentaires.</p>
@@ -139,7 +194,18 @@ contenant le code est disponible <a href="https://github.com/atoum/atoum/pull/32
         </footer>
     </article>
 
-    
+        <section class="disqus" id="disqus_thread"></section>
+
+    <script type="text/javascript">
+        var disqus_shortname = 'jubianchifr';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
 <hr/>
 
 <footer>&bull;&bull;&bull;</footer>
