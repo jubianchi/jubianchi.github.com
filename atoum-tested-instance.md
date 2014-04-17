@@ -76,13 +76,13 @@ Vous l'aurez compris, c'est <code>newTestedInstance</code> et <code>testedInstan
 Ces deux nouveaux _handlers_ vont vous permettre, respectivement, d'instancier une nouvelle instance de la classe testée
 et d'y accéder.
 
-Vous avez également remarquer l'assertion `isTestedInstance` qui permet de vérifier qu'un objet est identique à
+Vous aurez également remarqué l'assertion `isTestedInstance` qui permet de vérifier qu'un objet est identique à
 l'instance de test courante.
 
 <code>newTestedInstance</code> vous permettra donc de créer une nouvelle instance de la classe testée très facilement.
 
 Si le constructeur de la classe testée ne nécessite aucun argument, vous pourrez appeler <code>newTestedInstance</code>
-en omettant les paranthèses.
+en omettant les parenthèses.
 
 Si vous souhaitez passer des arguments au constructeur de la classe, passez-les simplement à <code>newTestedInstance</code> :
 
@@ -140,7 +140,7 @@ class foo extends atoum
 
 Et voilà, plus de <code>use</code> !
 
-Merci à <a href="http://blog.mageekbox.net/">@mageekguy</a> pour tout le travaille qu'il a fourni pour vous proposer ces nouvelles fonctionnalités !
+Merci à <a href="http://blog.mageekbox.net/">@mageekguy</a> pour tout le travail qu'il a fourni pour vous proposer ces nouvelles fonctionnalités !
 
 N'oubliez pas que vous pouvez tester tout cela en utilisant la branche <code>edge</code> d'atoum. La _pull-request_
 contenant le code est disponible [ici](https://github.com/atoum/atoum/pull/320) : n'hésitez pas à ajoutez vos commentaires.
