@@ -2,8 +2,7 @@
 {
     "title": "atoum feature preview #2 : mock pleaz",
     "type": "post",
-    "draft": true,
-    "date": "2014-04-14 22:29:00",
+    "date": "2014-05-27 22:29:00",
     "layout": "post.twig",
     "tags": ["php", "atoum", "test"],
     "twitter": {
@@ -14,17 +13,16 @@
 }
 ***
 
-Cet article est le second d'une série qui va vous présenter les fonctionnalités à venir dans atoum.
-Ces fonctionnalités ne sont actuellement pas disponible sur le <code>master</code> d'atoum mais vous pouvez les
-tester en utilisant la branche <code>edge</code> :
+Cet article est le second d'une série qui était censée vous présenter les fonctionnalités à venir dans atoum.
+**Aujourd'hui, ces fonctionnalités sont disponible sur le <code>master</code> d'atoum.**
 
 <pre class="line-numbers"><code class="language-javascript">{
     "require-dev": {
-        "atoum/atoum": "dev-edge"
+        "atoum/atoum": "dev-master"
     }
 }</code></pre>
 
-Dans cette article, nous allons découvrir plusieurs nouveatés autour des _mock_ dans atoum. L'API des mocks,
+Dans cet article, nous allons découvrir plusieurs nouveatés autour des _mock_ dans atoum. L'API des mocks,
 autant au niveau des controlleurs que des assertions, s'est vue dotée de plusieurs nouvelles petites fonctions
 qui vont vous permettre d'écrire des test encore plus clairs, plus facilement.
 
@@ -47,7 +45,7 @@ class foo extends atoum
             )
             ->then
                 ->object($foo->bar())->isIdenticalTo($foo)
-                ->variable($foo->baz())->isNull($foo)
+                ->variable($foo->baz())->isNull
 
             ->if(
                 $foo = new \mock\jubianchi\atoum\preview\foo(),
@@ -81,7 +79,7 @@ class foo extends atoum
             )
             ->then
                 ->object($foo->bar())->isIdenticalTo($foo)
-                ->variable($foo->baz())->isNull($foo)
+                ->variable($foo->baz())->isNull
 
             ->if($this->calling($foo)->baz->doesSomething)
             ->then
@@ -152,6 +150,3 @@ soeurs, <code>twice</code> et <code>thrice</code>.
 
 Nous avons également introduit une nouvelles petites syntaxe dans atoum pour remplace les appels à <code>exactly</code> :
 vous pouvez maitenant utiliser <code>->{n}</code> (où <code>n</code> est un entier).
-
-N'oubliez pas que vous pouvez tester tout cela en utilisant la branche <code>edge</code> d'atoum. La _pull-request_
-contenant le code est disponible [ici](https://github.com/atoum/atoum/pull/320) : n'hésitez pas à ajoutez vos commentaires.

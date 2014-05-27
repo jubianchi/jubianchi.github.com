@@ -45,7 +45,7 @@ gulp.task('watch', ['server', 'styles'], function() {
 
 gulp.task('server', ['web'], connect.server({
     root: [path.resolve('_site')],
-    port: 4000,
+    port: 4001,
     livereload: true
 }));
 
