@@ -23,7 +23,7 @@ Cet article est le second d'une série qui était censée vous présenter les fo
 }</code></pre>
 
 Dans cet article, nous allons découvrir plusieurs nouveautés autour des _mock_ dans atoum. L'API des mocks,
-autant au niveau des controlleurs que des assertions, s'est vue dotée de plusieurs nouvelles petites fonctions
+autant au niveau des contrôleurs que des assertions, s'est vue dotée de plusieurs nouvelles petites fonctions
 qui vont vous permettre d'écrire des tests encore plus clairs, plus facilement.
 
 Commençons par voir comment créer et configurer un mock classique :
@@ -58,7 +58,7 @@ class foo extends atoum
     }
 }</code></pre>
 
-Dans cette exemple, nous avons deux cas de test : le premier, dans lequel nous avons redéfini 2 méthodes du mock
+Dans cet exemple, nous avons deux cas de test : le premier, dans lequel nous avons redéfini 2 méthodes du mock
 et le second, dans lequel nous redéfinissons unqiuement 1 méthode du mock. Ce test peut être amélioré pour être plus
 clair, et atoum nous propose les solutions suivantes :
 
@@ -93,11 +93,11 @@ Qu'est-ce que nous avons donc :
 
 * <code>$this->calling($foo)->bar->isFluent</code> (ligne 13) permet, comme son nom l'indique, de rendre la méthode
 fluide (elle retourne l'instance de l'objet par lequel elle est appelée). La méthode <code>isFluent</code> est un alias
-do <code>returnThis</code>, vous pouvez donc également utiliser <code>$this->calling($foo)->bar->returnThis</code>.
+de <code>returnThis</code>, vous pouvez donc également utiliser <code>$this->calling($foo)->bar->returnThis</code>.
 * <code>$this->calling($foo)->baz->doesNothing</code> (ligne 14) permet de rendre une méthode inopérante, elle
 retournera donc <code>null</code>. Vous pouvez donc facilement désactiver une méthode.
 * <code>$this->calling($foo)->baz->doesSomething</code> permet de restaurer le comportement original de la méthode.
-L'utilisation de cette méthode a permit de supprimer un peu de code dans l'exemple précédent : en effet, on n'a plus besoin
+L'utilisation de cette méthode a permis de supprimer un peu de code dans l'exemple précédent : en effet, on n'a plus besoin
 de recréer une instance du mock pour restaurer ses méthodes.
 
 Passons maintenant aux assertions. Voyons tout de suite un exemple (encore) :
@@ -145,8 +145,8 @@ class foo extends atoum
     }
 }</code></pre>
 
-Comme vous le voyez, les paranthèses de <code>once</code> sont devenue optionnelles et il en va de même pour ses
-soeurs, <code>twice</code> et <code>thrice</code>.
+Comme vous le voyez, les paranthèses de <code>once</code> sont devenues optionnelles et il en va de même pour ses
+sœurs <code>twice</code> et <code>thrice</code>.
 
 Nous avons également introduit une nouvelle petite syntaxe dans atoum pour remplacer les appels à <code>exactly</code> :
 vous pouvez maitenant utiliser <code>->{n}</code> (où <code>n</code> est un entier).
