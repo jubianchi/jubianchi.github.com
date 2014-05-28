@@ -22,9 +22,9 @@ Cet article est le second d'une série qui était censée vous présenter les fo
     }
 }</code></pre>
 
-Dans cet article, nous allons découvrir plusieurs nouveatés autour des _mock_ dans atoum. L'API des mocks,
+Dans cet article, nous allons découvrir plusieurs nouveautés autour des _mock_ dans atoum. L'API des mocks,
 autant au niveau des controlleurs que des assertions, s'est vue dotée de plusieurs nouvelles petites fonctions
-qui vont vous permettre d'écrire des test encore plus clairs, plus facilement.
+qui vont vous permettre d'écrire des tests encore plus clairs, plus facilement.
 
 Commençons par voir comment créer et configurer un mock classique :
 
@@ -148,5 +148,5 @@ class foo extends atoum
 Comme vous le voyez, les paranthèses de <code>once</code> sont devenue optionnelles et il en va de même pour ses
 soeurs, <code>twice</code> et <code>thrice</code>.
 
-Nous avons également introduit une nouvelles petites syntaxe dans atoum pour remplace les appels à <code>exactly</code> :
+Nous avons également introduit une nouvelle petite syntaxe dans atoum pour remplacer les appels à <code>exactly</code> :
 vous pouvez maitenant utiliser <code>->{n}</code> (où <code>n</code> est un entier).
