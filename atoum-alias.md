@@ -150,5 +150,5 @@ namespace my\project\tests\units {
 }
 </code></pre>
 
-Je vous laisse découvrir ces fonctionnélités plus en détails en les utilisant. Si vous avez besoin d'aide, vous pouvez toujours
+Je vous laisse découvrir ces fonctionnalités plus en détails en les utilisant. Si vous avez besoin d'aide, vous pouvez toujours
 nous rejoindre sur IRC (<code>freenode##atoum</code>).
