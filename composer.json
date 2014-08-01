@@ -2,8 +2,14 @@
     "config": {
         "vendor-dir": "_vendor"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jubianchi/gumdrop.git"
+        }
+    ],
     "require":{
-        "simonjodet/gumdrop":"1.*"
+        "simonjodet/gumdrop":"1.*@dev"
     },
     "scripts":{
         "post-update-cmd":"php _vendor/simonjodet/gumdrop/gumdrop.php install",

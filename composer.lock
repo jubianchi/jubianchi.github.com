@@ -1,22 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "a6edb91b3723ba8d625f067978be94d8",
+    "hash": "2b2ca857bbc2bfb05d871cdab0ac92c8",
     "packages": [
         {
             "name": "simonjodet/gumdrop",
-            "version": "1.4.0",
+            "version": "1.4.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/simonjodet/gumdrop",
-                "reference": "1.4.0"
+                "url": "https://github.com/jubianchi/gumdrop.git",
+                "reference": "915013a4af897624cf0ee792a490c1858b3a964f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simonjodet/gumdrop/zipball/1.4.0",
-                "reference": "1.4.0",
+                "url": "https://api.github.com/repos/jubianchi/gumdrop/zipball/915013a4af897624cf0ee792a490c1858b3a964f",
+                "reference": "915013a4af897624cf0ee792a490c1858b3a964f",
                 "shasum": ""
             },
             "require": {
@@ -39,16 +40,21 @@
                     "Gumdrop": "."
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "post-update-cmd": [
+                    "php gumdrop.php install"
+                ],
+                "post-install-cmd": [
+                    "php gumdrop.php install"
+                ]
+            },
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
                     "name": "Simon Jodet",
-                    "email": "simon@jodet.com",
-                    "homepage": "https://github.com/simonjodet/",
-                    "role": "Developer"
+                    "email": "simon@jodet.com"
                 }
             ],
             "description": "Gumdrop is a static website generator converting Markdown files and using the Twig templating engine.",
@@ -57,7 +63,10 @@
                 "markdown",
                 "twig"
             ],
-            "time": "2013-02-10 16:34:53"
+            "support": {
+                "source": "https://github.com/jubianchi/gumdrop/tree/1.4"
+            },
+            "time": "2014-08-01 23:05:47"
         },
         {
             "name": "simonjodet/markdown",
@@ -205,20 +214,13 @@
             "time": "2013-06-11 07:34:22"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
-    "platform": [
-
-    ],
-    "platform-dev": [
-
-    ]
+    "stability-flags": {
+        "simonjodet/gumdrop": 20
+    },
+    "prefer-stable": false,
+    "platform": [],
+    "platform-dev": []
 }
