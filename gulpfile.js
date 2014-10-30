@@ -40,7 +40,7 @@ gulp.task('web', function() {
 
 gulp.task('watch', ['server', 'styles'], function() {
     gulp.watch(['_ui/less/**/*.less', '_ui/js/**/*.js', '_ui/fonts/**/*', '_ui/css/**/*.css'], ['styles', 'web']);
-    gulp.watch(['*.md', '_layout/**/*', 'boxes/**/*', 'experiments/**/*', 'cv/**/*'], ['web']);
+    gulp.watch(['*.md', '_layout/**/*', 'boxes/**/*', 'experiments/**/*', 'cv/**/*', 'assets/**/*'], ['web']);
 });
 
 gulp.task('server', ['web'], connect.server({
